@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LifeLogCalendarPageViewController" customModule="CM" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="ZPa-L5-hiU" id="J91-8x-VHS"/>
+                <outlet property="calendarContainerView" destination="rGv-OQ-jHY" id="Klg-E7-5fS"/>
+                <outlet property="heightCalendarView" destination="sRf-ER-wU8" id="Ta8-Nk-Uyq"/>
+                <outlet property="monthTitleButton" destination="GXM-Nb-tbT" id="1R0-Mx-bkl"/>
+                <outlet property="nextButton" destination="w5w-dE-bxD" id="DK3-ES-DkS"/>
+                <outlet property="previousButton" destination="sZx-RI-fPC" id="zIa-06-FBM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPa-L5-hiU">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w53-1V-7cO">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZx-RI-fPC" userLabel="previous">
+                            <rect key="frame" x="5" y="0.0" width="75" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="9Td-vA-0BF"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
+                            <state key="normal" image="ic_back_calendar"/>
+                            <connections>
+                                <action selector="previousMonthButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="kcy-5j-Use"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5w-dE-bxD" userLabel="next">
+                            <rect key="frame" x="334" y="0.0" width="75" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="tGL-Vf-raq"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="ic_next_gray_calendar"/>
+                            <connections>
+                                <action selector="nextMonthButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="opy-0y-JA0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXM-Nb-tbT">
+                            <rect key="frame" x="181.5" y="9" width="51" height="32"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" name="mainText"/>
+                            </state>
+                            <connections>
+                                <action selector="titleButtonTouchUpInside" destination="-1" eventType="touchUpInside" id="qWU-VC-4zO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="GXM-Nb-tbT" firstAttribute="centerY" secondItem="w53-1V-7cO" secondAttribute="centerY" id="7Yr-3v-qWx"/>
+                        <constraint firstItem="GXM-Nb-tbT" firstAttribute="centerX" secondItem="w53-1V-7cO" secondAttribute="centerX" id="82C-S0-edg"/>
+                        <constraint firstItem="sZx-RI-fPC" firstAttribute="leading" secondItem="w53-1V-7cO" secondAttribute="leading" constant="5" id="G4w-CL-FvS"/>
+                        <constraint firstItem="w5w-dE-bxD" firstAttribute="top" secondItem="w53-1V-7cO" secondAttribute="top" id="JrY-mJ-BCM"/>
+                        <constraint firstAttribute="bottom" secondItem="w5w-dE-bxD" secondAttribute="bottom" id="K5K-cw-N5U"/>
+                        <constraint firstItem="sZx-RI-fPC" firstAttribute="top" secondItem="w53-1V-7cO" secondAttribute="top" id="Ovm-dh-3Sd"/>
+                        <constraint firstAttribute="trailing" secondItem="w5w-dE-bxD" secondAttribute="trailing" constant="5" id="hLg-CP-NXZ"/>
+                        <constraint firstAttribute="height" constant="50" id="jZe-o8-cam"/>
+                        <constraint firstAttribute="bottom" secondItem="sZx-RI-fPC" secondAttribute="bottom" id="p0x-R2-Irz"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGv-OQ-jHY">
+                    <rect key="frame" x="0.0" y="95" width="414" height="400"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="sRf-ER-wU8"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0B6-18-3Oc">
+                    <rect key="frame" x="0.0" y="94" width="414" height="1"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnI-KR-Wn9">
+                            <rect key="frame" x="16" y="0.0" width="382" height="1"/>
+                            <color key="backgroundColor" name="status_notFound"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="UnI-KR-Wn9" secondAttribute="bottom" id="Dfu-9n-PMo"/>
+                        <constraint firstAttribute="height" constant="1" id="MEO-Gu-jb9"/>
+                        <constraint firstItem="UnI-KR-Wn9" firstAttribute="top" secondItem="0B6-18-3Oc" secondAttribute="top" id="OTg-5R-z2T"/>
+                        <constraint firstItem="UnI-KR-Wn9" firstAttribute="leading" secondItem="0B6-18-3Oc" secondAttribute="leading" constant="16" id="lWo-I9-YDQ"/>
+                        <constraint firstAttribute="trailing" secondItem="UnI-KR-Wn9" secondAttribute="trailing" constant="16" id="qWR-jR-2VJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZPa-L5-hiU" secondAttribute="trailing" id="00q-wz-SMM"/>
+                <constraint firstItem="w53-1V-7cO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3ZX-Ss-MDG"/>
+                <constraint firstAttribute="bottom" secondItem="ZPa-L5-hiU" secondAttribute="bottom" id="9R0-1Z-m4T"/>
+                <constraint firstItem="w53-1V-7cO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ifc-03-ZEb"/>
+                <constraint firstItem="ZPa-L5-hiU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Wi8-Ef-dK4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rGv-OQ-jHY" secondAttribute="trailing" id="Woo-H2-rmG"/>
+                <constraint firstItem="rGv-OQ-jHY" firstAttribute="top" secondItem="0B6-18-3Oc" secondAttribute="bottom" id="eAW-7B-yXt"/>
+                <constraint firstItem="0B6-18-3Oc" firstAttribute="top" secondItem="w53-1V-7cO" secondAttribute="bottom" id="icf-Mw-xbH"/>
+                <constraint firstItem="0B6-18-3Oc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qGn-Hv-XPN"/>
+                <constraint firstItem="w53-1V-7cO" firstAttribute="top" secondItem="ZPa-L5-hiU" secondAttribute="top" id="ruu-vt-dze"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w53-1V-7cO" secondAttribute="trailing" id="sCS-M1-ps2"/>
+                <constraint firstAttribute="trailing" secondItem="0B6-18-3Oc" secondAttribute="trailing" id="tT1-oF-eVL"/>
+                <constraint firstItem="rGv-OQ-jHY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="w5i-gL-Rrw"/>
+            </constraints>
+            <point key="canvasLocation" x="90" y="74"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back_calendar" width="10" height="16"/>
+        <image name="ic_next_gray_calendar" width="20" height="25"/>
+        <namedColor name="mainText">
+            <color red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="status_notFound">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

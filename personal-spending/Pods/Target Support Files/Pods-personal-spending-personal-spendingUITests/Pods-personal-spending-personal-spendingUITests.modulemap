@@ -1,0 +1,6 @@
+framework module Pods_personal_spending_personal_spendingUITests {
+  umbrella header "Pods-personal-spending-personal-spendingUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

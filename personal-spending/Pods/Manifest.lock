@@ -1,0 +1,20 @@
+PODS:
+  - SwiftDate (4.5.1)
+  - SwiftUtils (4.2.1)
+
+DEPENDENCIES:
+  - SwiftDate (= 4.5.1)
+  - SwiftUtils (= 4.2.1)
+
+SPEC REPOS:
+  trunk:
+    - SwiftDate
+    - SwiftUtils
+
+SPEC CHECKSUMS:
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  SwiftUtils: fa346feeac5a25eab7ea5d59f1857c6253cb8ab1
+
+PODFILE CHECKSUM: 2dd32c8cb320213eb3d398e0fcd0112e43df973d
+
+COCOAPODS: 1.12.1
