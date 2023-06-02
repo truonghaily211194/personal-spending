@@ -48,6 +48,14 @@ final class LifeLogHistoryDate {
 class HomeViewModel {
 
     private var lifeLogHistoryMonth: [[LifeLogHistory]] = [[LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 1", health: "health 1", breastfeeding: "breastfeeding 1", sleep: "sleep 1", water: "water 1", memo: "memo 1", medicine: "medicine 1", calorieConsumption: 1, calorieIntake: 1, totalScore: 1)),
+        LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 2", health: "health 2", breastfeeding: "breastfeeding 2", sleep: "sleep 2", water: "water 2", memo: "memo 2", medicine: "medicine 2", calorieConsumption: 2, calorieIntake: 2, totalScore: 2)),
+        LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 2", health: "health 2", breastfeeding: "breastfeeding 2", sleep: "sleep 2", water: "water 2", memo: "memo 2", medicine: "medicine 2", calorieConsumption: 2, calorieIntake: 2, totalScore: 2)),
+        LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 2", health: "health 2", breastfeeding: "breastfeeding 2", sleep: "sleep 2", water: "water 2", memo: "memo 2", medicine: "medicine 2", calorieConsumption: 2, calorieIntake: 2, totalScore: 2)),
+        LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 2", health: "health 2", breastfeeding: "breastfeeding 2", sleep: "sleep 2", water: "water 2", memo: "memo 2", medicine: "medicine 2", calorieConsumption: 2, calorieIntake: 2, totalScore: 2)),
+        LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 2", health: "health 2", breastfeeding: "breastfeeding 2", sleep: "sleep 2", water: "water 2", memo: "memo 2", medicine: "medicine 2", calorieConsumption: 2, calorieIntake: 2, totalScore: 2)),
+        LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 2", health: "health 2", breastfeeding: "breastfeeding 2", sleep: "sleep 2", water: "water 2", memo: "memo 2", medicine: "medicine 2", calorieConsumption: 2, calorieIntake: 2, totalScore: 2)),
+        LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 2", health: "health 2", breastfeeding: "breastfeeding 2", sleep: "sleep 2", water: "water 2", memo: "memo 2", medicine: "medicine 2", calorieConsumption: 2, calorieIntake: 2, totalScore: 2)),
+        LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 2", health: "health 2", breastfeeding: "breastfeeding 2", sleep: "sleep 2", water: "water 2", memo: "memo 2", medicine: "medicine 2", calorieConsumption: 2, calorieIntake: 2, totalScore: 2)),
         LifeLogHistory(date: App.region.today().absoluteDate, lifeLogHistoryDate: LifeLogHistoryDate(activity: "activity 2", health: "health 2", breastfeeding: "breastfeeding 2", sleep: "sleep 2", water: "water 2", memo: "memo 2", medicine: "medicine 2", calorieConsumption: 2, calorieIntake: 2, totalScore: 2))
 
         ]]
@@ -73,7 +81,7 @@ class HomeViewModel {
         let month = dateInRegion.month
         return HistoryHeaderViewModel(title: "\(month) / \(year)")
     }
-    
+
     func updateLifeLogHistoriesMonth(items: [[LifeLogHistory]]) {
         // Update today to loadmore next time
         guard let date = items.last?.last?.date.inRegion() else { return }

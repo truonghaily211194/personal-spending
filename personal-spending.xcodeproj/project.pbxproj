@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		362638548B090289F5A408F1 /* Pods_personal_spending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5108D31F07D25DDC29DB5BF8 /* Pods_personal_spending.framework */; };
 		ABD0809350718C9654F1FB50 /* Pods_personal_spendingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC98EF033C4ACA9D48A0DF7 /* Pods_personal_spendingTests.framework */; };
+		C7A9D7A22A272873005140F7 /* DataPersonal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7A9D7A02A272873005140F7 /* DataPersonal.xcdatamodeld */; };
+		C7A9D7A52A272D15005140F7 /* TestCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9D7A32A272D15005140F7 /* TestCoreDataViewController.swift */; };
+		C7A9D7A62A272D15005140F7 /* TestCoreDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A9D7A42A272D15005140F7 /* TestCoreDataViewController.xib */; };
+		C7A9D7A92A2734ED005140F7 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9D7A72A2734ED005140F7 /* TestTableViewCell.swift */; };
+		C7A9D7AA2A2734ED005140F7 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A9D7A82A2734ED005140F7 /* TestTableViewCell.xib */; };
+		C7A9D7AF2A287688005140F7 /* DisplayStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9D7AD2A287688005140F7 /* DisplayStampViewController.swift */; };
+		C7A9D7B02A287688005140F7 /* DisplayStampViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A9D7AE2A287688005140F7 /* DisplayStampViewController.xib */; };
 		C7C988C52A1F0643009AACB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C988C42A1F0643009AACB1 /* AppDelegate.swift */; };
 		C7C988CE2A1F0644009AACB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C988CD2A1F0644009AACB1 /* Assets.xcassets */; };
 		C7C988D12A1F0644009AACB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C988CF2A1F0644009AACB1 /* LaunchScreen.storyboard */; };
@@ -65,6 +72,13 @@
 		7E255870A59DDAF967A889BB /* Pods-personal-spending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending.debug.xcconfig"; path = "Target Support Files/Pods-personal-spending/Pods-personal-spending.debug.xcconfig"; sourceTree = "<group>"; };
 		BE94EC55CB5A891158BA6730 /* Pods-personal-spendingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spendingTests.debug.xcconfig"; path = "Target Support Files/Pods-personal-spendingTests/Pods-personal-spendingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40B2594D9698799A735DFAF /* Pods-personal-spending-personal-spendingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending-personal-spendingUITests.release.xcconfig"; path = "Target Support Files/Pods-personal-spending-personal-spendingUITests/Pods-personal-spending-personal-spendingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C7A9D7A12A272873005140F7 /* DataPersonal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataPersonal.xcdatamodel; sourceTree = "<group>"; };
+		C7A9D7A32A272D15005140F7 /* TestCoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataViewController.swift; sourceTree = "<group>"; };
+		C7A9D7A42A272D15005140F7 /* TestCoreDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCoreDataViewController.xib; sourceTree = "<group>"; };
+		C7A9D7A72A2734ED005140F7 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		C7A9D7A82A2734ED005140F7 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		C7A9D7AD2A287688005140F7 /* DisplayStampViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayStampViewController.swift; sourceTree = "<group>"; };
+		C7A9D7AE2A287688005140F7 /* DisplayStampViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayStampViewController.xib; sourceTree = "<group>"; };
 		C7C988C12A1F0643009AACB1 /* personal-spending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "personal-spending.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C988C42A1F0643009AACB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7C988CD2A1F0644009AACB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,9 +168,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C7A9D7AC2A287687005140F7 /* Stamp */ = {
+			isa = PBXGroup;
+			children = (
+				C7A9D7AD2A287688005140F7 /* DisplayStampViewController.swift */,
+				C7A9D7AE2A287688005140F7 /* DisplayStampViewController.xib */,
+			);
+			path = Stamp;
+			sourceTree = "<group>";
+		};
 		C7C988B82A1F0643009AACB1 = {
 			isa = PBXGroup;
 			children = (
+				C7A9D7A02A272873005140F7 /* DataPersonal.xcdatamodeld */,
 				C7C988C32A1F0643009AACB1 /* personal-spending */,
 				C7C988DA2A1F0645009AACB1 /* personal-spendingTests */,
 				C7C988E42A1F0645009AACB1 /* personal-spendingUITests */,
@@ -179,6 +203,7 @@
 		C7C988C32A1F0643009AACB1 /* personal-spending */ = {
 			isa = PBXGroup;
 			children = (
+				C7A9D7AC2A287687005140F7 /* Stamp */,
 				C7C989842A1F6464009AACB1 /* Calendar */,
 				C7C9897B2A1F2277009AACB1 /* Cell */,
 				C7C989742A1F21B5009AACB1 /* Header */,
@@ -190,6 +215,10 @@
 				C7C988F42A1F06E6009AACB1 /* HomeViewController.swift */,
 				C7C988F52A1F06E6009AACB1 /* HomeViewController.xib */,
 				C7C989822A1F3C8A009AACB1 /* HomeViewModel.swift */,
+				C7A9D7A32A272D15005140F7 /* TestCoreDataViewController.swift */,
+				C7A9D7A42A272D15005140F7 /* TestCoreDataViewController.xib */,
+				C7A9D7A72A2734ED005140F7 /* TestTableViewCell.swift */,
+				C7A9D7A82A2734ED005140F7 /* TestTableViewCell.xib */,
 			);
 			path = "personal-spending";
 			sourceTree = "<group>";
@@ -385,12 +414,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C989782A1F21B5009AACB1 /* HistoryHeaderView.xib in Resources */,
+				C7A9D7B02A287688005140F7 /* DisplayStampViewController.xib in Resources */,
 				C7C989812A1F2277009AACB1 /* LifeLogHistoryTableViewCell.xib in Resources */,
 				C7C989932A1F6464009AACB1 /* LifeLogCalendarPageViewController.xib in Resources */,
 				C7C988D12A1F0644009AACB1 /* LaunchScreen.storyboard in Resources */,
 				C7C988CE2A1F0644009AACB1 /* Assets.xcassets in Resources */,
+				C7A9D7AA2A2734ED005140F7 /* TestTableViewCell.xib in Resources */,
 				C7C989952A1F6464009AACB1 /* LifeLogCalendarCollectionCell.xib in Resources */,
 				C7C988F72A1F06E6009AACB1 /* HomeViewController.xib in Resources */,
+				C7A9D7A62A272D15005140F7 /* TestCoreDataViewController.xib in Resources */,
 				C7C989982A1F6464009AACB1 /* LifeLogCalendarViewController.xib in Resources */,
 				C7C9899A2A1F6464009AACB1 /* LifeLogCalendarWeekdayView.xib in Resources */,
 			);
@@ -523,18 +555,22 @@
 				C7C989942A1F6464009AACB1 /* LifeLogCalendarPageViewController.swift in Sources */,
 				C7C9899C2A1F6464009AACB1 /* LifeLogCalendarViewController.swift in Sources */,
 				C7C989972A1F6464009AACB1 /* LifeLogCalendarCollectionCell.swift in Sources */,
+				C7A9D7A22A272873005140F7 /* DataPersonal.xcdatamodeld in Sources */,
 				C7C989802A1F2277009AACB1 /* LifeLogHistoryTableViewCellViewModel.swift in Sources */,
 				C7C9899E2A1F65DC009AACB1 /* Color.swift in Sources */,
 				C7C989832A1F3C8A009AACB1 /* HomeViewModel.swift in Sources */,
 				C7C9897F2A1F2277009AACB1 /* LifeLogHistoryTableViewCell.swift in Sources */,
 				C7C989922A1F6464009AACB1 /* LifeLogCalendarViewModel.swift in Sources */,
+				C7A9D7A92A2734ED005140F7 /* TestTableViewCell.swift in Sources */,
 				C7C9897A2A1F21B5009AACB1 /* HistoryHeaderView.swift in Sources */,
 				C7C989732A1F1D52009AACB1 /* SwiftDate.swift in Sources */,
 				C7C989792A1F21B5009AACB1 /* HistoryHeaderViewModel.swift in Sources */,
 				C7C988C52A1F0643009AACB1 /* AppDelegate.swift in Sources */,
 				C7C989712A1F1BD5009AACB1 /* App.swift in Sources */,
 				C7C988F62A1F06E6009AACB1 /* HomeViewController.swift in Sources */,
+				C7A9D7A52A272D15005140F7 /* TestCoreDataViewController.swift in Sources */,
 				C7C989992A1F6464009AACB1 /* LifeLogCalendarWeekdayView.swift in Sources */,
+				C7A9D7AF2A287688005140F7 /* DisplayStampViewController.swift in Sources */,
 				C7C9899B2A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift in Sources */,
 				C7C989962A1F6464009AACB1 /* LifeLogCalendarCollectionCellViewModel.swift in Sources */,
 			);
@@ -874,6 +910,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C7A9D7A02A272873005140F7 /* DataPersonal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C7A9D7A12A272873005140F7 /* DataPersonal.xcdatamodel */,
+			);
+			currentVersion = C7A9D7A12A272873005140F7 /* DataPersonal.xcdatamodel */;
+			path = DataPersonal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C7C988B92A1F0643009AACB1 /* Project object */;
 }

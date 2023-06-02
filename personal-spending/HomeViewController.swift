@@ -26,9 +26,12 @@ class HomeViewController: UIViewController {
         } else {
             navigationController?.navigationBar.barTintColor = UIColor.RGB(246, 246, 246)
         }
-//        configNavigationBar()
         updateNavigationItem(isShowingCalendar: false)
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(closeLifeLogCalendar),
+            name: NSNotification.Name(rawValue: kCloseLifeLogCalendar),
+            object: nil)
     }
     
     private func configTableView() {
@@ -42,9 +45,12 @@ class HomeViewController: UIViewController {
     
     private func updateNavigationItem(isShowingCalendar: Bool) {
         if !isShowingCalendar {
-//            customBackButton()
+            title = "Home"
             customCalendarButton()
+            navigationItem.leftBarButtonItem = nil
         } else {
+            title = "Calendar"
+            closeLifeLogCalendar(nil)
             customCloseButton()
         }
     }
@@ -90,11 +96,11 @@ class HomeViewController: UIViewController {
     @objc private func closeLifeLogCalendar(_ sender: Any?) {
         updateNavigationItem(isShowingCalendar: false)
 
-//        if let child = children.first, let vc = child as? LifeLogCalendarPageViewController {
-//            vc.willMove(toParent: nil)
-//            vc.view.removeFromSuperview()
-//            vc.removeFromParent()
-//        }
+        if let child = children.first, let vc = child as? LifeLogCalendarPageViewController {
+            vc.willMove(toParent: nil)
+            vc.view.removeFromSuperview()
+            vc.removeFromParent()
+        }
     }
 
     private func customCalendarButton() {
@@ -132,7 +138,7 @@ class HomeViewController: UIViewController {
             },
             completion: { _ in
                 UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
-                    vc.updateBackgroundView(alpha: 0.5)
+                    vc.updateBackgroundView(alpha: 0.2)
                 }, completion: nil)
             })
     }
