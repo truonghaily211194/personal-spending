@@ -16,6 +16,9 @@
 		C7A9D7AA2A2734ED005140F7 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A9D7A82A2734ED005140F7 /* TestTableViewCell.xib */; };
 		C7A9D7AF2A287688005140F7 /* DisplayStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9D7AD2A287688005140F7 /* DisplayStampViewController.swift */; };
 		C7A9D7B02A287688005140F7 /* DisplayStampViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A9D7AE2A287688005140F7 /* DisplayStampViewController.xib */; };
+		C7A9D7C92A2F2435005140F7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9D7C72A2F2435005140F7 /* WelcomeViewController.swift */; };
+		C7A9D7CA2A2F2435005140F7 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A9D7C82A2F2435005140F7 /* WelcomeViewController.xib */; };
+		C7A9D7CD2A2F2D93005140F7 /* ExtenStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9D7CC2A2F2D93005140F7 /* ExtenStrings.swift */; };
 		C7C988C52A1F0643009AACB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C988C42A1F0643009AACB1 /* AppDelegate.swift */; };
 		C7C988CE2A1F0644009AACB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C988CD2A1F0644009AACB1 /* Assets.xcassets */; };
 		C7C988D12A1F0644009AACB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C988CF2A1F0644009AACB1 /* LaunchScreen.storyboard */; };
@@ -79,6 +82,9 @@
 		C7A9D7A82A2734ED005140F7 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		C7A9D7AD2A287688005140F7 /* DisplayStampViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayStampViewController.swift; sourceTree = "<group>"; };
 		C7A9D7AE2A287688005140F7 /* DisplayStampViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayStampViewController.xib; sourceTree = "<group>"; };
+		C7A9D7C72A2F2435005140F7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		C7A9D7C82A2F2435005140F7 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		C7A9D7CC2A2F2D93005140F7 /* ExtenStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtenStrings.swift; sourceTree = "<group>"; };
 		C7C988C12A1F0643009AACB1 /* personal-spending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "personal-spending.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C988C42A1F0643009AACB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7C988CD2A1F0644009AACB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,6 +225,9 @@
 				C7A9D7A42A272D15005140F7 /* TestCoreDataViewController.xib */,
 				C7A9D7A72A2734ED005140F7 /* TestTableViewCell.swift */,
 				C7A9D7A82A2734ED005140F7 /* TestTableViewCell.xib */,
+				C7A9D7C72A2F2435005140F7 /* WelcomeViewController.swift */,
+				C7A9D7C82A2F2435005140F7 /* WelcomeViewController.xib */,
+				C7A9D7CC2A2F2D93005140F7 /* ExtenStrings.swift */,
 			);
 			path = "personal-spending";
 			sourceTree = "<group>";
@@ -414,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C989782A1F21B5009AACB1 /* HistoryHeaderView.xib in Resources */,
+				C7A9D7CA2A2F2435005140F7 /* WelcomeViewController.xib in Resources */,
 				C7A9D7B02A287688005140F7 /* DisplayStampViewController.xib in Resources */,
 				C7C989812A1F2277009AACB1 /* LifeLogHistoryTableViewCell.xib in Resources */,
 				C7C989932A1F6464009AACB1 /* LifeLogCalendarPageViewController.xib in Resources */,
@@ -559,6 +569,7 @@
 				C7C989802A1F2277009AACB1 /* LifeLogHistoryTableViewCellViewModel.swift in Sources */,
 				C7C9899E2A1F65DC009AACB1 /* Color.swift in Sources */,
 				C7C989832A1F3C8A009AACB1 /* HomeViewModel.swift in Sources */,
+				C7A9D7C92A2F2435005140F7 /* WelcomeViewController.swift in Sources */,
 				C7C9897F2A1F2277009AACB1 /* LifeLogHistoryTableViewCell.swift in Sources */,
 				C7C989922A1F6464009AACB1 /* LifeLogCalendarViewModel.swift in Sources */,
 				C7A9D7A92A2734ED005140F7 /* TestTableViewCell.swift in Sources */,
@@ -573,6 +584,7 @@
 				C7A9D7AF2A287688005140F7 /* DisplayStampViewController.swift in Sources */,
 				C7C9899B2A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift in Sources */,
 				C7C989962A1F6464009AACB1 /* LifeLogCalendarCollectionCellViewModel.swift in Sources */,
+				C7A9D7CD2A2F2D93005140F7 /* ExtenStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

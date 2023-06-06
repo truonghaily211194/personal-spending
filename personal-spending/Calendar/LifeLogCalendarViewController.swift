@@ -18,7 +18,7 @@ protocol LifeLogCalendarViewControllerDelegate: class {
     func controller(_ controller: LifeLogCalendarViewController, needPerform action: LifeLogCalendarViewModel.Action)
 }
 
-final class LifeLogCalendarViewController: ViewController {
+final class LifeLogCalendarViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var weekdayContainerView: UIView!

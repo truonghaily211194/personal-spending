@@ -21,7 +21,6 @@ final class LifeLogCalendarCollectionCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupIdentifier()
     }
 
     override func layoutSubviews() {
@@ -34,11 +33,6 @@ final class LifeLogCalendarCollectionCell: UICollectionViewCell {
         super.prepareForReuse()
         dateTitleLabel.text = ""
         contentView.layer.borderWidth = 0
-    }
-
-    private func setupIdentifier() {
-        contentView.accessibilityIdentifier = "containerViewDate"
-        dateTitleLabel.accessibilityIdentifier = "tvDate"
     }
 
     private func updateUI() {

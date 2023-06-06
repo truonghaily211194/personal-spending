@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="personal_spending" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="NXh-7m-Q1C" id="31K-Iv-5o6"/>
+                <outlet property="goldImage1" destination="4uM-x6-2du" id="i6q-xv-XOF"/>
+                <outlet property="goldImage2" destination="Fiw-dm-v20" id="9gd-ml-gMw"/>
+                <outlet property="goldImage3" destination="CO3-as-jIv" id="5Mg-Qr-QAJ"/>
+                <outlet property="nameLabel" destination="iCP-UW-hO1" id="O4Q-OM-SFC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome John" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCP-UW-hO1">
+                    <rect key="frame" x="20" y="159" width="353" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="eOJ-Rd-Bia"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_slive_medal" translatesAutoresizingMaskIntoConstraints="NO" id="Fiw-dm-v20">
+                    <rect key="frame" x="179.66666666666666" y="239" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Fiw-dm-v20" secondAttribute="height" multiplier="1:1" id="fjC-qu-wc8"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_slive_medal" translatesAutoresizingMaskIntoConstraints="NO" id="4uM-x6-2du">
+                    <rect key="frame" x="135.66666666666666" y="239" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4uM-x6-2du" secondAttribute="height" multiplier="1:1" id="73q-yg-Dut"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_slive_medal" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-as-jIv">
+                    <rect key="frame" x="223.66666666666666" y="239" width="33.999999999999972" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="CO3-as-jIv" secondAttribute="height" multiplier="1:1" id="Lvf-Yy-2Uu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-7m-Q1C">
+                    <rect key="frame" x="10" y="323" width="373" height="22.333333333333314"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuP-c9-Yjf">
+                    <rect key="frame" x="101.66666666666669" y="680.66666666666663" width="90" height="77.333333333333371"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="6uh-QT-Ie0"/>
+                        <constraint firstAttribute="width" secondItem="zuP-c9-Yjf" secondAttribute="height" multiplier="36:31" id="SDv-rv-Lrz"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="icons8-facebook"/>
+                    <connections>
+                        <action selector="tapFacebook:" destination="-1" eventType="touchUpInside" id="YKm-jH-RGF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKf-Ry-v1T">
+                    <rect key="frame" x="201.66666666666666" y="678" width="89.999999999999972" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="4sK-Rb-huO"/>
+                        <constraint firstAttribute="height" constant="80" id="TAI-gn-ocg"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="icons8-gmail-"/>
+                    <connections>
+                        <action selector="tapEmail:" destination="-1" eventType="touchUpInside" id="Vn2-Pa-Xbm"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6k-N9-aWu">
+                    <rect key="frame" x="20" y="651.66666666666663" width="353" height="19"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iCP-UW-hO1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="4sf-Rr-NP7"/>
+                <constraint firstItem="Fiw-dm-v20" firstAttribute="top" secondItem="iCP-UW-hO1" secondAttribute="bottom" constant="40" id="GCH-cg-dgA"/>
+                <constraint firstItem="aKf-Ry-v1T" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" constant="50" id="Ibm-0p-NIS"/>
+                <constraint firstItem="NXh-7m-Q1C" firstAttribute="top" secondItem="Fiw-dm-v20" secondAttribute="bottom" constant="50" id="Nfb-yw-mdy"/>
+                <constraint firstItem="zuP-c9-Yjf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" constant="-50" id="PVv-76-3kr"/>
+                <constraint firstItem="Fiw-dm-v20" firstAttribute="leading" secondItem="4uM-x6-2du" secondAttribute="trailing" constant="10" id="TbR-kz-Z2N"/>
+                <constraint firstItem="W6k-N9-aWu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="W0c-fo-Qsa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iCP-UW-hO1" secondAttribute="trailing" constant="20" id="Zbw-tz-F5m"/>
+                <constraint firstItem="zuP-c9-Yjf" firstAttribute="top" secondItem="W6k-N9-aWu" secondAttribute="bottom" constant="10" id="dL6-s3-Bcm"/>
+                <constraint firstItem="4uM-x6-2du" firstAttribute="centerY" secondItem="Fiw-dm-v20" secondAttribute="centerY" id="fbv-43-CKl"/>
+                <constraint firstItem="CO3-as-jIv" firstAttribute="centerY" secondItem="Fiw-dm-v20" secondAttribute="centerY" id="gTw-Nl-ijn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zuP-c9-Yjf" secondAttribute="bottom" constant="60" id="khj-Kg-RRQ"/>
+                <constraint firstItem="CO3-as-jIv" firstAttribute="leading" secondItem="Fiw-dm-v20" secondAttribute="trailing" constant="10" id="lBG-Qh-xwk"/>
+                <constraint firstItem="iCP-UW-hO1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nFx-ox-ByD"/>
+                <constraint firstItem="NXh-7m-Q1C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="qiX-mc-fc7"/>
+                <constraint firstItem="Fiw-dm-v20" firstAttribute="centerX" secondItem="iCP-UW-hO1" secondAttribute="centerX" id="vhB-Fd-Ye5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W6k-N9-aWu" secondAttribute="trailing" constant="20" id="yB1-aP-8y7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aKf-Ry-v1T" secondAttribute="bottom" constant="60" id="zRi-ZJ-bBq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NXh-7m-Q1C" secondAttribute="trailing" constant="10" id="zvv-hZ-nhD"/>
+            </constraints>
+            <point key="canvasLocation" x="28" y="-1"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_slive_medal" width="34" height="34"/>
+        <image name="icons8-facebook" width="48" height="48"/>
+        <image name="icons8-gmail-" width="66.666664123535156" height="66.666664123535156"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
