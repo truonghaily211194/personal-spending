@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupCongratsActionViewController" customModule="personal_spending" customModuleProvider="target">
+            <connections>
+                <outlet property="contentPopupView" destination="AXq-nf-HKW" id="zQr-vi-q16"/>
+                <outlet property="popupImageView" destination="e7y-Fc-qTH" id="f5N-E6-BNe"/>
+                <outlet property="textLabel" destination="Arh-Su-FAX" id="sX8-pn-l9C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXq-nf-HKW" userLabel="View Popup">
+                    <rect key="frame" x="32" y="155.5" width="256" height="257"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzu-K8-g6b" userLabel="View Button">
+                            <rect key="frame" x="0.0" y="197" width="256" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUW-Nt-xrQ">
+                                    <rect key="frame" x="30" y="4" width="196" height="42"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="done"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="OK" backgroundImage="btn_congrats">
+                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeTitle" value="buttonInviteByEmail"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="achieveTarget:" destination="-1" eventType="touchUpInside" id="8JU-4l-Esg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="CUW-Nt-xrQ" secondAttribute="trailing" constant="30" id="1xT-BK-Wwa"/>
+                                <constraint firstItem="CUW-Nt-xrQ" firstAttribute="top" secondItem="gzu-K8-g6b" secondAttribute="top" constant="4" id="9mX-xE-ija"/>
+                                <constraint firstAttribute="bottom" secondItem="CUW-Nt-xrQ" secondAttribute="bottom" constant="14" id="Mpb-rg-iQK"/>
+                                <constraint firstAttribute="height" constant="60" id="XcI-RG-SYp"/>
+                                <constraint firstItem="CUW-Nt-xrQ" firstAttribute="leading" secondItem="gzu-K8-g6b" secondAttribute="leading" constant="30" id="rhr-yf-zLv"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_congrats" translatesAutoresizingMaskIntoConstraints="NO" id="e7y-Fc-qTH">
+                            <rect key="frame" x="32" y="10" width="192" height="177"/>
+                            <accessibility key="accessibilityConfiguration" identifier="congrats"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="e7y-Fc-qTH" secondAttribute="height" multiplier="407:375" id="aq1-CA-Gmd"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arh-Su-FAX">
+                            <rect key="frame" x="2" y="133" width="252" height="54"/>
+                            <accessibility key="accessibilityConfiguration" identifier="text"/>
+                            <string key="text">Congratulations.
+I have cleared the achievement GOAL!</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeText" value="textPopupCongratsAction"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="gzu-K8-g6b" firstAttribute="leading" secondItem="AXq-nf-HKW" secondAttribute="leading" id="D0l-5F-spm"/>
+                        <constraint firstItem="Arh-Su-FAX" firstAttribute="bottom" secondItem="e7y-Fc-qTH" secondAttribute="bottom" id="D3f-ny-5lB"/>
+                        <constraint firstAttribute="trailing" secondItem="gzu-K8-g6b" secondAttribute="trailing" id="T0e-Wy-ADi"/>
+                        <constraint firstItem="e7y-Fc-qTH" firstAttribute="top" secondItem="AXq-nf-HKW" secondAttribute="top" constant="10" id="TVE-jB-2eW"/>
+                        <constraint firstItem="Arh-Su-FAX" firstAttribute="trailing" secondItem="e7y-Fc-qTH" secondAttribute="trailing" constant="30" id="eHh-Fu-2n8"/>
+                        <constraint firstItem="e7y-Fc-qTH" firstAttribute="centerX" secondItem="AXq-nf-HKW" secondAttribute="centerX" id="fHL-7N-M2b"/>
+                        <constraint firstItem="e7y-Fc-qTH" firstAttribute="width" secondItem="AXq-nf-HKW" secondAttribute="width" multiplier="3/4" id="hoW-UP-KuP"/>
+                        <constraint firstAttribute="bottom" secondItem="gzu-K8-g6b" secondAttribute="bottom" id="oha-Ws-dqN"/>
+                        <constraint firstItem="gzu-K8-g6b" firstAttribute="top" secondItem="e7y-Fc-qTH" secondAttribute="bottom" constant="10" id="omc-qA-83w"/>
+                        <constraint firstItem="Arh-Su-FAX" firstAttribute="leading" secondItem="e7y-Fc-qTH" secondAttribute="leading" constant="-30" id="wQj-EC-RJi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AXq-nf-HKW" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="8/10" id="2YY-fO-SZj"/>
+                <constraint firstItem="AXq-nf-HKW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AYy-f0-wcl"/>
+                <constraint firstItem="AXq-nf-HKW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="X7K-9C-rFq"/>
+            </constraints>
+            <point key="canvasLocation" x="65.625" y="55.985915492957744"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_congrats" width="280" height="39.5"/>
+        <image name="image_congrats" width="203.5" height="187.5"/>
+    </resources>
+</document>

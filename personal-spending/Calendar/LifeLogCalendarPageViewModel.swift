@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftDate
+import CoreData
 
 final class LifeLogCalendarPageViewModel {
 
@@ -19,9 +20,11 @@ final class LifeLogCalendarPageViewModel {
     private(set) var lifeLogHistoriesMonth: [[LifeLogHistory]] = []
     private(set) var dates: [DateInRegion] = [] // Array of the first day in month
     var numberOfApisLoading: Int = 0
+    var dateUsers: [NSManagedObject] = []
 
-    init(currentDate: DateInRegion) {
+    init(currentDate: DateInRegion, dateUsers: [NSManagedObject]) {
         self.currentDate = currentDate
+        self.dateUsers = dateUsers
     }
 
     func viewModelForLifeLogCalendar(pageDirection: UIPageViewController.NavigationDirection?) -> LifeLogCalendarViewModel {
@@ -29,7 +32,7 @@ final class LifeLogCalendarPageViewModel {
         if let pageDirection = pageDirection {
             date = pageDirection == .reverse ? currentDate - 1.month : currentDate + 1.month
         }
-        let viewModel = LifeLogCalendarViewModel(currentDate: date)
+        let viewModel = LifeLogCalendarViewModel(currentDate: date, dateUsers: dateUsers)
         return viewModel
     }
 

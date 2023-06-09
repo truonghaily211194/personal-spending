@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DisplayStampViewController" customModule="CM" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DisplayStampViewController" customModule="personal_spending" customModuleProvider="target">
             <connections>
                 <outlet property="bottomView" destination="pjc-2D-keL" id="GMY-co-rWb"/>
                 <outlet property="closeButton" destination="qhY-FM-OzA" id="nUK-cS-NIt"/>
@@ -14,7 +14,6 @@
                 <outlet property="helpButton" destination="Gnc-bK-Zhr" id="3Bq-9c-ahz"/>
                 <outlet property="loadingIndicator" destination="wVT-L7-77x" id="ThM-Yn-d6v"/>
                 <outlet property="okButton" destination="UDK-3T-DHf" id="M2m-0a-Brp"/>
-                <outlet property="stampTitleImageView" destination="MPw-Z7-fIV" id="4O3-AO-mxl"/>
                 <outlet property="thumImageView" destination="Th8-6m-86Y" id="wRp-eE-F8z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="stampImages" destination="NUM-32-IPN" collectionClass="NSMutableArray" id="9d9-TC-0Qy"/>
@@ -72,22 +71,24 @@
                                         <constraint firstAttribute="width" secondItem="Th8-6m-86Y" secondAttribute="height" multiplier="608:163" id="1HK-OF-QDc"/>
                                     </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accumulate stamps every day and get gifts!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3H-wA-o1v">
+                                    <rect key="frame" x="20" y="37.999999999999993" width="316.33333333333331" height="80.333333333333314"/>
+                                    <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="25"/>
+                                    <color key="textColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="w3H-wA-o1v" firstAttribute="trailing" secondItem="Th8-6m-86Y" secondAttribute="trailing" constant="-20" id="Dql-bv-ihx"/>
+                                <constraint firstAttribute="bottom" secondItem="w3H-wA-o1v" secondAttribute="bottom" constant="5" id="IB3-gg-2bA"/>
+                                <constraint firstItem="w3H-wA-o1v" firstAttribute="top" secondItem="Th8-6m-86Y" secondAttribute="top" constant="10" id="Ibe-kj-WZQ"/>
                                 <constraint firstAttribute="bottom" secondItem="Th8-6m-86Y" secondAttribute="bottom" id="Mb6-AF-xRb"/>
+                                <constraint firstItem="w3H-wA-o1v" firstAttribute="centerX" secondItem="AQ9-0d-Ffz" secondAttribute="centerX" id="YFI-ch-9iI"/>
                                 <constraint firstItem="Th8-6m-86Y" firstAttribute="leading" secondItem="AQ9-0d-Ffz" secondAttribute="leading" id="Zuk-zz-qVl"/>
                                 <constraint firstAttribute="trailing" secondItem="Th8-6m-86Y" secondAttribute="trailing" id="jUI-dF-BwA"/>
                             </constraints>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stamp_title" translatesAutoresizingMaskIntoConstraints="NO" id="MPw-Z7-fIV">
-                            <rect key="frame" x="74.666666666666686" y="40" width="242" height="67"/>
-                            <accessibility key="accessibilityConfiguration" identifier="stapTitle"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="67" id="6RS-Ba-zlW"/>
-                                <constraint firstAttribute="width" constant="242" id="CTK-7h-0SS"/>
-                            </constraints>
-                        </imageView>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="wVT-L7-77x">
                             <rect key="frame" x="175.66666666666666" y="55.666666666666657" width="40" height="40"/>
                             <constraints>
@@ -471,7 +472,6 @@
                         <constraint firstItem="Xbf-qa-UcW" firstAttribute="width" secondItem="NUM-32-IPN" secondAttribute="width" id="9RK-BJ-ZuS"/>
                         <constraint firstItem="AQ9-0d-Ffz" firstAttribute="width" secondItem="TNg-nC-cbV" secondAttribute="width" multiplier="306/336" id="9py-vj-Y0h"/>
                         <constraint firstItem="vk6-UT-RP0" firstAttribute="trailing" secondItem="jd3-CV-TuJ" secondAttribute="trailing" id="Abn-3J-ZEX"/>
-                        <constraint firstItem="MPw-Z7-fIV" firstAttribute="centerY" secondItem="J73-yM-UHZ" secondAttribute="centerY" constant="3" id="Bqx-xx-aTJ"/>
                         <constraint firstItem="P46-ed-Lsr" firstAttribute="leading" secondItem="8mK-UA-hDE" secondAttribute="trailing" id="CRY-xP-QPD"/>
                         <constraint firstItem="LjN-hr-N7a" firstAttribute="bottom" secondItem="vLt-Iy-cIT" secondAttribute="bottom" id="Cfw-rB-ph1"/>
                         <constraint firstItem="Yk1-vT-cfu" firstAttribute="bottom" secondItem="M0g-4h-iwc" secondAttribute="bottom" id="D6W-CO-Jkm"/>
@@ -530,7 +530,6 @@
                         <constraint firstItem="wVT-L7-77x" firstAttribute="centerX" secondItem="Th8-6m-86Y" secondAttribute="centerX" id="exk-e3-yyx"/>
                         <constraint firstItem="8mK-UA-hDE" firstAttribute="leading" secondItem="Z01-OU-EmI" secondAttribute="trailing" id="fN9-Mn-L2A"/>
                         <constraint firstItem="QL5-un-3bg" firstAttribute="leading" secondItem="jd3-CV-TuJ" secondAttribute="leading" id="gJi-es-SuL"/>
-                        <constraint firstItem="MPw-Z7-fIV" firstAttribute="centerX" secondItem="TNg-nC-cbV" secondAttribute="centerX" id="gWz-RA-HvM"/>
                         <constraint firstItem="M0g-4h-iwc" firstAttribute="trailing" secondItem="Z01-OU-EmI" secondAttribute="trailing" id="gZh-yv-uby"/>
                         <constraint firstItem="ttX-ZT-7F8" firstAttribute="top" secondItem="Z01-OU-EmI" secondAttribute="bottom" id="gki-p2-MVw"/>
                         <constraint firstItem="E02-Im-GcK" firstAttribute="top" secondItem="ttX-ZT-7F8" secondAttribute="top" id="hJV-66-VUS"/>
@@ -664,6 +663,5 @@
         <image name="stamp_close_button" width="16" height="16"/>
         <image name="stamp_help" width="22.5" height="19.5"/>
         <image name="stamp_screen" width="335.5" height="428.5"/>
-        <image name="stamp_title" width="242" height="67"/>
     </resources>
 </document>

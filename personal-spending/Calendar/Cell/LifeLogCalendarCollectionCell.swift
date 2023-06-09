@@ -49,8 +49,8 @@ final class LifeLogCalendarCollectionCell: UICollectionViewCell {
                 dateTitleLabel.font = UIFont.boldSystemFont(ofSize: 13)
                 dateTitleLabel.textColor = Color.Text.placeholder
             }
-
-            if true {
+            guard let viewModel = viewModel else { return }
+            if viewModel.didGetStamp {
                 contentView.layer.borderColor = LifeLogCalendarViewModel.ScoreLevel.from1To49.color?.cgColor ?? .none
             } else {
                 contentView.layer.borderColor = UIColor.clear.cgColor

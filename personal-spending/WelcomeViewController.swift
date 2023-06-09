@@ -18,6 +18,7 @@ class WelcomeViewController: UIViewController {
 
     let date = App.region.today().toString(.date)
     var users: [NSManagedObject] = []
+    var goldClearLogo = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +41,28 @@ class WelcomeViewController: UIViewController {
             object: nil)
         setUserDefaultShowStamp()
         getDateUser()
+        setupUILogo()
     }
 
     @IBAction func tapFacebook(_ sender: Any) {
-        addDateUser(dateString: App.region.today().toString(.date))
-        showStampPopup(nil, stamp: 20, dailyStamp: 1, animation: true) {
-            print("aaaa")
+        let standard = UserDefaults.standard
+        goldClearLogo = standard.integer(forKey: ExtenStrings.kClearLogo)
+        if standard.string(forKey: ExtenStrings.kDateToDay) == date {
+            addDateUser(dateString: App.region.today().toString(.date))
+            standard.set(date, forKey: ExtenStrings.kDateToDay)
+            let stamp = standard.integer(forKey: ExtenStrings.kStampToDate)
+            standard.set(stamp + 1, forKey: ExtenStrings.kStampToDate)
+            showStampPopup(nil, stamp: stamp + 1, dailyStamp: 1, animation: true) {
+                if stamp + 1 == 4 {
+                    standard.set(0, forKey: ExtenStrings.kStampToDate)
+                    standard.set(self.goldClearLogo + 1, forKey: ExtenStrings.kClearLogo)
+                    self.goldClearLogo = self.goldClearLogo + 1
+                    self.setupUILogo()
+                    let vc = PopupCongratsActionViewController()
+                    vc.delegate = self
+                    self.present(vc, animated: true)
+                }
+            }
         }
     }
 
@@ -54,6 +71,19 @@ class WelcomeViewController: UIViewController {
         let user = users[0]
         let dateString = (user.value(forKey: "date") as? String) ?? ""
         print("----date: \(dateString)")
+    }
+    
+    func setupUILogo() {
+        if goldClearLogo == 1 {
+            goldImage1.image = UIImage(named: "icon_gold_medal")
+        } else if goldClearLogo == 2 {
+            goldImage1.image = UIImage(named: "icon_gold_medal")
+            goldImage2.image = UIImage(named: "icon_gold_medal")
+        } else if goldClearLogo == 3 {
+            goldImage1.image = UIImage(named: "icon_gold_medal")
+            goldImage2.image = UIImage(named: "icon_gold_medal")
+            goldImage3.image = UIImage(named: "icon_gold_medal")
+        }
     }
     
     func getDateUser() {
@@ -85,11 +115,23 @@ class WelcomeViewController: UIViewController {
 
     func setUserDefaultShowStamp() {
         let standard = UserDefaults.standard
+        goldClearLogo = standard.integer(forKey: ExtenStrings.kClearLogo)
         if standard.string(forKey: ExtenStrings.kDateToDay) != date {
+            addDateUser(dateString: App.region.today().toString(.date))
             standard.set(date, forKey: ExtenStrings.kDateToDay)
             let stamp = standard.integer(forKey: ExtenStrings.kStampToDate)
             standard.set(stamp + 1, forKey: ExtenStrings.kStampToDate)
-            showStampPopup(nil, stamp: stamp + 1, dailyStamp: 1, animation: true) { }
+            showStampPopup(nil, stamp: stamp + 1, dailyStamp: 1, animation: true) {
+                if stamp + 1 == 20 {
+                    standard.set(0, forKey: ExtenStrings.kStampToDate)
+                    standard.set(self.goldClearLogo + 1, forKey: ExtenStrings.kClearLogo)
+                    self.goldClearLogo = self.goldClearLogo + 1
+                    self.setupUILogo()
+                    let vc = PopupCongratsActionViewController()
+                    vc.delegate = self
+                    self.present(vc, animated: true)
+                }
+            }
         }
     }
 
@@ -181,7 +223,7 @@ class WelcomeViewController: UIViewController {
         updateNavigationItem(isShowingCalendar: true)
 
         let vc = LifeLogCalendarPageViewController.vc()
-        vc.viewModel = LifeLogCalendarPageViewModel(currentDate: App.region.today())
+        vc.viewModel = LifeLogCalendarPageViewModel(currentDate: App.region.today(), dateUsers: users)
         vc.view.frame = CGRect(x: self.view.bounds.origin.x, y: -self.view.bounds.size.height, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
         addChild(vc)
         view.addSubview(vc.view)
@@ -202,5 +244,14 @@ class WelcomeViewController: UIViewController {
                 }, completion: nil)
             })
     }
+}
 
+extension WelcomeViewController: PopupCongratsActionViewControllerDelegate {
+    func controller(_ controller: PopupCongratsActionViewController, needPerform action: PopupCongratsActionViewController.Action) {
+        if goldClearLogo == 3 {
+            UserDefaults.standard.set(0, forKey: ExtenStrings.kClearLogo)
+            let vc = PopupEnoughClearViewController()
+            present(vc, animated: true)
+        }
+    }
 }

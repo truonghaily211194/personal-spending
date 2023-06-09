@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupEnoughClearViewController" customModule="personal_spending" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="37R-Pt-mtz" id="SqO-SI-TUE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37R-Pt-mtz">
+                    <rect key="frame" x="30" y="241" width="333" height="370"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_congrats" translatesAutoresizingMaskIntoConstraints="NO" id="Snx-XI-gq7">
+                            <rect key="frame" x="0.0" y="0.0" width="333" height="370"/>
+                        </imageView>
+                        <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEH-wQ-ylG">
+                            <rect key="frame" x="0.0" y="0.0" width="333" height="370"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMF-vf-c9k">
+                                    <rect key="frame" x="30" y="300" width="273" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="YK3-8l-m3t"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="tintColor" name="AccentColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="No need to contact" backgroundImage="btn_congrats"/>
+                                    <connections>
+                                        <action selector="doNotContact:" destination="-1" eventType="touchUpInside" id="1uB-ZT-9W3"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="YMF-vf-c9k" secondAttribute="trailing" constant="30" id="91S-QH-8p2"/>
+                                <constraint firstItem="YMF-vf-c9k" firstAttribute="leading" secondItem="kEH-wQ-ylG" secondAttribute="leading" constant="30" id="bb3-Y8-nOb"/>
+                                <constraint firstAttribute="bottom" secondItem="YMF-vf-c9k" secondAttribute="bottom" constant="20" id="fRQ-wP-ReC"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-facebook" translatesAutoresizingMaskIntoConstraints="NO" id="8eY-th-DjP">
+                            <rect key="frame" x="76.666666666666671" y="138.33333333333331" width="80.000000000000014" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="vZ0-iv-HZf"/>
+                                <constraint firstAttribute="width" constant="80" id="ywp-fK-7FU"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMt-Dq-8v3">
+                            <rect key="frame" x="10" y="19.999999999999993" width="313" height="88.333333333333314"/>
+                            <string key="text">Congratulations on getting all 3 goals.
+Please contact me to receive gifts!!!</string>
+                            <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Facebook or Mail." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nP-Ab-l4x">
+                            <rect key="frame" x="20" y="233.33333333333331" width="293" height="19"/>
+                            <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz1-Tl-3eJ">
+                            <rect key="frame" x="76.666666666666671" y="138.33333333333331" width="80.000000000000014" height="80"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="contactFB:" destination="-1" eventType="touchUpInside" id="6Mw-rY-MSR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfJ-VH-hZb">
+                            <rect key="frame" x="176.66666666666666" y="138.33333333333331" width="79.999999999999972" height="80"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="contactEmail:" destination="-1" eventType="touchUpInside" id="uYR-jX-lA5"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-gmail" translatesAutoresizingMaskIntoConstraints="NO" id="q5x-48-w4z">
+                            <rect key="frame" x="176.66666666666666" y="138.33333333333331" width="79.999999999999972" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="Ibl-Ng-uwf"/>
+                                <constraint firstAttribute="width" constant="80" id="xNM-kj-Qgf"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" name="parts_sectionHeader"/>
+                    <constraints>
+                        <constraint firstItem="oz1-Tl-3eJ" firstAttribute="trailing" secondItem="8eY-th-DjP" secondAttribute="trailing" id="4ar-aQ-s2J"/>
+                        <constraint firstItem="oz1-Tl-3eJ" firstAttribute="top" secondItem="8eY-th-DjP" secondAttribute="top" id="6k2-b6-9Nf"/>
+                        <constraint firstAttribute="bottom" secondItem="kEH-wQ-ylG" secondAttribute="bottom" id="8kA-QE-3Dm"/>
+                        <constraint firstItem="dfJ-VH-hZb" firstAttribute="bottom" secondItem="q5x-48-w4z" secondAttribute="bottom" id="8th-2g-FgE"/>
+                        <constraint firstAttribute="trailing" secondItem="8nP-Ab-l4x" secondAttribute="trailing" constant="20" id="9Ug-2v-KZt"/>
+                        <constraint firstAttribute="trailing" secondItem="Snx-XI-gq7" secondAttribute="trailing" id="B1W-xU-Kiz"/>
+                        <constraint firstItem="Snx-XI-gq7" firstAttribute="leading" secondItem="37R-Pt-mtz" secondAttribute="leading" id="BVA-a1-YEq"/>
+                        <constraint firstItem="q5x-48-w4z" firstAttribute="top" secondItem="cMt-Dq-8v3" secondAttribute="bottom" constant="30" id="Bhy-0L-LEr"/>
+                        <constraint firstItem="cMt-Dq-8v3" firstAttribute="leading" secondItem="37R-Pt-mtz" secondAttribute="leading" constant="10" id="Hsi-l1-Gw3"/>
+                        <constraint firstAttribute="trailing" secondItem="kEH-wQ-ylG" secondAttribute="trailing" id="HuS-jf-IHu"/>
+                        <constraint firstAttribute="bottom" secondItem="Snx-XI-gq7" secondAttribute="bottom" id="I9N-qY-g9L"/>
+                        <constraint firstItem="q5x-48-w4z" firstAttribute="centerX" secondItem="37R-Pt-mtz" secondAttribute="centerX" constant="50" id="LbI-6e-gHs"/>
+                        <constraint firstItem="dfJ-VH-hZb" firstAttribute="trailing" secondItem="q5x-48-w4z" secondAttribute="trailing" id="NoI-fF-jZL"/>
+                        <constraint firstItem="8eY-th-DjP" firstAttribute="centerX" secondItem="37R-Pt-mtz" secondAttribute="centerX" constant="-50" id="Pnb-2h-xDx"/>
+                        <constraint firstItem="Snx-XI-gq7" firstAttribute="top" secondItem="37R-Pt-mtz" secondAttribute="top" id="QvM-0f-C4v"/>
+                        <constraint firstItem="dfJ-VH-hZb" firstAttribute="leading" secondItem="q5x-48-w4z" secondAttribute="leading" id="Vqz-tg-A0w"/>
+                        <constraint firstItem="dfJ-VH-hZb" firstAttribute="top" secondItem="q5x-48-w4z" secondAttribute="top" id="Won-2Y-kVl"/>
+                        <constraint firstAttribute="trailing" secondItem="cMt-Dq-8v3" secondAttribute="trailing" constant="10" id="aJO-e3-pqD"/>
+                        <constraint firstItem="8nP-Ab-l4x" firstAttribute="top" secondItem="cMt-Dq-8v3" secondAttribute="bottom" constant="125" id="eaU-9d-BzA"/>
+                        <constraint firstAttribute="width" secondItem="37R-Pt-mtz" secondAttribute="height" multiplier="9:10" id="ef1-LG-pQl"/>
+                        <constraint firstItem="kEH-wQ-ylG" firstAttribute="leading" secondItem="37R-Pt-mtz" secondAttribute="leading" id="hlh-kS-5yU"/>
+                        <constraint firstItem="oz1-Tl-3eJ" firstAttribute="bottom" secondItem="8eY-th-DjP" secondAttribute="bottom" id="hyB-KR-w6h"/>
+                        <constraint firstItem="oz1-Tl-3eJ" firstAttribute="leading" secondItem="8eY-th-DjP" secondAttribute="leading" id="ip4-MO-y5e"/>
+                        <constraint firstItem="cMt-Dq-8v3" firstAttribute="top" secondItem="37R-Pt-mtz" secondAttribute="top" constant="20" id="lmu-3H-Gao"/>
+                        <constraint firstItem="kEH-wQ-ylG" firstAttribute="top" secondItem="37R-Pt-mtz" secondAttribute="top" id="rWi-Q2-bnO"/>
+                        <constraint firstItem="8nP-Ab-l4x" firstAttribute="leading" secondItem="37R-Pt-mtz" secondAttribute="leading" constant="20" id="wVP-T3-Y3D"/>
+                        <constraint firstItem="8eY-th-DjP" firstAttribute="top" secondItem="cMt-Dq-8v3" secondAttribute="bottom" constant="30" id="yCv-Vz-7bJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
+            <constraints>
+                <constraint firstItem="37R-Pt-mtz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="FQh-Dl-OLg"/>
+                <constraint firstItem="37R-Pt-mtz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eg2-gJ-b2d"/>
+                <constraint firstItem="37R-Pt-mtz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lRz-Yp-pPP"/>
+            </constraints>
+            <point key="canvasLocation" x="26.717557251908396" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_congrats" width="280" height="39.5"/>
+        <image name="icons8-facebook" width="48" height="48"/>
+        <image name="icons8-gmail" width="32" height="32"/>
+        <image name="image_congrats" width="203.5" height="187.5"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="parts_sectionHeader">
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

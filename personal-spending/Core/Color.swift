@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 final class Color {
+    static let overlay = UIColor.RGB(0, 0, 0, 0.6)
     struct Calendar {
         static let firstBorderLevelScore = UIColor(named: "firstBorderLevelScore")
         static let secondBorderLevelScore = UIColor(named: "secondBorderLevelScore")

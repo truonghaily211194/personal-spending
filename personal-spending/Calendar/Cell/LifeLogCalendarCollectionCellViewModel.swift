@@ -11,8 +11,10 @@ import SwiftDate
 final class LifeLogCalendarCollectionCellViewModel {
 
     var dateItem: LifeLogCalendarViewModel.DateItem?
+    var didGetStamp: Bool
 
-    init(dateItem: LifeLogCalendarViewModel.DateItem) {
+    init(dateItem: LifeLogCalendarViewModel.DateItem, didGetStamp: Bool) {
         self.dateItem = dateItem
+        self.didGetStamp = didGetStamp
     }
 }

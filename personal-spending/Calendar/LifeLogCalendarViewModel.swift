@@ -8,6 +8,7 @@
 
 import SwiftDate
 import SwiftUtils
+import CoreData
 
 final class LifeLogCalendarViewModel {
 
@@ -98,9 +99,11 @@ final class LifeLogCalendarViewModel {
     var dateSelect = App.region.today()
     var indexDateSelect = 0
     var isDateSelect = false
+    var dateUsers: [NSManagedObject] = []
 
-    init(currentDate: DateInRegion) {
+    init(currentDate: DateInRegion, dateUsers: [NSManagedObject]) {
         self.currentDate = currentDate
+        self.dateUsers = dateUsers
     }
 
     fileprivate func handleShowDateSelect() {
@@ -193,6 +196,20 @@ final class LifeLogCalendarViewModel {
         let currentMonth = App.region.today().month
         let currentYear = App.region.today().year
         return currentDate.month == currentMonth && currentDate.year == currentYear
+    }
+    
+    func isDidGetStamps(indexPath: IndexPath) -> Bool {
+        let user = dateUsers[0]
+        let dateString = (user.value(forKey: "date") as? String) ?? ""
+        print("----date: \(dateString)")
+        let dateItemString = dateItems[indexPath.row].date?.toString(.date)
+        for index in 0..<dateUsers.count {
+            let dateString = dateUsers[index].value(forKey: "date") as? String ?? ""
+            if dateString == dateItemString {
+                return true
+            }
+        }
+        return false
     }
 }
 

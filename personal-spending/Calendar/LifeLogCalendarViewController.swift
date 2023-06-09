@@ -88,7 +88,7 @@ extension LifeLogCalendarViewController: UICollectionViewDelegate, UICollectionV
         guard let viewModel = viewModel else { return UICollectionViewCell() }
         let cell = collectionView.dequeue(LifeLogCalendarCollectionCell.self, forIndexPath: indexPath)
         let dateItem = viewModel.dateItems[indexPath.row]
-        let cellViewModel = LifeLogCalendarCollectionCellViewModel(dateItem: dateItem)
+        let cellViewModel = LifeLogCalendarCollectionCellViewModel(dateItem: dateItem, didGetStamp: viewModel.isDidGetStamps(indexPath: indexPath))
         cell.viewModel = cellViewModel
         return cell
     }

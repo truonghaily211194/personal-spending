@@ -16,7 +16,6 @@ class DisplayStampViewController: UIViewController {
     typealias closeClosure = () -> Void
 
     @IBOutlet fileprivate weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet fileprivate weak var stampTitleImageView: UIImageView!
     @IBOutlet fileprivate weak var thumImageView: UIImageView!
     @IBOutlet fileprivate weak var closeButton: UIButton!
     @IBOutlet fileprivate weak var helpButton: UIButton!
@@ -120,10 +119,8 @@ class DisplayStampViewController: UIViewController {
     fileprivate func setUpHeaderImage() {
         if let thumImage = thumImage {
             thumImageView.image = thumImage
-            stampTitleImageView.isHidden = true
         } else {
-            thumImageView.image = UIImage(named: "stamp_screen_thum")
-            stampTitleImageView.isHidden = false
+            thumImageView.image = UIImage(named: "banner")
         }
     }
 
@@ -132,7 +129,7 @@ class DisplayStampViewController: UIViewController {
         for i in 0 ..< 20 {
             if i < stamp {
                 if i == 19 {
-                    stampImages[i].image = UIImage(named: "stamp_get_stamp_20")
+                    stampImages[i].image = UIImage(named: "icons8-handshake")
                 } else {
                     stampImages[i].image = UIImage(named: "stamp_face")
                 }
@@ -161,7 +158,7 @@ class DisplayStampViewController: UIViewController {
                 }, completion: { (_) in
                         stampImageView.transform = stampImageView.transform.rotated(by: transformRotate)
                         if index == 19 {
-                            stampImageView.image = UIImage(named: "stamp_get_stamp_20")
+                            stampImageView.image = UIImage(named: "icons8-handshake")
                             if let superView = stampImageView.superview {
                                 stampImageView.frame = superView.bounds
                             }

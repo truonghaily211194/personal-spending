@@ -10,5 +10,6 @@ import Foundation
 class ExtenStrings {
     static let kDateToDay = "kDateToDay"
     static let kStampToDate = "kStampToDate"
+    static let kClearLogo = "kClearLogo"
     static let descriptions: [String] = ["That lucrative promotion, amazing perks, big assignment, money-spinning deal and massively rewarding project will be all yours, on one condition – wake up, smile and give it everything you’ve got. Good morning."]
 }
