@@ -47,14 +47,8 @@ class DisplayStampViewController: UIViewController {
 
         providesPresentationContextTransitionStyle = true
         definesPresentationContext = true
-        modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        modalPresentationStyle = UIModalPresentationStyle.overFullScreen
         modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(DisplayStampViewController.getStamp),
-//            name: NSNotification.Name(rawValue: kNeedReloadStamp),
-//            object: nil)
 
         if isAnimation {
             setUpAnimation()

@@ -59,6 +59,8 @@ class WelcomeViewController: UIViewController {
                     self.goldClearLogo = self.goldClearLogo + 1
                     self.setupUILogo()
                     let vc = PopupCongratsActionViewController()
+                    vc.modalPresentationStyle = .overFullScreen
+                    vc.modalTransitionStyle = .crossDissolve
                     vc.delegate = self
                     self.present(vc, animated: true)
                 }
@@ -128,6 +130,8 @@ class WelcomeViewController: UIViewController {
                     self.goldClearLogo = self.goldClearLogo + 1
                     self.setupUILogo()
                     let vc = PopupCongratsActionViewController()
+                    vc.modalPresentationStyle = .overFullScreen
+                    vc.modalTransitionStyle = .crossDissolve
                     vc.delegate = self
                     self.present(vc, animated: true)
                 }
@@ -140,6 +144,8 @@ class WelcomeViewController: UIViewController {
         vc.totalStamp = stamp
         vc.isAnimation = animation
         vc.thumImage = thumImage
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
         vc.setCloseClosure({
             complete()
         })
@@ -251,6 +257,8 @@ extension WelcomeViewController: PopupCongratsActionViewControllerDelegate {
         if goldClearLogo == 3 {
             UserDefaults.standard.set(0, forKey: ExtenStrings.kClearLogo)
             let vc = PopupEnoughClearViewController()
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
             present(vc, animated: true)
         }
     }
