@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoreData
+import SwiftUtils
 
 class WelcomeViewController: UIViewController {
     @IBOutlet weak var goldImage1: UIImageView!
@@ -13,11 +15,13 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var goldImage3: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+
+    let date = App.region.today().toString(.date)
+    var users: [NSManagedObject] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionLabel.text = ExtenStrings.descriptions.first
-
         if #available(iOS 15.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithDefaultBackground()
@@ -34,17 +38,61 @@ class WelcomeViewController: UIViewController {
             selector: #selector(closeLifeLogCalendar),
             name: NSNotification.Name(rawValue: kCloseLifeLogCalendar),
             object: nil)
+        setUserDefaultShowStamp()
+        getDateUser()
     }
 
     @IBAction func tapFacebook(_ sender: Any) {
-        showStampPopup(nil, stamp: 21, dailyStamp: 1, animation: true) {
+        addDateUser(dateString: App.region.today().toString(.date))
+        showStampPopup(nil, stamp: 20, dailyStamp: 1, animation: true) {
             print("aaaa")
         }
     }
 
     @IBAction func tapEmail(_ sender: Any) {
+        print("-----\(users)")
+        let user = users[0]
+        let dateString = (user.value(forKey: "date") as? String) ?? ""
+        print("----date: \(dateString)")
     }
     
+    func getDateUser() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DateUser")
+        do {
+          users = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+
+    func addDateUser(dateString: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "DateUser", in: managedContext)!
+        let user = NSManagedObject(entity: entity, insertInto: managedContext)
+        user.setValue(dateString, forKey: "date")
+        do {
+            try managedContext.save()
+            users.append(user)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+
+    func setUserDefaultShowStamp() {
+        let standard = UserDefaults.standard
+        if standard.string(forKey: ExtenStrings.kDateToDay) != date {
+            standard.set(date, forKey: ExtenStrings.kDateToDay)
+            let stamp = standard.integer(forKey: ExtenStrings.kStampToDate)
+            standard.set(stamp + 1, forKey: ExtenStrings.kStampToDate)
+            showStampPopup(nil, stamp: stamp + 1, dailyStamp: 1, animation: true) { }
+        }
+    }
+
     fileprivate func showStampPopup(_ thumImage: UIImage?, stamp: Int, dailyStamp: Int, animation: Bool, complete: @escaping () -> Void) {
         let vc = DisplayStampViewController()
         vc.totalStamp = stamp
@@ -55,7 +103,7 @@ class WelcomeViewController: UIViewController {
         })
         navigationController?.present(vc, animated: animation, completion: nil)
     }
-    
+
     private func updateNavigationItem(isShowingCalendar: Bool) {
         if !isShowingCalendar {
             title = "Home"
@@ -67,7 +115,7 @@ class WelcomeViewController: UIViewController {
             customCloseButton()
         }
     }
-    
+
     private func customCloseButton() {
         let button = UIButton()
         button.addTarget(self, action: #selector(closeLifeLogCalendar(_:)), for: .touchUpInside)
@@ -79,14 +127,14 @@ class WelcomeViewController: UIViewController {
         let item = UIBarButtonItem(customView: button)
         navigationItem.leftBarButtonItem = item
     }
-    
+
     private func customBackButton() {
         let backButton = customBackItemBlue(atTarget: self, selector: #selector(back(_:)))
         backButton.accessibilityIdentifier = "btnBack"
         navigationItem.leftBarButtonItem = backButton
     }
-    
-    func customBackItemBlue(atTarget target: Any?, selector: Selector, stringBack: String =  "back") -> UIBarButtonItem {
+
+    func customBackItemBlue(atTarget target: Any?, selector: Selector, stringBack: String = "back") -> UIBarButtonItem {
         let button = UIButton()
         button.accessibilityIdentifier = "btnBack"
         button.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.buttonFontSize)
@@ -101,11 +149,11 @@ class WelcomeViewController: UIViewController {
         button.sizeToFit()
         return UIBarButtonItem(customView: button)
     }
-    
+
     @objc func back(_ sender: Any?) {
         dismiss(animated: true, completion: nil)
     }
-    
+
     @objc private func closeLifeLogCalendar(_ sender: Any?) {
         updateNavigationItem(isShowingCalendar: false)
 
@@ -128,7 +176,7 @@ class WelcomeViewController: UIViewController {
         let item = UIBarButtonItem(customView: button)
         navigationItem.rightBarButtonItem = item
     }
-    
+
     @objc private func showLifeLogCalendar(_ sender: Any?) {
         updateNavigationItem(isShowingCalendar: true)
 
@@ -154,5 +202,5 @@ class WelcomeViewController: UIViewController {
                 }, completion: nil)
             })
     }
-    
+
 }

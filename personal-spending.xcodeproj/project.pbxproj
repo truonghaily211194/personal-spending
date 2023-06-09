@@ -43,8 +43,6 @@
 		C7C989962A1F6464009AACB1 /* LifeLogCalendarCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9898A2A1F6464009AACB1 /* LifeLogCalendarCollectionCellViewModel.swift */; };
 		C7C989972A1F6464009AACB1 /* LifeLogCalendarCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9898B2A1F6464009AACB1 /* LifeLogCalendarCollectionCell.swift */; };
 		C7C989982A1F6464009AACB1 /* LifeLogCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C9898C2A1F6464009AACB1 /* LifeLogCalendarViewController.xib */; };
-		C7C989992A1F6464009AACB1 /* LifeLogCalendarWeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9898E2A1F6464009AACB1 /* LifeLogCalendarWeekdayView.swift */; };
-		C7C9899A2A1F6464009AACB1 /* LifeLogCalendarWeekdayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C9898F2A1F6464009AACB1 /* LifeLogCalendarWeekdayView.xib */; };
 		C7C9899B2A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C989902A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift */; };
 		C7C9899C2A1F6464009AACB1 /* LifeLogCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C989912A1F6464009AACB1 /* LifeLogCalendarViewController.swift */; };
 		C7C9899E2A1F65DC009AACB1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9899D2A1F65DC009AACB1 /* Color.swift */; };
@@ -113,8 +111,6 @@
 		C7C9898A2A1F6464009AACB1 /* LifeLogCalendarCollectionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeLogCalendarCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		C7C9898B2A1F6464009AACB1 /* LifeLogCalendarCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeLogCalendarCollectionCell.swift; sourceTree = "<group>"; };
 		C7C9898C2A1F6464009AACB1 /* LifeLogCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeLogCalendarViewController.xib; sourceTree = "<group>"; };
-		C7C9898E2A1F6464009AACB1 /* LifeLogCalendarWeekdayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeLogCalendarWeekdayView.swift; sourceTree = "<group>"; };
-		C7C9898F2A1F6464009AACB1 /* LifeLogCalendarWeekdayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeLogCalendarWeekdayView.xib; sourceTree = "<group>"; };
 		C7C989902A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeLogCalendarPageViewModel.swift; sourceTree = "<group>"; };
 		C7C989912A1F6464009AACB1 /* LifeLogCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeLogCalendarViewController.swift; sourceTree = "<group>"; };
 		C7C9899D2A1F65DC009AACB1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -307,8 +303,6 @@
 		C7C9898D2A1F6464009AACB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C7C9898E2A1F6464009AACB1 /* LifeLogCalendarWeekdayView.swift */,
-				C7C9898F2A1F6464009AACB1 /* LifeLogCalendarWeekdayView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,7 +428,6 @@
 				C7C988F72A1F06E6009AACB1 /* HomeViewController.xib in Resources */,
 				C7A9D7A62A272D15005140F7 /* TestCoreDataViewController.xib in Resources */,
 				C7C989982A1F6464009AACB1 /* LifeLogCalendarViewController.xib in Resources */,
-				C7C9899A2A1F6464009AACB1 /* LifeLogCalendarWeekdayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +573,6 @@
 				C7C989712A1F1BD5009AACB1 /* App.swift in Sources */,
 				C7C988F62A1F06E6009AACB1 /* HomeViewController.swift in Sources */,
 				C7A9D7A52A272D15005140F7 /* TestCoreDataViewController.swift in Sources */,
-				C7C989992A1F6464009AACB1 /* LifeLogCalendarWeekdayView.swift in Sources */,
 				C7A9D7AF2A287688005140F7 /* DisplayStampViewController.swift in Sources */,
 				C7C9899B2A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift in Sources */,
 				C7C989962A1F6464009AACB1 /* LifeLogCalendarCollectionCellViewModel.swift in Sources */,

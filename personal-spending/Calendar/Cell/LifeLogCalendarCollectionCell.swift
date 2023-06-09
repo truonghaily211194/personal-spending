@@ -50,13 +50,8 @@ final class LifeLogCalendarCollectionCell: UICollectionViewCell {
                 dateTitleLabel.textColor = Color.Text.placeholder
             }
 
-            if let mealStatus = dateItem.mealStatus {
-                switch mealStatus {
-                case .notInput:
-                    contentView.layer.borderColor = UIColor.clear.cgColor
-                case .input(let kcalLevel):
-                    contentView.layer.borderColor = kcalLevel.color?.cgColor ?? .none
-                }
+            if true {
+                contentView.layer.borderColor = LifeLogCalendarViewModel.ScoreLevel.from1To49.color?.cgColor ?? .none
             } else {
                 contentView.layer.borderColor = UIColor.clear.cgColor
             }

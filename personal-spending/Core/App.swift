@@ -17,6 +17,7 @@ final class App {
     static let name = "カロママ"
     static let code = "CM"
     static let region: Region = Region(tz: TimeZoneName.asiaTokyo, cal: CalendarName.gregorian, loc: LocaleName.japanese)
+    static let regionEng: Region = Region(tz: TimeZoneName.asiaTokyo, cal: .gregorian, loc: LocaleName.english)
 }
 
 extension UIColor {

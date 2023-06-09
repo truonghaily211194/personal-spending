@@ -61,28 +61,28 @@ class TestCoreDataViewController: UIViewController {
         }
         let vc = DisplayStampViewController()
         navigationController?.present(vc, animated: true)
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-//
-//                let managedContext = appDelegate.persistentContainer.viewContext
-//                let fetchRequest: NSFetchRequest<DataUser> = DataUser.fetchRequest()
-//                let entity = NSEntityDescription.entity(forEntityName: "DataUser", in: managedContext)!
-//                let user = NSManagedObject(entity: entity, insertInto: managedContext)
-//                fetchRequest.predicate = NSPredicate(format:"money == 3000")
-//                print("")
-//
-//                money += 1000
-//                user.setValue("test category", forKey: "category")
-//                user.setValue("test info", forKey: "info")
-//                user.setValue("test descriptionInfo", forKey: "descriptionInfo")
-//                user.setValue(money, forKey: "money")
-//
-//                do {
-//                  try managedContext.save()
-//                    users.append(user)
-//                    tableView.reloadData()
-//                } catch let error as NSError {
-//                  print("Could not save. \(error), \(error.userInfo)")
-//                }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+
+                let managedContext = appDelegate.persistentContainer.viewContext
+                let fetchRequest: NSFetchRequest<DataUser> = DataUser.fetchRequest()
+                let entity = NSEntityDescription.entity(forEntityName: "DataUser", in: managedContext)!
+                let user = NSManagedObject(entity: entity, insertInto: managedContext)
+                fetchRequest.predicate = NSPredicate(format:"money == 3000")
+                print("")
+
+                money += 1000
+                user.setValue("test category", forKey: "category")
+                user.setValue("test info", forKey: "info")
+                user.setValue("test descriptionInfo", forKey: "descriptionInfo")
+                user.setValue(money, forKey: "money")
+
+                do {
+                  try managedContext.save()
+                    users.append(user)
+                    tableView.reloadData()
+                } catch let error as NSError {
+                  print("Could not save. \(error), \(error.userInfo)")
+                }
     }
 }
 

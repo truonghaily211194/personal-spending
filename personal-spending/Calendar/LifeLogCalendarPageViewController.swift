@@ -30,18 +30,8 @@ final class LifeLogCalendarPageViewController: ViewController {
 
     private lazy var titleDateFormatter: DateFormatter = {
         let fmt = DateFormatter()
-    #if RENA
-        if RNLocalization.shared.isJapanOrNotChooseLanguage {
-            fmt.setRegion(region: App.region)
-            fmt.setLocalizedDateFormatFromTemplate("yMMM")
-        } else {
             fmt.setRegion(region: App.regionEng)
             fmt.setLocalizedDateFormatFromTemplate("yMMM")
-        }
-    #else
-        fmt.setRegion(region: App.region)
-        fmt.setLocalizedDateFormatFromTemplate("yMMM")
-    #endif
         return fmt
     }()
 

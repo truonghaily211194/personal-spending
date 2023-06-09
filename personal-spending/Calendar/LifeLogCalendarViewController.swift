@@ -29,7 +29,6 @@ final class LifeLogCalendarViewController: UIViewController {
     // MARK: - Life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupIdentifier()
         setupCollectionView()
         setupData()
         getHealthScores()
@@ -44,12 +43,6 @@ final class LifeLogCalendarViewController: UIViewController {
         super.viewDidAppear(true)
         guard let viewModel = viewModel else { return }
         delegate?.controller(self, needPerform: .updateCalendar(height: viewModel.heightCalendar()))
-    }
-
-    // MARK: - Private
-    private func setupIdentifier() {
-        weekdayContainerView.accessibilityIdentifier = "containerViewWeekday"
-        collectionView.accessibilityIdentifier = "containerViewCalendar"
     }
 
     private func setupCollectionView() {
@@ -76,19 +69,6 @@ final class LifeLogCalendarViewController: UIViewController {
     }
 
     private func getHealthScores() {
-//        guard let viewModel = viewModel else { return }
-//        hud.show()
-//        viewModel.getHealthScores { [weak self] result in
-//            hud.dismiss()
-//            guard let this = self else { return }
-//            switch result {
-//            case .success:
-//                viewModel.reloadMealStatus()
-//                this.collectionView.reloadData()
-//            case .failure(let error):
-//                AlertController.alertWithError(error).present()
-//            }
-//        }
     }
 }
 
