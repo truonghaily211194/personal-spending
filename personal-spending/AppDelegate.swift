@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc = WelcomeViewController()
         let navi = UINavigationController(rootViewController: vc)
 //        let vc = LifeLogHistoryController.vc()
-        window?.rootViewController = navi
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
         return true
     }

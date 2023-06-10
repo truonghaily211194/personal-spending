@@ -8,8 +8,12 @@
 import UIKit
 import CoreData
 import SwiftUtils
+import MessageUI
 
-class WelcomeViewController: UIViewController {
+protocol MailDelegate: MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
+}
+
+class WelcomeViewController: UIViewController, MailDelegate {
     @IBOutlet weak var goldImage1: UIImageView!
     @IBOutlet weak var goldImage2: UIImageView!
     @IBOutlet weak var goldImage3: UIImageView!
@@ -19,29 +23,34 @@ class WelcomeViewController: UIViewController {
     let date = App.region.today().toString(.date)
     var users: [NSManagedObject] = []
     var goldClearLogo = 0
+    var isShowingCalendar = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionLabel.text = ExtenStrings.descriptions.first
-        if #available(iOS 15.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithDefaultBackground()
-            appearance.shadowColor = .clear
-            appearance.backgroundColor = UIColor.RGB(246, 246, 246)
-            navigationController?.navigationBar.standardAppearance = appearance
-            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
-        } else {
-            navigationController?.navigationBar.barTintColor = UIColor.RGB(246, 246, 246)
-        }
-        updateNavigationItem(isShowingCalendar: false)
+//        if #available(iOS 15.0, *) {
+//            let appearance = UINavigationBarAppearance()
+//            appearance.configureWithDefaultBackground()
+//            appearance.shadowColor = .clear
+//            appearance.backgroundColor = UIColor.RGB(246, 246, 246)
+//            navigationController?.navigationBar.standardAppearance = appearance
+//            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+//        } else {
+//            navigationController?.navigationBar.barTintColor = UIColor.RGB(246, 246, 246)
+//        }
+//        updateNavigationItem(isShowingCalendar: false)
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(closeLifeLogCalendar),
             name: NSNotification.Name(rawValue: kCloseLifeLogCalendar),
             object: nil)
-        setUserDefaultShowStamp()
         getDateUser()
         setupUILogo()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setUserDefaultShowStamp()
     }
 
     @IBAction func tapFacebook(_ sender: Any) {
@@ -68,11 +77,35 @@ class WelcomeViewController: UIViewController {
         }
     }
 
+    @IBAction func calendarTouchUp(_ sender: Any) {
+        if !isShowingCalendar {
+            showLifeLogCalendar2()
+            isShowingCalendar = true
+        }
+    }
+    
     @IBAction func tapEmail(_ sender: Any) {
         print("-----\(users)")
         let user = users[0]
         let dateString = (user.value(forKey: "date") as? String) ?? ""
         print("----date: \(dateString)")
+        openMail()
+    }
+    
+    func openFaceBook() {
+        guard let url = URL(string: "https://www.facebook.com/truonghaily.2111") else { return }
+
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    func openMail() {
+        if let vc = ContactLinkMailManager.createControllerEmail(delegate: self) {
+            present(vc, animated: true, completion: nil)
+        }
     }
     
     func setupUILogo() {
@@ -149,84 +182,21 @@ class WelcomeViewController: UIViewController {
         vc.setCloseClosure({
             complete()
         })
-        navigationController?.present(vc, animated: animation, completion: nil)
-    }
-
-    private func updateNavigationItem(isShowingCalendar: Bool) {
-        if !isShowingCalendar {
-            title = "Home"
-            customCalendarButton()
-            navigationItem.leftBarButtonItem = nil
-        } else {
-            title = "Calendar"
-            closeLifeLogCalendar(nil)
-            customCloseButton()
-        }
-    }
-
-    private func customCloseButton() {
-        let button = UIButton()
-        button.addTarget(self, action: #selector(closeLifeLogCalendar(_:)), for: .touchUpInside)
-        button.setImage(UIImage(named: "ic_close_calendar"), for: .normal)
-        button.setImage(UIImage(named: "ic_close_calendar"), for: .highlighted)
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        button.sizeToFit()
-        let item = UIBarButtonItem(customView: button)
-        navigationItem.leftBarButtonItem = item
-    }
-
-    private func customBackButton() {
-        let backButton = customBackItemBlue(atTarget: self, selector: #selector(back(_:)))
-        backButton.accessibilityIdentifier = "btnBack"
-        navigationItem.leftBarButtonItem = backButton
-    }
-
-    func customBackItemBlue(atTarget target: Any?, selector: Selector, stringBack: String = "back") -> UIBarButtonItem {
-        let button = UIButton()
-        button.accessibilityIdentifier = "btnBack"
-        button.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.buttonFontSize)
-        button.addTarget(target, action: selector, for: .touchUpInside)
-        button.setTitle(stringBack, for: .normal)
-        button.setTitleColor(UIColor.blue, for: .normal)
-        button.setImage(UIImage(named: "icon_arrow_left_blue"), for: .normal)
-        button.setImage(UIImage(named: "icon_arrow_left_blue"), for: .highlighted)
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
-        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
-        button.sizeToFit()
-        return UIBarButtonItem(customView: button)
-    }
-
-    @objc func back(_ sender: Any?) {
-        dismiss(animated: true, completion: nil)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.present(vc, animated: animation, completion: nil)
+//        }
     }
 
     @objc private func closeLifeLogCalendar(_ sender: Any?) {
-        updateNavigationItem(isShowingCalendar: false)
-
         if let child = children.first, let vc = child as? LifeLogCalendarPageViewController {
             vc.willMove(toParent: nil)
             vc.view.removeFromSuperview()
             vc.removeFromParent()
+            isShowingCalendar = false
         }
     }
-
-    private func customCalendarButton() {
-        let button = UIButton()
-        button.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.buttonFontSize)
-        button.addTarget(self, action: #selector(showLifeLogCalendar(_:)), for: .touchUpInside)
-        button.setImage(UIImage(named: "ic_lifelog_calendar"), for: .normal)
-        button.setImage(UIImage(named: "ic_lifelog_calendar"), for: .highlighted)
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        button.sizeToFit()
-        let item = UIBarButtonItem(customView: button)
-        navigationItem.rightBarButtonItem = item
-    }
-
-    @objc private func showLifeLogCalendar(_ sender: Any?) {
-        updateNavigationItem(isShowingCalendar: true)
+    
+    private func showLifeLogCalendar2() {
 
         let vc = LifeLogCalendarPageViewController.vc()
         vc.viewModel = LifeLogCalendarPageViewModel(currentDate: App.region.today(), dateUsers: users)
@@ -260,6 +230,44 @@ extension WelcomeViewController: PopupCongratsActionViewControllerDelegate {
             vc.modalPresentationStyle = .overFullScreen
             vc.modalTransitionStyle = .crossDissolve
             present(vc, animated: true)
+        }
+    }
+}
+
+extension WelcomeViewController {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
+
+class ContactLinkMailManager {
+    
+    // MARK: - Send Email / Message
+    class func createControllerEmail(delegate: MailDelegate) -> UIViewController? {
+        var address = "haily.211194@gmail.com"
+        
+        if MFMailComposeViewController.canSendMail() {
+            let vc = MFMailComposeViewController()
+            vc.mailComposeDelegate = delegate
+            vc.setToRecipients([address])
+            vc.modalPresentationStyle = .fullScreen
+            return vc
+        } else if MFMessageComposeViewController.canSendText() {
+            let vc = MFMessageComposeViewController()
+            vc.messageComposeDelegate = delegate
+            vc.recipients = [address]
+            vc.modalPresentationStyle = .fullScreen
+            return vc
+        } else {
+            let alert = AlertController(title: "", message: "Your phone currently does not have a mail app.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alert.addAction(okAction)
+            alert.present()
+            return nil
         }
     }
 }
