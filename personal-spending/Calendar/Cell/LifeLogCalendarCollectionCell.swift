@@ -44,10 +44,12 @@ final class LifeLogCalendarCollectionCell: UICollectionViewCell {
             switch type {
             case .current, .pass:
                 dateTitleLabel.font = UIFont.boldSystemFont(ofSize: 15)
-                dateTitleLabel.textColor = Color.Text.mainText
+//                dateTitleLabel.textColor = Color.Text.mainText
+                dateTitleLabel.textColor = UIColor.RGB(0, 122, 255)
             case .future:
                 dateTitleLabel.font = UIFont.boldSystemFont(ofSize: 13)
-                dateTitleLabel.textColor = Color.Text.placeholder
+//                dateTitleLabel.textColor = Color.Text.placeholder
+                dateTitleLabel.textColor = UIColor.RGB(0, 122, 255, 0.4)
             }
             guard let viewModel = viewModel else { return }
             if viewModel.didGetStamp {

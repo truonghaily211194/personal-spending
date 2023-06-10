@@ -65,31 +65,34 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="eOJ-Rd-Bia"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="28"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="32"/>
                     <color key="textColor" name="AccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_slive_medal" translatesAutoresizingMaskIntoConstraints="NO" id="Fiw-dm-v20">
-                    <rect key="frame" x="179.66666666666666" y="230" width="34" height="34"/>
+                    <rect key="frame" x="166.66666666666666" y="230" width="60" height="60"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="60" id="II5-Ob-8il"/>
                         <constraint firstAttribute="width" secondItem="Fiw-dm-v20" secondAttribute="height" multiplier="1:1" id="fjC-qu-wc8"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_slive_medal" translatesAutoresizingMaskIntoConstraints="NO" id="4uM-x6-2du">
-                    <rect key="frame" x="135.66666666666666" y="230" width="34" height="34"/>
+                    <rect key="frame" x="96.666666666666671" y="230" width="60.000000000000014" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="4uM-x6-2du" secondAttribute="height" multiplier="1:1" id="73q-yg-Dut"/>
+                        <constraint firstAttribute="width" constant="60" id="u6x-mq-Nld"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_slive_medal" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-as-jIv">
-                    <rect key="frame" x="223.66666666666666" y="230" width="33.999999999999972" height="34"/>
+                    <rect key="frame" x="236.66666666666663" y="230" width="60" height="60"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="60" id="FXp-bo-wTF"/>
                         <constraint firstAttribute="width" secondItem="CO3-as-jIv" secondAttribute="height" multiplier="1:1" id="Lvf-Yy-2Uu"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-7m-Q1C">
-                    <rect key="frame" x="10" y="314" width="373" height="22.333333333333314"/>
-                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                    <rect key="frame" x="10" y="340" width="373" height="26.666666666666686"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="24"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
