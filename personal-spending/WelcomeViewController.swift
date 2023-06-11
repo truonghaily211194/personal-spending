@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController, MailDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionLabel.text = ExtenStrings.descriptions.first
+        descriptionLabel.text = ExtenStrings.descriptions.randomElement()
 //        if #available(iOS 15.0, *) {
 //            let appearance = UINavigationBarAppearance()
 //            appearance.configureWithDefaultBackground()
