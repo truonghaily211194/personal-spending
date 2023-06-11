@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		362638548B090289F5A408F1 /* Pods_personal_spending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5108D31F07D25DDC29DB5BF8 /* Pods_personal_spending.framework */; };
 		ABD0809350718C9654F1FB50 /* Pods_personal_spendingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC98EF033C4ACA9D48A0DF7 /* Pods_personal_spendingTests.framework */; };
+		C7A4BC4B2A36231F00629AFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */; };
 		C7A8418B2A32E66C00A76CDC /* PopupCongratsActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A841892A32E66C00A76CDC /* PopupCongratsActionViewController.swift */; };
 		C7A8418C2A32E66C00A76CDC /* PopupCongratsActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A8418A2A32E66C00A76CDC /* PopupCongratsActionViewController.xib */; };
 		C7A8418F2A33045B00A76CDC /* PopupEnoughClearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8418D2A33045B00A76CDC /* PopupEnoughClearViewController.swift */; };
@@ -77,6 +78,7 @@
 		7E255870A59DDAF967A889BB /* Pods-personal-spending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending.debug.xcconfig"; path = "Target Support Files/Pods-personal-spending/Pods-personal-spending.debug.xcconfig"; sourceTree = "<group>"; };
 		BE94EC55CB5A891158BA6730 /* Pods-personal-spendingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spendingTests.debug.xcconfig"; path = "Target Support Files/Pods-personal-spendingTests/Pods-personal-spendingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40B2594D9698799A735DFAF /* Pods-personal-spending-personal-spendingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending-personal-spendingUITests.release.xcconfig"; path = "Target Support Files/Pods-personal-spending-personal-spendingUITests/Pods-personal-spending-personal-spendingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		C7A841892A32E66C00A76CDC /* PopupCongratsActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupCongratsActionViewController.swift; sourceTree = "<group>"; };
 		C7A8418A2A32E66C00A76CDC /* PopupCongratsActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupCongratsActionViewController.xib; sourceTree = "<group>"; };
 		C7A8418D2A33045B00A76CDC /* PopupEnoughClearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupEnoughClearViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				C7A9D7C72A2F2435005140F7 /* WelcomeViewController.swift */,
 				C7A9D7C82A2F2435005140F7 /* WelcomeViewController.xib */,
 				C7A9D7CC2A2F2D93005140F7 /* ExtenStrings.swift */,
+				C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */,
 			);
 			path = "personal-spending";
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				C7C989782A1F21B5009AACB1 /* HistoryHeaderView.xib in Resources */,
 				C7A9D7CA2A2F2435005140F7 /* WelcomeViewController.xib in Resources */,
 				C7A9D7B02A287688005140F7 /* DisplayStampViewController.xib in Resources */,
+				C7A4BC4B2A36231F00629AFB /* InfoPlist.strings in Resources */,
 				C7C989812A1F2277009AACB1 /* LifeLogHistoryTableViewCell.xib in Resources */,
 				C7C989932A1F6464009AACB1 /* LifeLogCalendarPageViewController.xib in Resources */,
 				C7C988D12A1F0644009AACB1 /* LaunchScreen.storyboard in Resources */,

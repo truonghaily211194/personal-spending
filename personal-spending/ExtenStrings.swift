@@ -8,6 +8,7 @@
 import Foundation
 
 class ExtenStrings {
+    // link icon https://myfreelogomaker.com/brandkit/130847930/logo-files
     static let kDateToDay = "kDateToDay"
     static let kStampToDate = "kStampToDate"
     static let kClearLogo = "kClearLogo"
