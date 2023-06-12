@@ -16,7 +16,7 @@ import GoogleMobileAds
 protocol MailDelegate: MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
 }
 
-class WelcomeViewController: UIViewController, MailDelegate {
+class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelegate {
     @IBOutlet weak var goldImage1: UIImageView!
     @IBOutlet weak var goldImage2: UIImageView!
     @IBOutlet weak var goldImage3: UIImageView!
@@ -30,7 +30,6 @@ class WelcomeViewController: UIViewController, MailDelegate {
     let bannerView: GADBannerView = {
         let bannerView = GADBannerView()
         bannerView.adUnitID = "ca-app-pub-1480390762284051/8439011927"
-        bannerView.load(GADRequest())
         if #available(iOS 13.0, *) {
             bannerView.backgroundColor = .secondarySystemBackground
         }
@@ -39,7 +38,9 @@ class WelcomeViewController: UIViewController, MailDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bannerView.delegate = self
         bannerView.rootViewController = self
+        bannerView.load(GADRequest())
         view.addSubview(bannerView)
         descriptionLabel.text = ExtenStrings.descriptions.randomElement()
         if let name = UserDefaults.standard.string(forKey: ExtenStrings.kNameUser) {
@@ -67,7 +68,7 @@ class WelcomeViewController: UIViewController, MailDelegate {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        bannerView.frame = CGRect(x: 0, y: view.frame.height - 60, width: view.frame.size.width, height: 60).integral
+        bannerView.frame = CGRect(x: 0, y: view.frame.height - 70, width: view.frame.size.width, height: 70).integral
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -78,7 +79,7 @@ class WelcomeViewController: UIViewController, MailDelegate {
     @IBAction func editName(_ sender: Any) {
         changeName()
     }
-    
+
     @IBAction func tapFacebook(_ sender: Any) {
         let standard = UserDefaults.standard
         goldClearLogo = standard.integer(forKey: ExtenStrings.kClearLogo)
@@ -112,6 +113,14 @@ class WelcomeViewController: UIViewController, MailDelegate {
 
     @IBAction func tapEmail(_ sender: Any) {
         openMail()
+    }
+
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner Received")
+    }
+    
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        print("Fail to receive ad with error: \(error)")
     }
 
     func changeName() {

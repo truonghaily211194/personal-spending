@@ -43,7 +43,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-1r-JCD">
-                            <rect key="frame" x="188.33333333333334" y="757.33333333333337" width="16.333333333333343" height="19"/>
+                            <rect key="frame" x="188.33333333333334" y="737.33333333333337" width="16.333333333333343" height="19"/>
                             <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -109,7 +109,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuP-c9-Yjf">
-                    <rect key="frame" x="119" y="741.66666666666663" width="55" height="50.333333333333371"/>
+                    <rect key="frame" x="119" y="721.66666666666663" width="55" height="50.333333333333371"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="55" id="6uh-QT-Ie0"/>
                         <constraint firstAttribute="width" secondItem="zuP-c9-Yjf" secondAttribute="height" multiplier="36:33" id="SDv-rv-Lrz"/>
@@ -121,7 +121,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKf-Ry-v1T">
-                    <rect key="frame" x="224" y="739" width="45" height="55"/>
+                    <rect key="frame" x="224" y="719" width="45" height="55"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="45" id="4sK-Rb-huO"/>
                         <constraint firstAttribute="height" constant="55" id="TAI-gn-ocg"/>
@@ -133,7 +133,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact me via:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6k-N9-aWu">
-                    <rect key="frame" x="20" y="722.66666666666663" width="353" height="19"/>
+                    <rect key="frame" x="20" y="702.66666666666663" width="353" height="19"/>
                     <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
                     <color key="textColor" name="boldText"/>
                     <nil key="highlightedColor"/>
@@ -158,14 +158,14 @@
                 <constraint firstItem="zuP-c9-Yjf" firstAttribute="top" secondItem="W6k-N9-aWu" secondAttribute="bottom" id="dL6-s3-Bcm"/>
                 <constraint firstItem="4uM-x6-2du" firstAttribute="centerY" secondItem="Fiw-dm-v20" secondAttribute="centerY" id="fbv-43-CKl"/>
                 <constraint firstItem="CO3-as-jIv" firstAttribute="centerY" secondItem="Fiw-dm-v20" secondAttribute="centerY" id="gTw-Nl-ijn"/>
-                <constraint firstAttribute="bottom" secondItem="zuP-c9-Yjf" secondAttribute="bottom" constant="60" id="khj-Kg-RRQ"/>
+                <constraint firstAttribute="bottom" secondItem="zuP-c9-Yjf" secondAttribute="bottom" constant="80" id="khj-Kg-RRQ"/>
                 <constraint firstItem="CO3-as-jIv" firstAttribute="leading" secondItem="Fiw-dm-v20" secondAttribute="trailing" constant="10" id="lBG-Qh-xwk"/>
                 <constraint firstItem="dNT-Sd-wxB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="meW-kc-mhe"/>
                 <constraint firstItem="iCP-UW-hO1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="nFx-ox-ByD"/>
                 <constraint firstItem="NXh-7m-Q1C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qiX-mc-fc7"/>
                 <constraint firstItem="Fiw-dm-v20" firstAttribute="centerX" secondItem="iCP-UW-hO1" secondAttribute="centerX" id="vhB-Fd-Ye5"/>
                 <constraint firstAttribute="trailing" secondItem="W6k-N9-aWu" secondAttribute="trailing" constant="20" id="yB1-aP-8y7"/>
-                <constraint firstAttribute="bottom" secondItem="aKf-Ry-v1T" secondAttribute="bottom" constant="58" id="zRi-ZJ-bBq"/>
+                <constraint firstAttribute="bottom" secondItem="aKf-Ry-v1T" secondAttribute="bottom" constant="78" id="zRi-ZJ-bBq"/>
                 <constraint firstAttribute="trailing" secondItem="NXh-7m-Q1C" secondAttribute="trailing" constant="10" id="zvv-hZ-nhD"/>
             </constraints>
             <point key="canvasLocation" x="26.717557251908396" y="-1.4084507042253522"/>
