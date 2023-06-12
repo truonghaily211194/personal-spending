@@ -9,6 +9,7 @@ target 'personal-spending' do
   # Pods for personal-spending
     pod 'SwiftUtils', '4.2.1'
     pod 'SwiftDate', '4.5.1'
+    pod 'Google-Mobile-Ads-SDK'
 
   target 'personal-spendingTests' do
     inherit! :search_paths

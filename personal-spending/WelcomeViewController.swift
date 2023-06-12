@@ -9,6 +9,9 @@ import UIKit
 import CoreData
 import SwiftUtils
 import MessageUI
+import GoogleMobileAds
+// ca-app-pub-1480390762284051~6234422931
+//ca-app-pub-1480390762284051/8402556741
 
 protocol MailDelegate: MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
 }
@@ -24,10 +27,24 @@ class WelcomeViewController: UIViewController, MailDelegate {
     var users: [NSManagedObject] = []
     var goldClearLogo = 0
     var isShowingCalendar = false
+    let bannerView: GADBannerView = {
+        let bannerView = GADBannerView()
+        bannerView.adUnitID = "ca-app-pub-1480390762284051/8439011927"
+        bannerView.load(GADRequest())
+        if #available(iOS 13.0, *) {
+            bannerView.backgroundColor = .secondarySystemBackground
+        }
+        return bannerView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bannerView.rootViewController = self
+        view.addSubview(bannerView)
         descriptionLabel.text = ExtenStrings.descriptions.randomElement()
+        if let name = UserDefaults.standard.string(forKey: ExtenStrings.kNameUser) {
+            nameLabel.text = "Welcome \(name)"
+        }
 //        if #available(iOS 15.0, *) {
 //            let appearance = UINavigationBarAppearance()
 //            appearance.configureWithDefaultBackground()
@@ -47,12 +64,21 @@ class WelcomeViewController: UIViewController, MailDelegate {
         getDateUser()
         setupUILogo()
     }
-    
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        bannerView.frame = CGRect(x: 0, y: view.frame.height - 60, width: view.frame.size.width, height: 60).integral
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setUserDefaultShowStamp()
     }
 
+    @IBAction func editName(_ sender: Any) {
+        changeName()
+    }
+    
     @IBAction func tapFacebook(_ sender: Any) {
         let standard = UserDefaults.standard
         goldClearLogo = standard.integer(forKey: ExtenStrings.kClearLogo)
@@ -83,15 +109,40 @@ class WelcomeViewController: UIViewController, MailDelegate {
             isShowingCalendar = true
         }
     }
-    
+
     @IBAction func tapEmail(_ sender: Any) {
-        print("-----\(users)")
-        let user = users[0]
-        let dateString = (user.value(forKey: "date") as? String) ?? ""
-        print("----date: \(dateString)")
         openMail()
     }
-    
+
+    func changeName() {
+        let alertController = UIAlertController(title: "You can change your name.", message: nil, preferredStyle: .alert)
+
+        // Add a text field to the alert controller
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter your name...."
+            if let name = UserDefaults.standard.string(forKey: ExtenStrings.kNameUser) {
+                textField.text = "\(name)"
+            }
+        }
+
+        // Add an action button to the alert controller
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            if let textField = alertController.textFields?.first {
+                let enteredText = textField.text ?? ""
+                UserDefaults.standard.set(enteredText, forKey: ExtenStrings.kNameUser)
+                self.nameLabel.text = "Welcome \(enteredText)"
+            }
+        }
+        alertController.addAction(okAction)
+
+        // Add a cancel button to the alert controller
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+
+        // Present the alert controller
+        present(alertController, animated: true, completion: nil)
+    }
+
     func openFaceBook() {
         guard let url = URL(string: "https://www.facebook.com/truonghaily.2111") else { return }
 
@@ -101,13 +152,13 @@ class WelcomeViewController: UIViewController, MailDelegate {
             UIApplication.shared.openURL(url)
         }
     }
-    
+
     func openMail() {
         if let vc = ContactLinkMailManager.createControllerEmail(delegate: self) {
             present(vc, animated: true, completion: nil)
         }
     }
-    
+
     func setupUILogo() {
         if goldClearLogo == 1 {
             goldImage1.image = UIImage(named: "icon_gold_medal")
@@ -120,16 +171,16 @@ class WelcomeViewController: UIViewController, MailDelegate {
             goldImage3.image = UIImage(named: "icon_gold_medal")
         }
     }
-    
+
     func getDateUser() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
-        
+
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DateUser")
         do {
-          users = try managedContext.fetch(fetchRequest)
+            users = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
-          print("Could not fetch. \(error), \(error.userInfo)")
+            print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
 
@@ -183,7 +234,7 @@ class WelcomeViewController: UIViewController, MailDelegate {
             complete()
         })
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.present(vc, animated: animation, completion: nil)
+        self.present(vc, animated: animation, completion: nil)
 //        }
     }
 
@@ -195,7 +246,7 @@ class WelcomeViewController: UIViewController, MailDelegate {
             isShowingCalendar = false
         }
     }
-    
+
     private func showLifeLogCalendar2() {
 
         let vc = LifeLogCalendarPageViewController.vc()
@@ -245,11 +296,11 @@ extension WelcomeViewController {
 }
 
 class ContactLinkMailManager {
-    
+
     // MARK: - Send Email / Message
     class func createControllerEmail(delegate: MailDelegate) -> UIViewController? {
         var address = "haily.211194@gmail.com"
-        
+
         if MFMailComposeViewController.canSendMail() {
             let vc = MFMailComposeViewController()
             vc.mailComposeDelegate = delegate

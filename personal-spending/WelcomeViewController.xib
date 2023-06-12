@@ -69,29 +69,41 @@
                     <color key="textColor" name="AccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNT-Sd-wxB">
+                    <rect key="frame" x="167" y="190" width="59" height="34.333333333333343"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34.329999999999998" id="tDM-xH-67m"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Edit Name"/>
+                    <connections>
+                        <action selector="editName:" destination="-1" eventType="touchUpInside" id="d8m-zL-v9h"/>
+                    </connections>
+                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_slive_medal" translatesAutoresizingMaskIntoConstraints="NO" id="Fiw-dm-v20">
-                    <rect key="frame" x="166.66666666666666" y="230" width="60" height="60"/>
+                    <rect key="frame" x="166.66666666666666" y="250" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="II5-Ob-8il"/>
                         <constraint firstAttribute="width" secondItem="Fiw-dm-v20" secondAttribute="height" multiplier="1:1" id="fjC-qu-wc8"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_slive_medal" translatesAutoresizingMaskIntoConstraints="NO" id="4uM-x6-2du">
-                    <rect key="frame" x="96.666666666666671" y="230" width="60.000000000000014" height="60"/>
+                    <rect key="frame" x="96.666666666666671" y="250" width="60.000000000000014" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="4uM-x6-2du" secondAttribute="height" multiplier="1:1" id="73q-yg-Dut"/>
                         <constraint firstAttribute="width" constant="60" id="u6x-mq-Nld"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_slive_medal" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-as-jIv">
-                    <rect key="frame" x="236.66666666666663" y="230" width="60" height="60"/>
+                    <rect key="frame" x="236.66666666666663" y="250" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="FXp-bo-wTF"/>
                         <constraint firstAttribute="width" secondItem="CO3-as-jIv" secondAttribute="height" multiplier="1:1" id="Lvf-Yy-2Uu"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-7m-Q1C">
-                    <rect key="frame" x="10" y="340" width="373" height="26.666666666666686"/>
+                    <rect key="frame" x="10" y="360" width="373" height="26.666666666666686"/>
                     <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="24"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -132,8 +144,9 @@
                 <constraint firstItem="iCP-UW-hO1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="4sf-Rr-NP7"/>
                 <constraint firstItem="DYE-rY-lXQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5H2-zD-a0p"/>
                 <constraint firstItem="ggO-1r-JCD" firstAttribute="centerY" secondItem="zuP-c9-Yjf" secondAttribute="centerY" id="8Yn-mR-J3s"/>
-                <constraint firstItem="Fiw-dm-v20" firstAttribute="top" secondItem="iCP-UW-hO1" secondAttribute="bottom" constant="40" id="GCH-cg-dgA"/>
+                <constraint firstItem="Fiw-dm-v20" firstAttribute="top" secondItem="iCP-UW-hO1" secondAttribute="bottom" constant="60" id="GCH-cg-dgA"/>
                 <constraint firstItem="aKf-Ry-v1T" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="50" id="Ibm-0p-NIS"/>
+                <constraint firstItem="dNT-Sd-wxB" firstAttribute="top" secondItem="iCP-UW-hO1" secondAttribute="bottom" id="MFd-dx-N6x"/>
                 <constraint firstItem="NXh-7m-Q1C" firstAttribute="top" secondItem="Fiw-dm-v20" secondAttribute="bottom" constant="50" id="Nfb-yw-mdy"/>
                 <constraint firstItem="zuP-c9-Yjf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-50" id="PVv-76-3kr"/>
                 <constraint firstItem="DYE-rY-lXQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pqm-uc-5Ci"/>
@@ -147,6 +160,7 @@
                 <constraint firstItem="CO3-as-jIv" firstAttribute="centerY" secondItem="Fiw-dm-v20" secondAttribute="centerY" id="gTw-Nl-ijn"/>
                 <constraint firstAttribute="bottom" secondItem="zuP-c9-Yjf" secondAttribute="bottom" constant="60" id="khj-Kg-RRQ"/>
                 <constraint firstItem="CO3-as-jIv" firstAttribute="leading" secondItem="Fiw-dm-v20" secondAttribute="trailing" constant="10" id="lBG-Qh-xwk"/>
+                <constraint firstItem="dNT-Sd-wxB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="meW-kc-mhe"/>
                 <constraint firstItem="iCP-UW-hO1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="nFx-ox-ByD"/>
                 <constraint firstItem="NXh-7m-Q1C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qiX-mc-fc7"/>
                 <constraint firstItem="Fiw-dm-v20" firstAttribute="centerX" secondItem="iCP-UW-hO1" secondAttribute="centerX" id="vhB-Fd-Ye5"/>

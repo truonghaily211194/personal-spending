@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,10 +27,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        let vc = WelcomeViewController()
-        let navi = UINavigationController(rootViewController: vc)
+        let isChangeRoot = UserDefaults.standard.bool(forKey: ExtenStrings.kChangeRoot)
+        var vc = UIViewController()
+        if isChangeRoot {
+            vc = WelcomeViewController()
+        } else {
+            vc = GetStartedViewController()
+        }
+//        let navi = UINavigationController(rootViewController: vc)
 //        let vc = LifeLogHistoryController.vc()
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
