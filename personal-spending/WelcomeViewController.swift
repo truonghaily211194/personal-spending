@@ -63,7 +63,6 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
             name: NSNotification.Name(rawValue: kCloseLifeLogCalendar),
             object: nil)
         getDateUser()
-        setupUILogo()
     }
 
     override func viewDidLayoutSubviews() {
@@ -74,6 +73,7 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setUserDefaultShowStamp()
+        setupUILogo()
     }
 
     @IBAction func editName(_ sender: Any) {
@@ -320,7 +320,7 @@ class ContactLinkMailManager {
 
     // MARK: - Send Email / Message
     class func createControllerEmail(delegate: MailDelegate) -> UIViewController? {
-        var address = "haily.211194@gmail.com"
+        let address = "haily.211194@gmail.com"
 
         if MFMailComposeViewController.canSendMail() {
             let vc = MFMailComposeViewController()

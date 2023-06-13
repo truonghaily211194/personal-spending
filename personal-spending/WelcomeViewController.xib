@@ -70,9 +70,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNT-Sd-wxB">
-                    <rect key="frame" x="177.5" y="190" width="59" height="34.5"/>
+                    <rect key="frame" x="177.5" y="190" width="59" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34.329999999999998" id="tDM-xH-67m"/>
+                        <constraint firstAttribute="height" constant="20" id="tDM-xH-67m"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
