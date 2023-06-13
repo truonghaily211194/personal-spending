@@ -29,7 +29,8 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
     var isShowingCalendar = false
     let bannerView: GADBannerView = {
         let bannerView = GADBannerView()
-        bannerView.adUnitID = "ca-app-pub-1480390762284051/8439011927"
+//        bannerView.adUnitID = "ca-app-pub-1480390762284051/8439011927" // Pro
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111" // Test
         if #available(iOS 13.0, *) {
             bannerView.backgroundColor = .secondarySystemBackground
         }
@@ -76,6 +77,10 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
         setupUILogo()
     }
 
+    @IBAction func changeDescription(_ sender: Any) {
+        descriptionLabel.text = ExtenStrings.descriptions.randomElement()
+    }
+    
     @IBAction func editName(_ sender: Any) {
         changeName()
     }
@@ -89,7 +94,7 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
 //            let stamp = standard.integer(forKey: ExtenStrings.kStampToDate)
 //            standard.set(stamp + 1, forKey: ExtenStrings.kStampToDate)
 //            showStampPopup(nil, stamp: stamp + 1, dailyStamp: 1, animation: true) {
-//                if stamp + 1 == 4 {
+//                if stamp + 1 == 2 {
 //                    standard.set(0, forKey: ExtenStrings.kStampToDate)
 //                    standard.set(self.goldClearLogo + 1, forKey: ExtenStrings.kClearLogo)
 //                    self.goldClearLogo = self.goldClearLogo + 1
