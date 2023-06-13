@@ -29,14 +29,14 @@ class DisplayStampViewController: UIViewController {
     var date = App.region.today()
 
     fileprivate var stamp = 0
-    fileprivate var gif = 0
+    var gif = 0
     var totalStamp = 0 {
         didSet {
             stamp = totalStamp % 20
-            gif = totalStamp / 20
+//            gif = totalStamp / 20
             if stamp == 0 && totalStamp != 0 {
                 stamp = 20
-                gif -= 1
+//                gif -= 1
             }
         }
     }
@@ -53,7 +53,7 @@ class DisplayStampViewController: UIViewController {
         if isAnimation {
             setUpAnimation()
         } else {
-            okButton.setImage(UIImage(named: "show_stamp_exchange"), for: .normal)
+//            okButton.setImage(UIImage(named: "show_stamp_exchange"), for: .normal)
             setUpHeaderImage()
             loadingIndicator.stopAnimating()
             loadingIndicator.isHidden = true
@@ -100,7 +100,7 @@ class DisplayStampViewController: UIViewController {
 
     @objc func getStamp() {
         view.isHidden = false
-        totalStamp = 5 //stamp
+        totalStamp = stamp //stamp
         reloadStamp()
         loadImage("")
     }
@@ -172,6 +172,8 @@ class DisplayStampViewController: UIViewController {
             self.dismiss(animated: true, completion: {
                 self.complete()
             })
+        } else {
+            self.dismiss(animated: true)
         }
     }
 

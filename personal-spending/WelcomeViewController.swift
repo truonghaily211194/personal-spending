@@ -11,7 +11,7 @@ import SwiftUtils
 import MessageUI
 import GoogleMobileAds
 // ca-app-pub-1480390762284051~6234422931
-//ca-app-pub-1480390762284051/8402556741
+// ca-app-pub-1480390762284051/8402556741
 
 protocol MailDelegate: MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
 }
@@ -81,29 +81,41 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
     }
 
     @IBAction func tapFacebook(_ sender: Any) {
-        let standard = UserDefaults.standard
-        goldClearLogo = standard.integer(forKey: ExtenStrings.kClearLogo)
-        if standard.string(forKey: ExtenStrings.kDateToDay) == date {
-            addDateUser(dateString: App.region.today().toString(.date))
-            standard.set(date, forKey: ExtenStrings.kDateToDay)
-            let stamp = standard.integer(forKey: ExtenStrings.kStampToDate)
-            standard.set(stamp + 1, forKey: ExtenStrings.kStampToDate)
-            showStampPopup(nil, stamp: stamp + 1, dailyStamp: 1, animation: true) {
-                if stamp + 1 == 4 {
-                    standard.set(0, forKey: ExtenStrings.kStampToDate)
-                    standard.set(self.goldClearLogo + 1, forKey: ExtenStrings.kClearLogo)
-                    self.goldClearLogo = self.goldClearLogo + 1
-                    self.setupUILogo()
-                    let vc = PopupCongratsActionViewController()
-                    vc.modalPresentationStyle = .overFullScreen
-                    vc.modalTransitionStyle = .crossDissolve
-                    vc.delegate = self
-                    self.present(vc, animated: true)
-                }
-            }
-        }
+//        let standard = UserDefaults.standard
+//        goldClearLogo = standard.integer(forKey: ExtenStrings.kClearLogo)
+//        if standard.string(forKey: ExtenStrings.kDateToDay) == date {
+//            addDateUser(dateString: App.region.today().toString(.date))
+//            standard.set(date, forKey: ExtenStrings.kDateToDay)
+//            let stamp = standard.integer(forKey: ExtenStrings.kStampToDate)
+//            standard.set(stamp + 1, forKey: ExtenStrings.kStampToDate)
+//            showStampPopup(nil, stamp: stamp + 1, dailyStamp: 1, animation: true) {
+//                if stamp + 1 == 4 {
+//                    standard.set(0, forKey: ExtenStrings.kStampToDate)
+//                    standard.set(self.goldClearLogo + 1, forKey: ExtenStrings.kClearLogo)
+//                    self.goldClearLogo = self.goldClearLogo + 1
+//                    self.setupUILogo()
+//                    let vc = PopupCongratsActionViewController()
+//                    vc.modalPresentationStyle = .overFullScreen
+//                    vc.modalTransitionStyle = .crossDissolve
+//                    vc.delegate = self
+//                    self.present(vc, animated: true)
+//                }
+//            }
+//        }
+        openFaceBook()
     }
 
+    @IBAction func tapShowStamp(_ sender: Any) {
+        let stamp = UserDefaults.standard.integer(forKey: ExtenStrings.kStampToDate)
+        let vc = DisplayStampViewController()
+        vc.totalStamp = stamp
+        vc.isAnimation = false
+        vc.gif = goldClearLogo
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
+    }
+    
     @IBAction func calendarTouchUp(_ sender: Any) {
         if !isShowingCalendar {
             showLifeLogCalendar2()
