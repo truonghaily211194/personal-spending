@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		362638548B090289F5A408F1 /* Pods_personal_spending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5108D31F07D25DDC29DB5BF8 /* Pods_personal_spending.framework */; };
 		ABD0809350718C9654F1FB50 /* Pods_personal_spendingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC98EF033C4ACA9D48A0DF7 /* Pods_personal_spendingTests.framework */; };
+		C78D4FE02A395D3400071797 /* MainGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FDF2A395D3400071797 /* MainGameModel.swift */; };
 		C799D2B12A376C6100EB8FB8 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */; };
 		C799D2B22A376C6100EB8FB8 /* GetStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */; };
 		C7A4BC4B2A36231F00629AFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */; };
@@ -53,6 +54,24 @@
 		C7C9899B2A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C989902A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift */; };
 		C7C9899C2A1F6464009AACB1 /* LifeLogCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C989912A1F6464009AACB1 /* LifeLogCalendarViewController.swift */; };
 		C7C9899E2A1F65DC009AACB1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9899D2A1F65DC009AACB1 /* Color.swift */; };
+		C7CE41D62A385F1B00CD656A /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41CF2A385F1B00CD656A /* Question+CoreDataProperties.swift */; };
+		C7CE41D72A385F1B00CD656A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41D02A385F1B00CD656A /* CoreDataManager.swift */; };
+		C7CE41D82A385F1B00CD656A /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41D12A385F1B00CD656A /* Question+CoreDataClass.swift */; };
+		C7CE41D92A385F1B00CD656A /* Kit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41D22A385F1B00CD656A /* Kit+CoreDataProperties.swift */; };
+		C7CE41DA2A385F1B00CD656A /* Kit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41D32A385F1B00CD656A /* Kit+CoreDataClass.swift */; };
+		C7CE41DB2A385F1B00CD656A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41D42A385F1B00CD656A /* Model.xcdatamodeld */; };
+		C7CE41DF2A385F7B00CD656A /* KitsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41DC2A385F7B00CD656A /* KitsLibrary.swift */; };
+		C7CE41E02A385F7B00CD656A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41DD2A385F7B00CD656A /* UserData.swift */; };
+		C7CE41E12A385F7B00CD656A /* GlobalCustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41DE2A385F7B00CD656A /* GlobalCustomTypes.swift */; };
+		C7CE41E42A38624500CD656A /* MainGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41E22A38624500CD656A /* MainGameViewController.swift */; };
+		C7CE41E52A38624500CD656A /* MainGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CE41E32A38624500CD656A /* MainGameViewController.xib */; };
+		C7CE41E82A38626200CD656A /* KitSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41E62A38626200CD656A /* KitSelectionViewController.swift */; };
+		C7CE41E92A38626200CD656A /* KitSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CE41E72A38626200CD656A /* KitSelectionViewController.xib */; };
+		C7CE41EC2A3862EA00CD656A /* KitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41EA2A3862EA00CD656A /* KitCollectionViewCell.swift */; };
+		C7CE41ED2A3862EA00CD656A /* KitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CE41EB2A3862EA00CD656A /* KitCollectionViewCell.xib */; };
+		C7CE41F12A386A3600CD656A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41EF2A386A3600CD656A /* TestViewController.swift */; };
+		C7CE41F22A386A3600CD656A /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CE41F02A386A3600CD656A /* TestViewController.xib */; };
+		C7CE41F42A386B1300CD656A /* TestingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE41F32A386B1300CD656A /* TestingModel.swift */; };
 		FBF558723EC6571284F15ADC /* Pods_personal_spending_personal_spendingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBECF6E7F342C9459273A2B8 /* Pods_personal_spending_personal_spendingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +99,7 @@
 		7E255870A59DDAF967A889BB /* Pods-personal-spending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending.debug.xcconfig"; path = "Target Support Files/Pods-personal-spending/Pods-personal-spending.debug.xcconfig"; sourceTree = "<group>"; };
 		BE94EC55CB5A891158BA6730 /* Pods-personal-spendingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spendingTests.debug.xcconfig"; path = "Target Support Files/Pods-personal-spendingTests/Pods-personal-spendingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40B2594D9698799A735DFAF /* Pods-personal-spending-personal-spendingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending-personal-spendingUITests.release.xcconfig"; path = "Target Support Files/Pods-personal-spending-personal-spendingUITests/Pods-personal-spending-personal-spendingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C78D4FDF2A395D3400071797 /* MainGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameModel.swift; sourceTree = "<group>"; };
 		C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetStartedViewController.xib; sourceTree = "<group>"; };
 		C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -128,6 +148,24 @@
 		C7C989902A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeLogCalendarPageViewModel.swift; sourceTree = "<group>"; };
 		C7C989912A1F6464009AACB1 /* LifeLogCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeLogCalendarViewController.swift; sourceTree = "<group>"; };
 		C7C9899D2A1F65DC009AACB1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C7CE41CF2A385F1B00CD656A /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C7CE41D02A385F1B00CD656A /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C7CE41D12A385F1B00CD656A /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C7CE41D22A385F1B00CD656A /* Kit+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C7CE41D32A385F1B00CD656A /* Kit+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C7CE41D52A385F1B00CD656A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C7CE41DC2A385F7B00CD656A /* KitsLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KitsLibrary.swift; sourceTree = "<group>"; };
+		C7CE41DD2A385F7B00CD656A /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		C7CE41DE2A385F7B00CD656A /* GlobalCustomTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalCustomTypes.swift; sourceTree = "<group>"; };
+		C7CE41E22A38624500CD656A /* MainGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameViewController.swift; sourceTree = "<group>"; };
+		C7CE41E32A38624500CD656A /* MainGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainGameViewController.xib; sourceTree = "<group>"; };
+		C7CE41E62A38626200CD656A /* KitSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitSelectionViewController.swift; sourceTree = "<group>"; };
+		C7CE41E72A38626200CD656A /* KitSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KitSelectionViewController.xib; sourceTree = "<group>"; };
+		C7CE41EA2A3862EA00CD656A /* KitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7CE41EB2A3862EA00CD656A /* KitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KitCollectionViewCell.xib; sourceTree = "<group>"; };
+		C7CE41EF2A386A3600CD656A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C7CE41F02A386A3600CD656A /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		C7CE41F32A386B1300CD656A /* TestingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingModel.swift; sourceTree = "<group>"; };
 		D9C12F9626C4209310A2EA18 /* Pods-personal-spending-personal-spendingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending-personal-spendingUITests.debug.xcconfig"; path = "Target Support Files/Pods-personal-spending-personal-spendingUITests/Pods-personal-spending-personal-spendingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E166FD7EEBE1E1C992396906 /* Pods-personal-spending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending.release.xcconfig"; path = "Target Support Files/Pods-personal-spending/Pods-personal-spending.release.xcconfig"; sourceTree = "<group>"; };
 		FBECF6E7F342C9459273A2B8 /* Pods_personal_spending_personal_spendingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_personal_spending_personal_spendingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +268,7 @@
 		C7C988C32A1F0643009AACB1 /* personal-spending */ = {
 			isa = PBXGroup;
 			children = (
+				C7F49D992A385BF800EFA7BA /* Game */,
 				C7A841882A32E65200A76CDC /* Archived */,
 				C7A9D7AC2A287687005140F7 /* Stamp */,
 				C7C989842A1F6464009AACB1 /* Calendar */,
@@ -334,6 +373,40 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C7CE41CE2A385F1B00CD656A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C7CE41CF2A385F1B00CD656A /* Question+CoreDataProperties.swift */,
+				C7CE41D02A385F1B00CD656A /* CoreDataManager.swift */,
+				C7CE41D12A385F1B00CD656A /* Question+CoreDataClass.swift */,
+				C7CE41D22A385F1B00CD656A /* Kit+CoreDataProperties.swift */,
+				C7CE41D32A385F1B00CD656A /* Kit+CoreDataClass.swift */,
+				C7CE41D42A385F1B00CD656A /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C7F49D992A385BF800EFA7BA /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				C7CE41DE2A385F7B00CD656A /* GlobalCustomTypes.swift */,
+				C7CE41DC2A385F7B00CD656A /* KitsLibrary.swift */,
+				C7CE41DD2A385F7B00CD656A /* UserData.swift */,
+				C7CE41CE2A385F1B00CD656A /* CoreData */,
+				C7CE41E22A38624500CD656A /* MainGameViewController.swift */,
+				C7CE41E32A38624500CD656A /* MainGameViewController.xib */,
+				C7CE41E62A38626200CD656A /* KitSelectionViewController.swift */,
+				C7CE41E72A38626200CD656A /* KitSelectionViewController.xib */,
+				C7CE41EA2A3862EA00CD656A /* KitCollectionViewCell.swift */,
+				C7CE41EB2A3862EA00CD656A /* KitCollectionViewCell.xib */,
+				C7CE41EF2A386A3600CD656A /* TestViewController.swift */,
+				C7CE41F02A386A3600CD656A /* TestViewController.xib */,
+				C7CE41F32A386B1300CD656A /* TestingModel.swift */,
+				C78D4FDF2A395D3400071797 /* MainGameModel.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,9 +519,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A8418C2A32E66C00A76CDC /* PopupCongratsActionViewController.xib in Resources */,
+				C7CE41E52A38624500CD656A /* MainGameViewController.xib in Resources */,
+				C7CE41E92A38626200CD656A /* KitSelectionViewController.xib in Resources */,
 				C7C989782A1F21B5009AACB1 /* HistoryHeaderView.xib in Resources */,
 				C7A9D7CA2A2F2435005140F7 /* WelcomeViewController.xib in Resources */,
 				C799D2B22A376C6100EB8FB8 /* GetStartedViewController.xib in Resources */,
+				C7CE41F22A386A3600CD656A /* TestViewController.xib in Resources */,
+				C7CE41ED2A3862EA00CD656A /* KitCollectionViewCell.xib in Resources */,
 				C7A9D7B02A287688005140F7 /* DisplayStampViewController.xib in Resources */,
 				C7A4BC4B2A36231F00629AFB /* InfoPlist.strings in Resources */,
 				C7C989812A1F2277009AACB1 /* LifeLogHistoryTableViewCell.xib in Resources */,
@@ -588,30 +665,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7CE41EC2A3862EA00CD656A /* KitCollectionViewCell.swift in Sources */,
+				C7CE41F42A386B1300CD656A /* TestingModel.swift in Sources */,
+				C7CE41D92A385F1B00CD656A /* Kit+CoreDataProperties.swift in Sources */,
 				C7C989942A1F6464009AACB1 /* LifeLogCalendarPageViewController.swift in Sources */,
 				C7C9899C2A1F6464009AACB1 /* LifeLogCalendarViewController.swift in Sources */,
 				C7C989972A1F6464009AACB1 /* LifeLogCalendarCollectionCell.swift in Sources */,
 				C7A8418B2A32E66C00A76CDC /* PopupCongratsActionViewController.swift in Sources */,
 				C7A9D7A22A272873005140F7 /* DataPersonal.xcdatamodeld in Sources */,
 				C7C989802A1F2277009AACB1 /* LifeLogHistoryTableViewCellViewModel.swift in Sources */,
+				C7CE41D72A385F1B00CD656A /* CoreDataManager.swift in Sources */,
 				C7C9899E2A1F65DC009AACB1 /* Color.swift in Sources */,
 				C7C989832A1F3C8A009AACB1 /* HomeViewModel.swift in Sources */,
+				C7CE41E42A38624500CD656A /* MainGameViewController.swift in Sources */,
 				C7A9D7C92A2F2435005140F7 /* WelcomeViewController.swift in Sources */,
 				C799D2B12A376C6100EB8FB8 /* GetStartedViewController.swift in Sources */,
 				C7C9897F2A1F2277009AACB1 /* LifeLogHistoryTableViewCell.swift in Sources */,
 				C7C989922A1F6464009AACB1 /* LifeLogCalendarViewModel.swift in Sources */,
+				C7CE41DA2A385F1B00CD656A /* Kit+CoreDataClass.swift in Sources */,
+				C7CE41E82A38626200CD656A /* KitSelectionViewController.swift in Sources */,
 				C7A9D7A92A2734ED005140F7 /* TestTableViewCell.swift in Sources */,
 				C7C9897A2A1F21B5009AACB1 /* HistoryHeaderView.swift in Sources */,
+				C7CE41F12A386A3600CD656A /* TestViewController.swift in Sources */,
 				C7C989732A1F1D52009AACB1 /* SwiftDate.swift in Sources */,
 				C7C989792A1F21B5009AACB1 /* HistoryHeaderViewModel.swift in Sources */,
 				C7C988C52A1F0643009AACB1 /* AppDelegate.swift in Sources */,
+				C7CE41DB2A385F1B00CD656A /* Model.xcdatamodeld in Sources */,
 				C7C989712A1F1BD5009AACB1 /* App.swift in Sources */,
 				C7C988F62A1F06E6009AACB1 /* HomeViewController.swift in Sources */,
 				C7A9D7A52A272D15005140F7 /* TestCoreDataViewController.swift in Sources */,
 				C7A9D7AF2A287688005140F7 /* DisplayStampViewController.swift in Sources */,
 				C7C9899B2A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift in Sources */,
+				C7CE41D82A385F1B00CD656A /* Question+CoreDataClass.swift in Sources */,
+				C7CE41E02A385F7B00CD656A /* UserData.swift in Sources */,
 				C7C989962A1F6464009AACB1 /* LifeLogCalendarCollectionCellViewModel.swift in Sources */,
+				C7CE41DF2A385F7B00CD656A /* KitsLibrary.swift in Sources */,
+				C7CE41D62A385F1B00CD656A /* Question+CoreDataProperties.swift in Sources */,
+				C7CE41E12A385F7B00CD656A /* GlobalCustomTypes.swift in Sources */,
 				C7A9D7CD2A2F2D93005140F7 /* ExtenStrings.swift in Sources */,
+				C78D4FE02A395D3400071797 /* MainGameModel.swift in Sources */,
 				C7A8418F2A33045B00A76CDC /* PopupEnoughClearViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -969,6 +1061,16 @@
 			);
 			currentVersion = C7A9D7A12A272873005140F7 /* DataPersonal.xcdatamodel */;
 			path = DataPersonal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C7CE41D42A385F1B00CD656A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C7CE41D52A385F1B00CD656A /* Model.xcdatamodel */,
+			);
+			currentVersion = C7CE41D52A385F1B00CD656A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
