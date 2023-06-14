@@ -39,9 +39,8 @@
                         <constraint firstAttribute="width" constant="120" id="uI5-yC-99Z"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzS-tG-iio">
+                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzS-tG-iio">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <connections>
                         <action selector="clickExam:" destination="iN0-l3-epB" eventType="touchUpInside" id="d0Z-Nz-hhr"/>
@@ -53,10 +52,14 @@
             <constraints>
                 <constraint firstItem="0tU-xm-TzM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0jf-ns-dbg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0tU-xm-TzM" secondAttribute="trailing" id="9s1-91-qgZ"/>
+                <constraint firstItem="DzS-tG-iio" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JOu-3i-Jke"/>
+                <constraint firstItem="DzS-tG-iio" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Kzi-BJ-tFP"/>
+                <constraint firstItem="DzS-tG-iio" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="TgB-z3-bti"/>
                 <constraint firstItem="bzx-zE-LYR" firstAttribute="centerX" secondItem="0tU-xm-TzM" secondAttribute="centerX" id="XPi-qJ-sUk"/>
                 <constraint firstItem="0tU-xm-TzM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eGl-zE-RG8"/>
                 <constraint firstAttribute="bottom" secondItem="0tU-xm-TzM" secondAttribute="bottom" id="mmT-xw-SIm"/>
                 <constraint firstItem="bzx-zE-LYR" firstAttribute="centerY" secondItem="0tU-xm-TzM" secondAttribute="centerY" id="pnN-ea-GkH"/>
+                <constraint firstItem="DzS-tG-iio" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pzw-ya-pot"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
