@@ -1,9 +1,5 @@
 ////
 ////  DisplayStampViewController.swift
-////  CM
-////
-////  Created by Mai Anh Tuan on 4/3/17.
-////  Copyright © 2017 AsianTech Co., Ltd. All rights reserved.
 ////
 
 import UIKit
