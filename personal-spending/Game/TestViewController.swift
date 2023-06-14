@@ -85,7 +85,7 @@ class TestViewController: UIViewController {
         testingModel.userAnswer = sender.titleLabel?.text
         rootView.isUserInteractionEnabled = false
         if testingModel.isRightAnswerCheck() {
-            questionLabel.isHidden = true
+//            questionLabel.isHidden = true
             answerResultImage.image = UIImage(named: "Right_png")
             answerResultImage.isHidden = false
             Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [self] _ in
@@ -98,7 +98,7 @@ class TestViewController: UIViewController {
             }
         } else {
             answerResultImage.image = UIImage(named: "Wrong_png")
-            questionLabel.isHidden = true
+//            questionLabel.isHidden = true
             answerResultImage.isHidden = false
             Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [self] _ in
                 testingModel.nextQuestion()

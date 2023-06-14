@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="s6j-pM-H0Q">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <rect key="frame" x="20" y="30" width="353" height="822"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MTF-Hr-YoG">
                         <size key="itemSize" width="167" height="144"/>
@@ -34,9 +34,9 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="s6j-pM-H0Q" secondAttribute="bottom" id="MYm-Nf-ra1"/>
-                <constraint firstItem="s6j-pM-H0Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZNE-TP-6rF"/>
-                <constraint firstItem="s6j-pM-H0Q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gNi-pY-mrn"/>
-                <constraint firstAttribute="trailing" secondItem="s6j-pM-H0Q" secondAttribute="trailing" id="vh4-aP-4TA"/>
+                <constraint firstItem="s6j-pM-H0Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ZNE-TP-6rF"/>
+                <constraint firstItem="s6j-pM-H0Q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="gNi-pY-mrn"/>
+                <constraint firstAttribute="trailing" secondItem="s6j-pM-H0Q" secondAttribute="trailing" constant="20" id="vh4-aP-4TA"/>
             </constraints>
             <point key="canvasLocation" x="54" y="21"/>
         </view>

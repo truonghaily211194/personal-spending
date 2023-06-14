@@ -10,17 +10,16 @@ import UIKit
 class KitSelectionViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
-    var studyStageRawValue = 1
+    var studyStageRawValue = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tuneUI()
     }
     
     private func tuneUI() {
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem?.tintColor = UIColor(red: 54 / 255, green: 63 / 255, blue: 242 / 255, alpha: 1)
+//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+//        navigationItem.backBarButtonItem?.tintColor = UIColor(red: 54 / 255, green: 63 / 255, blue: 242 / 255, alpha: 1)
         collectionView.register(KitCollectionViewCell.self)
         
         collectionView.delegate = self
@@ -28,7 +27,7 @@ class KitSelectionViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = 50
+        layout.minimumInteritemSpacing = 50 //50
         layout.minimumLineSpacing = 50
         layout.itemSize = CGSize.init(width: 130, height: 130)
 
@@ -76,7 +75,7 @@ extension KitSelectionViewController: UICollectionViewDataSource, UICollectionVi
         let vc = TestViewController()
 //        let sb = UIStoryboard(name: "Main", bundle: nil)
 //        if let testVC = sb.instantiateViewController(withIdentifier: "TestVC") as? TestViewController {
-//            NotificationCenter.default.post(name: Notification.Name(rawValue: chosenTestNotificationKey), object: (indexPath, studyStageRawValue))
+            NotificationCenter.default.post(name: Notification.Name(rawValue: chosenTestNotificationKey), object: (indexPath, studyStageRawValue))
             self.navigationController?.pushViewController(vc, animated: true)
 //        }
     }

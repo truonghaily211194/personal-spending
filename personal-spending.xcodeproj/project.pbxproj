@@ -10,6 +10,12 @@
 		362638548B090289F5A408F1 /* Pods_personal_spending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5108D31F07D25DDC29DB5BF8 /* Pods_personal_spending.framework */; };
 		ABD0809350718C9654F1FB50 /* Pods_personal_spendingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC98EF033C4ACA9D48A0DF7 /* Pods_personal_spendingTests.framework */; };
 		C78D4FE02A395D3400071797 /* MainGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FDF2A395D3400071797 /* MainGameModel.swift */; };
+		C78D4FE32A399DD300071797 /* MainGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FE12A399DD300071797 /* MainGameCell.swift */; };
+		C78D4FE42A399DD300071797 /* MainGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FE22A399DD300071797 /* MainGameCell.xib */; };
+		C78D4FE82A39AD0F00071797 /* HeaderMainGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FE72A39AD0F00071797 /* HeaderMainGameView.swift */; };
+		C78D4FEA2A39AD1B00071797 /* HeaderMainGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FE92A39AD1B00071797 /* HeaderMainGameView.xib */; };
+		C78D4FEC2A39AE1300071797 /* FooterMainGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FEB2A39AE1300071797 /* FooterMainGameView.swift */; };
+		C78D4FEE2A39AE2000071797 /* FooterMainGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FED2A39AE2000071797 /* FooterMainGameView.xib */; };
 		C799D2B12A376C6100EB8FB8 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */; };
 		C799D2B22A376C6100EB8FB8 /* GetStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */; };
 		C7A4BC4B2A36231F00629AFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */; };
@@ -100,6 +106,12 @@
 		BE94EC55CB5A891158BA6730 /* Pods-personal-spendingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spendingTests.debug.xcconfig"; path = "Target Support Files/Pods-personal-spendingTests/Pods-personal-spendingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40B2594D9698799A735DFAF /* Pods-personal-spending-personal-spendingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending-personal-spendingUITests.release.xcconfig"; path = "Target Support Files/Pods-personal-spending-personal-spendingUITests/Pods-personal-spending-personal-spendingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C78D4FDF2A395D3400071797 /* MainGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameModel.swift; sourceTree = "<group>"; };
+		C78D4FE12A399DD300071797 /* MainGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameCell.swift; sourceTree = "<group>"; };
+		C78D4FE22A399DD300071797 /* MainGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainGameCell.xib; sourceTree = "<group>"; };
+		C78D4FE72A39AD0F00071797 /* HeaderMainGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMainGameView.swift; sourceTree = "<group>"; };
+		C78D4FE92A39AD1B00071797 /* HeaderMainGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderMainGameView.xib; sourceTree = "<group>"; };
+		C78D4FEB2A39AE1300071797 /* FooterMainGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterMainGameView.swift; sourceTree = "<group>"; };
+		C78D4FED2A39AE2000071797 /* FooterMainGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterMainGameView.xib; sourceTree = "<group>"; };
 		C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetStartedViewController.xib; sourceTree = "<group>"; };
 		C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -405,6 +417,12 @@
 				C7CE41F02A386A3600CD656A /* TestViewController.xib */,
 				C7CE41F32A386B1300CD656A /* TestingModel.swift */,
 				C78D4FDF2A395D3400071797 /* MainGameModel.swift */,
+				C78D4FE12A399DD300071797 /* MainGameCell.swift */,
+				C78D4FE22A399DD300071797 /* MainGameCell.xib */,
+				C78D4FE72A39AD0F00071797 /* HeaderMainGameView.swift */,
+				C78D4FE92A39AD1B00071797 /* HeaderMainGameView.xib */,
+				C78D4FEB2A39AE1300071797 /* FooterMainGameView.swift */,
+				C78D4FED2A39AE2000071797 /* FooterMainGameView.xib */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -519,9 +537,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A8418C2A32E66C00A76CDC /* PopupCongratsActionViewController.xib in Resources */,
+				C78D4FEE2A39AE2000071797 /* FooterMainGameView.xib in Resources */,
 				C7CE41E52A38624500CD656A /* MainGameViewController.xib in Resources */,
 				C7CE41E92A38626200CD656A /* KitSelectionViewController.xib in Resources */,
 				C7C989782A1F21B5009AACB1 /* HistoryHeaderView.xib in Resources */,
+				C78D4FEA2A39AD1B00071797 /* HeaderMainGameView.xib in Resources */,
 				C7A9D7CA2A2F2435005140F7 /* WelcomeViewController.xib in Resources */,
 				C799D2B22A376C6100EB8FB8 /* GetStartedViewController.xib in Resources */,
 				C7CE41F22A386A3600CD656A /* TestViewController.xib in Resources */,
@@ -538,6 +558,7 @@
 				C7C988F72A1F06E6009AACB1 /* HomeViewController.xib in Resources */,
 				C7A9D7A62A272D15005140F7 /* TestCoreDataViewController.xib in Resources */,
 				C7C989982A1F6464009AACB1 /* LifeLogCalendarViewController.xib in Resources */,
+				C78D4FE42A399DD300071797 /* MainGameCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +700,7 @@
 				C7C989832A1F3C8A009AACB1 /* HomeViewModel.swift in Sources */,
 				C7CE41E42A38624500CD656A /* MainGameViewController.swift in Sources */,
 				C7A9D7C92A2F2435005140F7 /* WelcomeViewController.swift in Sources */,
+				C78D4FE82A39AD0F00071797 /* HeaderMainGameView.swift in Sources */,
 				C799D2B12A376C6100EB8FB8 /* GetStartedViewController.swift in Sources */,
 				C7C9897F2A1F2277009AACB1 /* LifeLogHistoryTableViewCell.swift in Sources */,
 				C7C989922A1F6464009AACB1 /* LifeLogCalendarViewModel.swift in Sources */,
@@ -698,9 +720,11 @@
 				C7C9899B2A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift in Sources */,
 				C7CE41D82A385F1B00CD656A /* Question+CoreDataClass.swift in Sources */,
 				C7CE41E02A385F7B00CD656A /* UserData.swift in Sources */,
+				C78D4FE32A399DD300071797 /* MainGameCell.swift in Sources */,
 				C7C989962A1F6464009AACB1 /* LifeLogCalendarCollectionCellViewModel.swift in Sources */,
 				C7CE41DF2A385F7B00CD656A /* KitsLibrary.swift in Sources */,
 				C7CE41D62A385F1B00CD656A /* Question+CoreDataProperties.swift in Sources */,
+				C78D4FEC2A39AE1300071797 /* FooterMainGameView.swift in Sources */,
 				C7CE41E12A385F7B00CD656A /* GlobalCustomTypes.swift in Sources */,
 				C7A9D7CD2A2F2D93005140F7 /* ExtenStrings.swift in Sources */,
 				C78D4FE02A395D3400071797 /* MainGameModel.swift in Sources */,

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="MainGameCell" customModule="personal_spending" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat_emoji" translatesAutoresizingMaskIntoConstraints="NO" id="noi-iT-sq5">
+                        <rect key="frame" x="20" y="10" width="42" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="noi-iT-sq5" secondAttribute="height" multiplier="1:1" id="d00-a8-b1j"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dP-VQ-Hno">
+                        <rect key="frame" x="72" y="20.333333333333336" width="49" height="21.333333333333336"/>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                        <color key="textColor" systemColor="tintColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_gray_arrow_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="51B-lw-2jC">
+                        <rect key="frame" x="285" y="18.666666666666668" width="25" height="25.000000000000004"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="fNZ-MV-Dby"/>
+                            <constraint firstAttribute="height" constant="25" id="ofd-NI-bPS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="noi-iT-sq5" secondAttribute="bottom" constant="10" id="6op-Xs-T8x"/>
+                    <constraint firstItem="noi-iT-sq5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Qu0-u1-QkZ"/>
+                    <constraint firstItem="51B-lw-2jC" firstAttribute="centerY" secondItem="6dP-VQ-Hno" secondAttribute="centerY" id="beX-mN-j5S"/>
+                    <constraint firstAttribute="trailing" secondItem="51B-lw-2jC" secondAttribute="trailing" constant="10" id="fKa-my-Ydv"/>
+                    <constraint firstItem="noi-iT-sq5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="j4A-jS-hBN"/>
+                    <constraint firstItem="6dP-VQ-Hno" firstAttribute="leading" secondItem="noi-iT-sq5" secondAttribute="trailing" constant="10" id="pA4-f2-np1"/>
+                    <constraint firstItem="6dP-VQ-Hno" firstAttribute="centerY" secondItem="noi-iT-sq5" secondAttribute="centerY" id="vby-2T-bc0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="courseLabel" destination="6dP-VQ-Hno" id="HFe-Ye-lTf"/>
+                <outlet property="iconImage" destination="noi-iT-sq5" id="Kpn-Uf-8mw"/>
+            </connections>
+            <point key="canvasLocation" x="65.648854961832058" y="26.056338028169016"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Cat_emoji" width="296" height="320"/>
+        <image name="ic_gray_arrow_calendar" width="20" height="25"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
