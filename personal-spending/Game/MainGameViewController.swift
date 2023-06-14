@@ -119,7 +119,9 @@ extension MainGameViewController: FooterMainGameViewDelegate {
     func footerView(footer: FooterMainGameView, needPerformAction action: FooterMainGameView.Action) {
         switch action {
         case .exam(let section):
-            print("---------: \(section)")
+            let vc = ExamViewController()
+            NotificationCenter.default.post(name: Notification.Name(rawValue: chosenExamNotificationKey), object: section)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

@@ -16,6 +16,9 @@
 		C78D4FEA2A39AD1B00071797 /* HeaderMainGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FE92A39AD1B00071797 /* HeaderMainGameView.xib */; };
 		C78D4FEC2A39AE1300071797 /* FooterMainGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FEB2A39AE1300071797 /* FooterMainGameView.swift */; };
 		C78D4FEE2A39AE2000071797 /* FooterMainGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FED2A39AE2000071797 /* FooterMainGameView.xib */; };
+		C78D4FF12A39C43000071797 /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FEF2A39C43000071797 /* ExamViewController.swift */; };
+		C78D4FF22A39C43000071797 /* ExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FF02A39C43000071797 /* ExamViewController.xib */; };
+		C78D4FF42A39C67C00071797 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FF32A39C67C00071797 /* ExamModel.swift */; };
 		C799D2B12A376C6100EB8FB8 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */; };
 		C799D2B22A376C6100EB8FB8 /* GetStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */; };
 		C7A4BC4B2A36231F00629AFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */; };
@@ -112,6 +115,9 @@
 		C78D4FE92A39AD1B00071797 /* HeaderMainGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderMainGameView.xib; sourceTree = "<group>"; };
 		C78D4FEB2A39AE1300071797 /* FooterMainGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterMainGameView.swift; sourceTree = "<group>"; };
 		C78D4FED2A39AE2000071797 /* FooterMainGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterMainGameView.xib; sourceTree = "<group>"; };
+		C78D4FEF2A39C43000071797 /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
+		C78D4FF02A39C43000071797 /* ExamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamViewController.xib; sourceTree = "<group>"; };
+		C78D4FF32A39C67C00071797 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
 		C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetStartedViewController.xib; sourceTree = "<group>"; };
 		C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -423,6 +429,9 @@
 				C78D4FE92A39AD1B00071797 /* HeaderMainGameView.xib */,
 				C78D4FEB2A39AE1300071797 /* FooterMainGameView.swift */,
 				C78D4FED2A39AE2000071797 /* FooterMainGameView.xib */,
+				C78D4FEF2A39C43000071797 /* ExamViewController.swift */,
+				C78D4FF02A39C43000071797 /* ExamViewController.xib */,
+				C78D4FF32A39C67C00071797 /* ExamModel.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -545,6 +554,7 @@
 				C7A9D7CA2A2F2435005140F7 /* WelcomeViewController.xib in Resources */,
 				C799D2B22A376C6100EB8FB8 /* GetStartedViewController.xib in Resources */,
 				C7CE41F22A386A3600CD656A /* TestViewController.xib in Resources */,
+				C78D4FF22A39C43000071797 /* ExamViewController.xib in Resources */,
 				C7CE41ED2A3862EA00CD656A /* KitCollectionViewCell.xib in Resources */,
 				C7A9D7B02A287688005140F7 /* DisplayStampViewController.xib in Resources */,
 				C7A4BC4B2A36231F00629AFB /* InfoPlist.strings in Resources */,
@@ -716,9 +726,11 @@
 				C7C989712A1F1BD5009AACB1 /* App.swift in Sources */,
 				C7C988F62A1F06E6009AACB1 /* HomeViewController.swift in Sources */,
 				C7A9D7A52A272D15005140F7 /* TestCoreDataViewController.swift in Sources */,
+				C78D4FF42A39C67C00071797 /* ExamModel.swift in Sources */,
 				C7A9D7AF2A287688005140F7 /* DisplayStampViewController.swift in Sources */,
 				C7C9899B2A1F6464009AACB1 /* LifeLogCalendarPageViewModel.swift in Sources */,
 				C7CE41D82A385F1B00CD656A /* Question+CoreDataClass.swift in Sources */,
+				C78D4FF12A39C43000071797 /* ExamViewController.swift in Sources */,
 				C7CE41E02A385F7B00CD656A /* UserData.swift in Sources */,
 				C78D4FE32A399DD300071797 /* MainGameCell.swift in Sources */,
 				C7C989962A1F6464009AACB1 /* LifeLogCalendarCollectionCellViewModel.swift in Sources */,
