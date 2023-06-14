@@ -30,12 +30,18 @@ class TestingModel: Testing {
     private var correctAnswersCount: Int = 0
     
     var userAnswer: String?
+    var questionEmpty = false
     
     func testStart() {
         guard let selectedStudyStage = selectedStudyStage,
               let selectedKit = selectedKit else { return }
         testingQuestions = KitsLibrary.shared.getKitForTesting(for: selectedStudyStage, and: selectedKit)
-        testingQuestions = testingQuestions.shuffled()
+        if testingQuestions.count > 0 {
+            questionEmpty = false
+            testingQuestions = testingQuestions.shuffled()
+        } else {
+            questionEmpty = true
+        }
         totalQuestionsCount = testingQuestions.count
     }
     

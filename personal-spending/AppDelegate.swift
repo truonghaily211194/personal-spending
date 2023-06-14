@@ -32,14 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         let isChangeRoot = UserDefaults.standard.bool(forKey: ExtenStrings.kChangeRoot)
         var vc = UIViewController()
-//        if isChangeRoot {
-//            vc = WelcomeViewController()
-//        } else {
-//            vc = GetStartedViewController()
-//        }
-        vc = MainGameViewController()
-        let navi = UINavigationController(rootViewController: vc)
-        window?.rootViewController = navi
+        if isChangeRoot {
+            vc = WelcomeViewController()
+        } else {
+            vc = GetStartedViewController()
+        }
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
         return true
     }

@@ -14,6 +14,7 @@ class KitSelectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Course"
         tuneUI()
     }
     
@@ -41,17 +42,17 @@ class KitSelectionViewController: UIViewController {
         let location = gesture.location(in: collectionView)
         if let indexPath = collectionView.indexPathForItem(at: location) {
             if KitsLibrary.shared.isBasicKitCheck(for: indexPath, for: studyStageRawValue) {
-                let alert = UIAlertController(title: "Базовые наборы слов удалять нельзя", message: nil, preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "Ок", style: .default)
+                let alert = UIAlertController(title: "Basic word sets cannot be deleted", message: nil, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "ОK", style: .default)
                 alert.addAction(okAction)
                 self.present(alert, animated: true)
             } else {
-                let alert = UIAlertController(title: "Вы действительно хотите удалить этот набор слов?", message: nil, preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "Ок", style: .destructive) { _ in
+                let alert = UIAlertController(title: "Are you sure you want to delete this set of words?", message: nil, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "ОK", style: .destructive) { _ in
                     KitsLibrary.shared.deleteUserKit(for: indexPath, for: self.studyStageRawValue)
                     self.collectionView.reloadData()
                 }
-                let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
                 alert.addAction(okAction)
                 alert.addAction(cancelAction)
                 self.present(alert, animated: true)
@@ -73,10 +74,8 @@ extension KitSelectionViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = TestViewController()
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        if let testVC = sb.instantiateViewController(withIdentifier: "TestVC") as? TestViewController {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: chosenTestNotificationKey), object: (indexPath, studyStageRawValue))
-            self.navigationController?.pushViewController(vc, animated: true)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: chosenTestNotificationKey), object: (indexPath, studyStageRawValue))
+        self.navigationController?.pushViewController(vc, animated: true)
 //        }
     }
 }

@@ -22,6 +22,7 @@ final class CoreDataManager {
         
         container.loadPersistentStores {
             storeDescription, error in
+            print("------ \(error)")
         }
         
     return container

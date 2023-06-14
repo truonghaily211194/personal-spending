@@ -18,7 +18,7 @@ class KitCollectionViewCell: UICollectionViewCell {
     }
     
     private func tuneUI() {
-        background.backgroundColor = UIColor(red: 1, green: 200 / 255, blue: 199 / 255, alpha: 1)
+        background.backgroundColor = UIColor(red: 1, green: 220 / 255, blue: 199 / 255, alpha: 1)
         self.layer.cornerRadius = 20
         label.adjustsFontSizeToFitWidth = true
     }

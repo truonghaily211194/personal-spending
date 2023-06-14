@@ -19,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat_emoji" translatesAutoresizingMaskIntoConstraints="NO" id="noi-iT-sq5">
-                        <rect key="frame" x="20" y="10" width="42" height="42"/>
+                        <rect key="frame" x="20" y="17" width="28" height="28"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="noi-iT-sq5" secondAttribute="height" multiplier="1:1" id="d00-a8-b1j"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dP-VQ-Hno">
-                        <rect key="frame" x="72" y="20.333333333333336" width="49" height="21.333333333333336"/>
+                        <rect key="frame" x="58" y="20" width="49" height="22.333333333333329"/>
                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                         <color key="textColor" systemColor="tintColor"/>
                         <nil key="highlightedColor"/>
@@ -40,8 +40,8 @@
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="noi-iT-sq5" secondAttribute="bottom" constant="10" id="6op-Xs-T8x"/>
-                    <constraint firstItem="noi-iT-sq5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Qu0-u1-QkZ"/>
+                    <constraint firstAttribute="bottom" secondItem="noi-iT-sq5" secondAttribute="bottom" constant="17" id="6op-Xs-T8x"/>
+                    <constraint firstItem="noi-iT-sq5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="Qu0-u1-QkZ"/>
                     <constraint firstItem="51B-lw-2jC" firstAttribute="centerY" secondItem="6dP-VQ-Hno" secondAttribute="centerY" id="beX-mN-j5S"/>
                     <constraint firstAttribute="trailing" secondItem="51B-lw-2jC" secondAttribute="trailing" constant="10" id="fKa-my-Ydv"/>
                     <constraint firstItem="noi-iT-sq5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="j4A-jS-hBN"/>

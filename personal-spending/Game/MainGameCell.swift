@@ -17,6 +17,12 @@ class MainGameCell: UITableViewCell {
             courseLabel.text = course
         }
     }
+    
+    var image: UIImage = UIImage() {
+        didSet {
+            iconImage.image = image
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

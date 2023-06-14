@@ -77,6 +77,13 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
         setupUILogo()
     }
 
+    @IBAction func playGame(_ sender: Any) {
+        let vc = MainGameViewController()
+        let navi = UINavigationController(rootViewController: vc)
+        UIApplication.shared.windows.first?.rootViewController = navi
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    
     @IBAction func changeDescription(_ sender: Any) {
         descriptionLabel.text = ExtenStrings.descriptions.randomElement()
     }

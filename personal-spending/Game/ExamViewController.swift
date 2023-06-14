@@ -24,6 +24,9 @@ class ExamViewController: UIViewController, UITextViewDelegate {
         tuneUI()
         examModel.testStart()
         examModel.test(questionLabel: questionLabel, buttons: nil, countLabel: questionsCountLabel)
+        if examModel.examEmpty {
+            showAlert()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,14 +39,23 @@ class ExamViewController: UIViewController, UITextViewDelegate {
         view.endEditing(true)
     }
     
+    func showAlert() {
+        let alert = UIAlertController(title: "Please complete 3 final exams first", message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ОK", style: .default) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
+    }
+    
     @objc private func presentResult(_ notification: NSNotification) {
         if let result = notification.object {
-            let alert = UIAlertController(title: "Ваш результат: \(result)%", message: nil, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Your result: \(result)%", message: nil, preferredStyle: .alert)
             
-            let backAction = UIAlertAction(title: "В главное меню", style: .default) { _ in
+            let backAction = UIAlertAction(title: "Go Menu", style: .default) { _ in
                 self.navigationController?.popToRootViewController(animated: true)
             }
-            let onceAgainAction = UIAlertAction(title: "Попробовать ещё раз", style: .cancel) {_ in
+            let onceAgainAction = UIAlertAction(title: "Try one more time", style: .cancel) {_ in
                 self.examModel.testStart()
                 self.examModel.test(questionLabel: self.questionLabel, buttons: nil, countLabel: self.questionsCountLabel)
             }
@@ -67,6 +79,7 @@ class ExamViewController: UIViewController, UITextViewDelegate {
             questionBackground.layer.borderColor = CGColor(red: 250 / 255, green: 185 / 255, blue: 26 / 255, alpha: 1)
         } else {
             // Fallback on earlier versions
+            questionBackground.layer.borderColor = UIColor.systemPink.cgColor
         }
         questionBackground.layer.borderWidth = 5
         

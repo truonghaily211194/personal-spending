@@ -478,23 +478,23 @@ final class KitsLibrary {
         molecule.correctAnswer = "Molecule"
         molecule.incorrectAnswers = ["Molecul", "Cell", "Gene"]
         let evolution = Question(context: CoreDataManager.shared.context)
-        evolution.question = "Эволюция"
+        evolution.question = "Sự tiến hoá"
         evolution.correctAnswer = "Evolution"
         evolution.incorrectAnswers = ["Evolute", "Diversity", "Selection"]
         let naturalSelection = Question(context: CoreDataManager.shared.context)
-        naturalSelection.question = "Естественный отбор"
+        naturalSelection.question = "a mechanism of evolution."
         naturalSelection.correctAnswer = "Natural selection"
         naturalSelection.incorrectAnswers = ["Natural breed", "Nature selection", "Metabolism"]
         let humanBrain = Question(context: CoreDataManager.shared.context)
-        humanBrain.question = "Человеческий мозг"
+        humanBrain.question = "Bộ não"
         humanBrain.correctAnswer = "Human brain"
         humanBrain.incorrectAnswers = ["Human cell", "Human head", "Organ"]
         let population = Question(context: CoreDataManager.shared.context)
-        population.question = "Популяция"
+        population.question = "Dân số"
         population.correctAnswer = "Population"
         population.incorrectAnswers = ["People", "Pupilation", "Nation"]
         let animal = Question(context: CoreDataManager.shared.context)
-        animal.question = "Животное"
+        animal.question = "Động vật"
         animal.correctAnswer = "Animal"
         animal.incorrectAnswers = ["Human", "Plant", "Bioshere"]
         
@@ -588,7 +588,7 @@ final class KitsLibrary {
         chess.correctAnswer = "Chess"
         chess.incorrectAnswers = ["Checkers", "Tennis", "Dominoes"]
         let magazine = Question(context: CoreDataManager.shared.context)
-        magazine.question = "Журнал"
+        magazine.question = "Tạp chí"
         magazine.correctAnswer = "Magazine"
         magazine.incorrectAnswers = ["Newspaper", "The Internet", "Press"]
         
@@ -668,15 +668,15 @@ final class KitsLibrary {
         luxury.correctAnswer = "Luxury"
         luxury.incorrectAnswers = ["Lucksury", "Leisury", "Unique"]
         let mall = Question(context: CoreDataManager.shared.context)
-        mall.question = "Торговый центр"
+        mall.question = "Trung tâm mua sắm"
         mall.correctAnswer = "Shopping mall"
         mall.incorrectAnswers = ["Shipping mall", "Shopping center", "Shopping centre"]
         let payForPurchase = Question(context: CoreDataManager.shared.context)
-        payForPurchase.question = "Переведите предложение: Заплатить за покупку"
+        payForPurchase.question = "Để trả tiền mua hàng"
         payForPurchase.correctAnswer = "To pay for a purchase"
         payForPurchase.incorrectAnswers = ["To pay for the purchase", "To pay for a buy", "To pay off a purchase"]
         let bargain = Question(context: CoreDataManager.shared.context)
-        bargain.question = "Сделка"
+        bargain.question = "Mặc cả"
         bargain.correctAnswer = "Bargain"
         bargain.incorrectAnswers = ["Agreement", "Shopping", "Luxury"]
         
@@ -904,7 +904,7 @@ final class KitsLibrary {
         late.correctAnswer = "To be late"
         late.incorrectAnswers = ["To be plate", "To arrive", "To release"]
         let politeness = Question(context: CoreDataManager.shared.context)
-        politeness.question = "Вежливость"
+        politeness.question = "lịch sự"
         politeness.correctAnswer = "Politeness"
         politeness.incorrectAnswers = ["Polite", "Plite", "Paliteness"]
         
@@ -1062,7 +1062,7 @@ final class KitsLibrary {
             output = try CoreDataManager.shared.context.fetch(fetchRequest)[selectedKit].questions?.allObjects as? [Question] ?? []
         }
         catch {
-            print(error)
+            print("------: \(error)")
         }
         
         return output

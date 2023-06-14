@@ -6,24 +6,27 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class TestViewController: UIViewController {
-    
+
     @IBOutlet weak var rootView: UIView!
     @IBOutlet var answerButtons: [UIButton]!
     @IBOutlet weak var answerResultImage: UIImageView!
     @IBOutlet weak var questionsCountLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionBackground: UIView!
-    
+
     private let testingModel = TestingModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tuneUI()
         testingModel.testStart()
         testingModel.test(questionLabel: questionLabel, buttons: answerButtons, countLabel: questionsCountLabel)
+        if testingModel.questionEmpty {
+            showAlert()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -32,14 +35,23 @@ class TestViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(presentResult(_:)), name: Notification.Name(rawValue: testNotificationKey), object: nil)
     }
 
+    func showAlert() {
+        let alert = UIAlertController(title: "Please choose another course", message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ОK", style: .default) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
+    }
+
     @objc func presentResult(_ notification: NSNotification) {
         if let result = notification.object {
-            let alert = UIAlertController(title: "Ваш результат: \(result)%", message: nil, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Your result: \(result)%", message: nil, preferredStyle: .alert)
 
-            let backAction = UIAlertAction(title: "В главное меню", style: .default) { _ in
+            let backAction = UIAlertAction(title: "Go to main menu", style: .default) { _ in
                 self.navigationController?.popToRootViewController(animated: true)
             }
-            let onceAgainAction = UIAlertAction(title: "Попробовать ещё раз", style: .cancel) {_ in
+            let onceAgainAction = UIAlertAction(title: "Try one more time", style: .cancel) { _ in
                 self.testingModel.testStart()
                 self.testingModel.test(questionLabel: self.questionLabel, buttons: self.answerButtons, countLabel: self.questionsCountLabel)
             }
@@ -62,6 +74,7 @@ class TestViewController: UIViewController {
         if #available(iOS 13.0, *) {
             questionBackground.layer.borderColor = CGColor(red: 250 / 255, green: 185 / 255, blue: 26 / 255, alpha: 1)
         } else {
+            questionBackground.layer.borderColor = UIColor.systemPink.cgColor
             // Fallback on earlier versions
         }
         questionBackground.layer.borderWidth = 5

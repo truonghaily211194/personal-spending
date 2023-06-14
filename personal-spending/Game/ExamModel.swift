@@ -42,12 +42,21 @@ class ExamModel: Testing {
     private var correctAnswersCount: Int = 0
     
     var userAnswer: String?
+    var examEmpty = false
     
     func testStart() {
-        var allExamQuestions = KitsLibrary.shared.getKitsForExam(with: kitsForExam).shuffled()
+        var allExamQuestions: [Question] = []
+        if KitsLibrary.shared.getKitsForExam(with: kitsForExam).count > 0 {
+            examEmpty = false
+            allExamQuestions = KitsLibrary.shared.getKitsForExam(with: kitsForExam).shuffled()
+        } else {
+            examEmpty = true
+        }
+//        var
         var mediumArr: [Question] = []
         (1...10).forEach { _ in
-            mediumArr.append(allExamQuestions.first!)
+            guard let allExamQuestion = allExamQuestions.first else { return }
+            mediumArr.append(allExamQuestion)
             allExamQuestions.remove(at: 0)
         }
         examQuestions = mediumArr
