@@ -120,7 +120,7 @@ class MainGameViewController: UIViewController, GADFullScreenContentDelegate {
     
     func requestAds() {
         let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: adsTest,
+        GADInterstitialAd.load(withAdUnitID: adsPro,
             request: request,
             completionHandler: { [self] ad, error in
                 if let error = error {
