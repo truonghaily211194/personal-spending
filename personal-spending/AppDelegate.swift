@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             vc = GetStartedViewController()
         }
+        let uuid = NSUUID().uuidString
+        print(uuid)
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
         return true

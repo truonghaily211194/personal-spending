@@ -19,6 +19,8 @@
 		C78D4FF12A39C43000071797 /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FEF2A39C43000071797 /* ExamViewController.swift */; };
 		C78D4FF22A39C43000071797 /* ExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FF02A39C43000071797 /* ExamViewController.xib */; };
 		C78D4FF42A39C67C00071797 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FF32A39C67C00071797 /* ExamModel.swift */; };
+		C78D50792A40AC9E00071797 /* ActionPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D50772A40AC9E00071797 /* ActionPopupViewController.swift */; };
+		C78D507A2A40AC9E00071797 /* ActionPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D50782A40AC9E00071797 /* ActionPopupViewController.xib */; };
 		C799D2B12A376C6100EB8FB8 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */; };
 		C799D2B22A376C6100EB8FB8 /* GetStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */; };
 		C7A4BC4B2A36231F00629AFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */; };
@@ -118,6 +120,8 @@
 		C78D4FEF2A39C43000071797 /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
 		C78D4FF02A39C43000071797 /* ExamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamViewController.xib; sourceTree = "<group>"; };
 		C78D4FF32A39C67C00071797 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
+		C78D50772A40AC9E00071797 /* ActionPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPopupViewController.swift; sourceTree = "<group>"; };
+		C78D50782A40AC9E00071797 /* ActionPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionPopupViewController.xib; sourceTree = "<group>"; };
 		C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetStartedViewController.xib; sourceTree = "<group>"; };
 		C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 				C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */,
 				C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */,
 				C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */,
+				C78D50772A40AC9E00071797 /* ActionPopupViewController.swift */,
+				C78D50782A40AC9E00071797 /* ActionPopupViewController.xib */,
 			);
 			path = "personal-spending";
 			sourceTree = "<group>";
@@ -546,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A8418C2A32E66C00A76CDC /* PopupCongratsActionViewController.xib in Resources */,
+				C78D507A2A40AC9E00071797 /* ActionPopupViewController.xib in Resources */,
 				C78D4FEE2A39AE2000071797 /* FooterMainGameView.xib in Resources */,
 				C7CE41E52A38624500CD656A /* MainGameViewController.xib in Resources */,
 				C7CE41E92A38626200CD656A /* KitSelectionViewController.xib in Resources */,
@@ -741,6 +748,7 @@
 				C7A9D7CD2A2F2D93005140F7 /* ExtenStrings.swift in Sources */,
 				C78D4FE02A395D3400071797 /* MainGameModel.swift in Sources */,
 				C7A8418F2A33045B00A76CDC /* PopupEnoughClearViewController.swift in Sources */,
+				C78D50792A40AC9E00071797 /* ActionPopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,8 +29,8 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
     var isShowingCalendar = false
     let bannerView: GADBannerView = {
         let bannerView = GADBannerView()
-        bannerView.adUnitID = "ca-app-pub-1480390762284051/8439011927" // Pro
-//        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111" // Test
+//        bannerView.adUnitID = "ca-app-pub-1480390762284051/8439011927" // Pro
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111" // Test
         if #available(iOS 13.0, *) {
             bannerView.backgroundColor = .secondarySystemBackground
         }
@@ -138,7 +138,14 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
     @IBAction func tapEmail(_ sender: Any) {
         openMail()
     }
-
+    
+    @IBAction func actionTap(_ sender: Any) {
+        let action = ActionPopupViewController()
+        action.modalPresentationStyle = .overFullScreen
+        action.modalTransitionStyle = .crossDissolve
+        present(action, animated: true)
+    }
+    
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("Banner Received")
     }

@@ -37,15 +37,16 @@ class MainGameViewController: UIViewController, GADFullScreenContentDelegate {
     // 0 ->7 : 8course
     // 0->4: 5 exam
     
-    private var interstitial: GADInterstitialAd?
-
-    let adsTest = "ca-app-pub-3940256099942544/1033173712"
-    let adsPro = "ca-app-pub-1480390762284051/6778284194"
+//    private var interstitial: GADInterstitialAd?
+//
+//    let adsTest = "ca-app-pub-3940256099942544/1033173712"
+//    let adsPro = "ca-app-pub-1480390762284051/6778284194"
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        requestAds()
+        // Todo: -
+//        requestAds()
         if #available(iOS 15.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithDefaultBackground()
@@ -118,28 +119,28 @@ class MainGameViewController: UIViewController, GADFullScreenContentDelegate {
 //        }
     }
     
-    func requestAds() {
-        let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: adsPro,
-            request: request,
-            completionHandler: { [self] ad, error in
-                if let error = error {
-                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                    return
-                }
-                interstitial = ad
-            interstitial?.fullScreenContentDelegate = self
-            }
-        )
-    }
+//    func requestAds() {
+//        let request = GADRequest()
+//        GADInterstitialAd.load(withAdUnitID: adsTest,
+//            request: request,
+//            completionHandler: { [self] ad, error in
+//                if let error = error {
+//                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+//                    return
+//                }
+//                interstitial = ad
+//            interstitial?.fullScreenContentDelegate = self
+//            }
+//        )
+//    }
     
-    func showAds() {
-        if interstitial != nil {
-            interstitial?.present(fromRootViewController: self)
-          } else {
-            print("Ad wasn't ready")
-          }
-    }
+//    func showAds() {
+//        if interstitial != nil {
+//            interstitial?.present(fromRootViewController: self)
+//          } else {
+//            print("Ad wasn't ready")
+//          }
+//    }
     
     /// Tells the delegate that the ad failed to present full screen content.
       func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
@@ -213,7 +214,8 @@ extension MainGameViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showAds()
+        // Todo: -
+//        showAds()
         let vc = KitSelectionViewController()
         let data = data[indexPath.section].dataCell[indexPath.row]
         if data.tag > 4 {
@@ -228,7 +230,8 @@ extension MainGameViewController: FooterMainGameViewDelegate {
     func footerView(footer: FooterMainGameView, needPerformAction action: FooterMainGameView.Action) {
         switch action {
         case .exam(let section):
-            showAds()
+            // Todo: -
+//            showAds()
             let vc = ExamViewController()
             NotificationCenter.default.post(name: Notification.Name(rawValue: chosenExamNotificationKey), object: section)
             self.navigationController?.pushViewController(vc, animated: true)
