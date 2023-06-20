@@ -40,7 +40,7 @@ final class KitsLibrary {
         it.correctAnswer = "It"
         it.incorrectAnswers = ["She", "He", "They"]
         let car = Question(context: CoreDataManager.shared.context)
-        car.question = "xe Oto"
+        car.question = "xe ô tô"
         car.correctAnswer = "Car"
         car.incorrectAnswers = ["Bus", "Apple", "Chicken"]
         let house = Question(context: CoreDataManager.shared.context)
@@ -856,11 +856,11 @@ final class KitsLibrary {
         cocktail.correctAnswer = "Cocktail"
         cocktail.incorrectAnswers = ["Juice", "Water", "Wine"]
         let wineglass = Question(context: CoreDataManager.shared.context)
-        wineglass.question = "Бокал"
+        wineglass.question = " glass with a stem and foot, used for drinking wine."
         wineglass.correctAnswer = "Wineglass"
         wineglass.incorrectAnswers = ["Bocal", "Glass", "Cup"]
         let etiquette = Question(context: CoreDataManager.shared.context)
-        etiquette.question = "Этикет"
+        etiquette.question = "the customary code of polite behavior in society or among members of a particular profession or group."
         etiquette.correctAnswer = "Etiquette"
         etiquette.incorrectAnswers = ["Ticket", "Eticket", "Table"]
         

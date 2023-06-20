@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		362638548B090289F5A408F1 /* Pods_personal_spending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5108D31F07D25DDC29DB5BF8 /* Pods_personal_spending.framework */; };
 		ABD0809350718C9654F1FB50 /* Pods_personal_spendingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC98EF033C4ACA9D48A0DF7 /* Pods_personal_spendingTests.framework */; };
+		C70618EB2A41F1860037E7D2 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70618E92A41F1860037E7D2 /* EntryController.swift */; };
 		C78D4FE02A395D3400071797 /* MainGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FDF2A395D3400071797 /* MainGameModel.swift */; };
 		C78D4FE32A399DD300071797 /* MainGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FE12A399DD300071797 /* MainGameCell.swift */; };
 		C78D4FE42A399DD300071797 /* MainGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FE22A399DD300071797 /* MainGameCell.xib */; };
@@ -110,6 +111,7 @@
 		7E255870A59DDAF967A889BB /* Pods-personal-spending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending.debug.xcconfig"; path = "Target Support Files/Pods-personal-spending/Pods-personal-spending.debug.xcconfig"; sourceTree = "<group>"; };
 		BE94EC55CB5A891158BA6730 /* Pods-personal-spendingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spendingTests.debug.xcconfig"; path = "Target Support Files/Pods-personal-spendingTests/Pods-personal-spendingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40B2594D9698799A735DFAF /* Pods-personal-spending-personal-spendingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending-personal-spendingUITests.release.xcconfig"; path = "Target Support Files/Pods-personal-spending-personal-spendingUITests/Pods-personal-spending-personal-spendingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C70618E92A41F1860037E7D2 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		C78D4FDF2A395D3400071797 /* MainGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameModel.swift; sourceTree = "<group>"; };
 		C78D4FE12A399DD300071797 /* MainGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameCell.swift; sourceTree = "<group>"; };
 		C78D4FE22A399DD300071797 /* MainGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainGameCell.xib; sourceTree = "<group>"; };
@@ -244,6 +246,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C70618E82A41F1560037E7D2 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				C70618E92A41F1860037E7D2 /* EntryController.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		C7A841882A32E65200A76CDC /* Archived */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +300,7 @@
 		C7C988C32A1F0643009AACB1 /* personal-spending */ = {
 			isa = PBXGroup;
 			children = (
+				C70618E82A41F1560037E7D2 /* QRCode */,
 				C7F49D992A385BF800EFA7BA /* Game */,
 				C7A841882A32E65200A76CDC /* Archived */,
 				C7A9D7AC2A287687005140F7 /* Stamp */,
@@ -728,6 +739,7 @@
 				C7CE41F12A386A3600CD656A /* TestViewController.swift in Sources */,
 				C7C989732A1F1D52009AACB1 /* SwiftDate.swift in Sources */,
 				C7C989792A1F21B5009AACB1 /* HistoryHeaderViewModel.swift in Sources */,
+				C70618EB2A41F1860037E7D2 /* EntryController.swift in Sources */,
 				C7C988C52A1F0643009AACB1 /* AppDelegate.swift in Sources */,
 				C7CE41DB2A385F1B00CD656A /* Model.xcdatamodeld in Sources */,
 				C7C989712A1F1BD5009AACB1 /* App.swift in Sources */,

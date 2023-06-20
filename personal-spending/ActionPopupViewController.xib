@@ -19,21 +19,35 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-AW-xYr">
-                    <rect key="frame" x="188.66666666666666" y="546" width="16" height="22"/>
+                    <rect key="frame" x="313" y="578" width="50" height="50"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="ic_close_calendar"/>
+                    <state key="normal" image="icons8-education"/>
+                    <connections>
+                        <action selector="tapGame:" destination="-1" eventType="touchUpInside" id="127-vV-bhj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqG-VQ-xmw">
+                    <rect key="frame" x="213" y="628" width="50" height="50"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="icons8-qr-code"/>
+                    <connections>
+                        <action selector="generateQR:" destination="-1" eventType="touchUpInside" id="qt8-4j-7vm"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZGz-AW-xYr" secondAttribute="bottom" constant="250" id="Iy9-Rc-vR6"/>
-                <constraint firstItem="ZGz-AW-xYr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aaZ-vR-NjK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PqG-VQ-xmw" secondAttribute="bottom" constant="140" id="GH7-D5-Xdj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZGz-AW-xYr" secondAttribute="bottom" constant="190" id="Iy9-Rc-vR6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PqG-VQ-xmw" secondAttribute="trailing" constant="130" id="PxE-tF-RSY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZGz-AW-xYr" secondAttribute="trailing" constant="30" id="u8B-id-lYh"/>
             </constraints>
             <point key="canvasLocation" x="66" y="20"/>
         </view>
     </objects>
     <resources>
-        <image name="ic_close_calendar" width="16" height="16"/>
+        <image name="icons8-education" width="50" height="50"/>
+        <image name="icons8-qr-code" width="50" height="50"/>
     </resources>
 </document>

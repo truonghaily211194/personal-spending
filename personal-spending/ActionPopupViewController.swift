@@ -7,8 +7,18 @@
 
 import UIKit
 
+protocol ActionPopupViewControllerDelegate: class {
+    func controller(_ controller: ActionPopupViewController, needPerformAction action: ActionPopupViewController.Action)
+}
+
 class ActionPopupViewController: UIViewController {
 
+    enum Action {
+        case game
+        case generate
+    }
+    
+    weak var delegate: ActionPopupViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDismiss(_:)))
@@ -18,5 +28,13 @@ class ActionPopupViewController: UIViewController {
     
     @objc private func handleDismiss(_ sender: Any?) {
        dismiss(animated: true)
+    }
+    
+    @IBAction func tapGame(_ sender: Any) {
+        delegate?.controller(self, needPerformAction: .game)
+    }
+    
+    @IBAction func generateQR(_ sender: Any) {
+        delegate?.controller(self, needPerformAction: .generate)
     }
 }
