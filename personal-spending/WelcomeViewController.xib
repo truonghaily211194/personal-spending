@@ -27,7 +27,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYE-rY-lXQ">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen2" translatesAutoresizingMaskIntoConstraints="NO" id="Bqw-W2-rg2">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen4" translatesAutoresizingMaskIntoConstraints="NO" id="Bqw-W2-rg2">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TR-dU-ln1">
@@ -59,7 +59,7 @@
                         <constraint firstAttribute="height" constant="40" id="eOJ-Rd-Bia"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="32"/>
-                    <color key="textColor" name="AccentColor"/>
+                    <color key="textColor" systemColor="systemBlueColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNT-Sd-wxB">
@@ -69,7 +69,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Edit Name"/>
+                    <state key="normal" title="Edit Name">
+                        <color key="titleColor" systemColor="systemBlueColor"/>
+                    </state>
                     <connections>
                         <action selector="editName:" destination="-1" eventType="touchUpInside" id="d8m-zL-v9h"/>
                     </connections>
@@ -108,19 +110,20 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SS-Fq-HVS">
-                    <rect key="frame" x="324" y="736" width="60" height="50"/>
+                    <rect key="frame" x="334" y="736" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="60" id="9LI-Xl-z8U"/>
+                        <constraint firstAttribute="width" constant="50" id="9LI-Xl-z8U"/>
                         <constraint firstAttribute="height" constant="50" id="T7T-ib-hcL"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="timeline_tabbar_more_item_normal"/>
+                    <state key="normal" backgroundImage="add"/>
                     <connections>
                         <action selector="actionTap:" destination="-1" eventType="touchUpInside" id="fgL-FG-Vs4"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-7m-Q1C">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-7m-Q1C">
                     <rect key="frame" x="10" y="330" width="394" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -217,19 +220,19 @@
         </view>
     </objects>
     <resources>
+        <image name="add" width="170.66667175292969" height="170.66667175292969"/>
         <image name="ic_lifelog_calendar" width="26.5" height="26"/>
         <image name="ic_usepoint" width="46" height="48"/>
         <image name="icon_slive_medal" width="34" height="34"/>
-        <image name="screen2" width="523.5" height="960"/>
-        <image name="timeline_tabbar_more_item_normal" width="46" height="46"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="screen4" width="2000" height="3000"/>
         <namedColor name="boldText">
             <color red="0.33300000429153442" green="0.33300000429153442" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

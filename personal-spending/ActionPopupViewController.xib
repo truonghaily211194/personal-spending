@@ -20,16 +20,24 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-AW-xYr">
                     <rect key="frame" x="313" y="578" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="0TG-Be-xe2"/>
+                        <constraint firstAttribute="height" constant="50" id="tzt-6F-EEa"/>
+                    </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="icons8-education"/>
+                    <state key="normal" image="graduate"/>
                     <connections>
                         <action selector="tapGame:" destination="-1" eventType="touchUpInside" id="127-vV-bhj"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqG-VQ-xmw">
                     <rect key="frame" x="213" y="628" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="33q-Sm-ceo"/>
+                        <constraint firstAttribute="width" constant="50" id="Mfc-M2-lKO"/>
+                    </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="icons8-qr-code"/>
+                    <state key="normal" image="qr"/>
                     <connections>
                         <action selector="generateQR:" destination="-1" eventType="touchUpInside" id="qt8-4j-7vm"/>
                     </connections>
@@ -47,7 +55,7 @@
         </view>
     </objects>
     <resources>
-        <image name="icons8-education" width="50" height="50"/>
-        <image name="icons8-qr-code" width="50" height="50"/>
+        <image name="graduate" width="256" height="256"/>
+        <image name="qr" width="256" height="256"/>
     </resources>
 </document>
