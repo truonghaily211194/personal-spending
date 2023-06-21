@@ -59,7 +59,7 @@ class MainGameViewController: UIViewController, GADFullScreenContentDelegate {
         }
         title = "Main Game"
 
-        let backButton = UIBarButtonItem(title: "BackHome", style: .plain, target: self, action: #selector(backButtonTapped))
+        let backButton = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backButtonTapped))
         // Assign the custom button to the leftBarButtonItem
         navigationItem.leftBarButtonItem = backButton
 
