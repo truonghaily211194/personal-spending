@@ -56,6 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: kDidBecomeActive), object: nil)
+    }
 
 }
 

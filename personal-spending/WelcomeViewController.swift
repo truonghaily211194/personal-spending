@@ -29,8 +29,8 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
     var isShowingCalendar = false
     let bannerView: GADBannerView = {
         let bannerView = GADBannerView()
-//        bannerView.adUnitID = "ca-app-pub-1480390762284051/8439011927" // Pro
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111" // Test
+        bannerView.adUnitID = "ca-app-pub-1480390762284051/8439011927" // Pro
+//        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111" // Test
         if #available(iOS 13.0, *) {
             bannerView.backgroundColor = .secondarySystemBackground
         }
@@ -62,6 +62,11 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
             self,
             selector: #selector(closeLifeLogCalendar),
             name: NSNotification.Name(rawValue: kCloseLifeLogCalendar),
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(setUserDefaultShowStamp),
+            name: NSNotification.Name(rawValue: kDidBecomeActive),
             object: nil)
         getDateUser()
     }
@@ -137,7 +142,7 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
         action.modalPresentationStyle = .overFullScreen
         action.modalTransitionStyle = .crossDissolve
         action.delegate = self
-        present(action, animated: true)
+        present(action, animated: false)
     }
     
     func showGenQRCode() {
@@ -238,7 +243,7 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
         }
     }
 
-    func setUserDefaultShowStamp() {
+    @objc func setUserDefaultShowStamp() {
         let standard = UserDefaults.standard
         goldClearLogo = standard.integer(forKey: ExtenStrings.kClearLogo)
         if standard.string(forKey: ExtenStrings.kDateToDay) != date {
