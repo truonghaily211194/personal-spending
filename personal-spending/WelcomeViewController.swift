@@ -63,25 +63,23 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
             selector: #selector(closeLifeLogCalendar),
             name: NSNotification.Name(rawValue: kCloseLifeLogCalendar),
             object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(setUserDefaultShowStamp),
+            name: NSNotification.Name(rawValue: kDidBecomeActive),
+            object: nil)
         getDateUser()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        bannerView.frame = CGRect(x: 0, y: view.frame.height - 70, width: view.frame.size.width, height: 70).integral
+        bannerView.frame = CGRect(x: 0, y: view.frame.height - 60, width: view.frame.size.width, height: 60).integral
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setUserDefaultShowStamp()
         setupUILogo()
-    }
-
-    @IBAction func playGame(_ sender: Any) {
-        let vc = MainGameViewController()
-        let navi = UINavigationController(rootViewController: vc)
-        UIApplication.shared.windows.first?.rootViewController = navi
-        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
     @IBAction func changeDescription(_ sender: Any) {
@@ -138,7 +136,20 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
     @IBAction func tapEmail(_ sender: Any) {
         openMail()
     }
-
+    
+    @IBAction func actionTap(_ sender: Any) {
+        let action = ActionPopupViewController()
+        action.modalPresentationStyle = .overFullScreen
+        action.modalTransitionStyle = .crossDissolve
+        action.delegate = self
+        present(action, animated: false)
+    }
+    
+    func showGenQRCode() {
+        let vc = EntryController()
+        present(vc, animated: true)
+    }
+    
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("Banner Received")
     }
@@ -232,7 +243,7 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
         }
     }
 
-    func setUserDefaultShowStamp() {
+    @objc func setUserDefaultShowStamp() {
         let standard = UserDefaults.standard
         goldClearLogo = standard.integer(forKey: ExtenStrings.kClearLogo)
         if standard.string(forKey: ExtenStrings.kDateToDay) != date {
@@ -325,6 +336,23 @@ extension WelcomeViewController {
 
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         controller.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension WelcomeViewController: ActionPopupViewControllerDelegate {
+    func controller(_ controller: ActionPopupViewController, needPerformAction action: ActionPopupViewController.Action) {
+        switch action {
+        case .game:
+            let vc = MainGameViewController()
+            let navi = UINavigationController(rootViewController: vc)
+            UIApplication.shared.windows.first?.rootViewController = navi
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        case .generate:
+            let vc = EntryController()
+            let navi = UINavigationController(rootViewController: vc)
+            UIApplication.shared.windows.first?.rootViewController = navi
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		362638548B090289F5A408F1 /* Pods_personal_spending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5108D31F07D25DDC29DB5BF8 /* Pods_personal_spending.framework */; };
 		ABD0809350718C9654F1FB50 /* Pods_personal_spendingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC98EF033C4ACA9D48A0DF7 /* Pods_personal_spendingTests.framework */; };
+		C70618EB2A41F1860037E7D2 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70618E92A41F1860037E7D2 /* EntryController.swift */; };
 		C78D4FE02A395D3400071797 /* MainGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FDF2A395D3400071797 /* MainGameModel.swift */; };
 		C78D4FE32A399DD300071797 /* MainGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FE12A399DD300071797 /* MainGameCell.swift */; };
 		C78D4FE42A399DD300071797 /* MainGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FE22A399DD300071797 /* MainGameCell.xib */; };
@@ -19,6 +20,8 @@
 		C78D4FF12A39C43000071797 /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FEF2A39C43000071797 /* ExamViewController.swift */; };
 		C78D4FF22A39C43000071797 /* ExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D4FF02A39C43000071797 /* ExamViewController.xib */; };
 		C78D4FF42A39C67C00071797 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D4FF32A39C67C00071797 /* ExamModel.swift */; };
+		C78D50792A40AC9E00071797 /* ActionPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D50772A40AC9E00071797 /* ActionPopupViewController.swift */; };
+		C78D507A2A40AC9E00071797 /* ActionPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D50782A40AC9E00071797 /* ActionPopupViewController.xib */; };
 		C799D2B12A376C6100EB8FB8 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */; };
 		C799D2B22A376C6100EB8FB8 /* GetStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */; };
 		C7A4BC4B2A36231F00629AFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */; };
@@ -108,6 +111,7 @@
 		7E255870A59DDAF967A889BB /* Pods-personal-spending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending.debug.xcconfig"; path = "Target Support Files/Pods-personal-spending/Pods-personal-spending.debug.xcconfig"; sourceTree = "<group>"; };
 		BE94EC55CB5A891158BA6730 /* Pods-personal-spendingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spendingTests.debug.xcconfig"; path = "Target Support Files/Pods-personal-spendingTests/Pods-personal-spendingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40B2594D9698799A735DFAF /* Pods-personal-spending-personal-spendingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personal-spending-personal-spendingUITests.release.xcconfig"; path = "Target Support Files/Pods-personal-spending-personal-spendingUITests/Pods-personal-spending-personal-spendingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C70618E92A41F1860037E7D2 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		C78D4FDF2A395D3400071797 /* MainGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameModel.swift; sourceTree = "<group>"; };
 		C78D4FE12A399DD300071797 /* MainGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameCell.swift; sourceTree = "<group>"; };
 		C78D4FE22A399DD300071797 /* MainGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainGameCell.xib; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 		C78D4FEF2A39C43000071797 /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
 		C78D4FF02A39C43000071797 /* ExamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamViewController.xib; sourceTree = "<group>"; };
 		C78D4FF32A39C67C00071797 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
+		C78D50772A40AC9E00071797 /* ActionPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPopupViewController.swift; sourceTree = "<group>"; };
+		C78D50782A40AC9E00071797 /* ActionPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionPopupViewController.xib; sourceTree = "<group>"; };
 		C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetStartedViewController.xib; sourceTree = "<group>"; };
 		C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -240,6 +246,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C70618E82A41F1560037E7D2 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				C70618E92A41F1860037E7D2 /* EntryController.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		C7A841882A32E65200A76CDC /* Archived */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +300,7 @@
 		C7C988C32A1F0643009AACB1 /* personal-spending */ = {
 			isa = PBXGroup;
 			children = (
+				C70618E82A41F1560037E7D2 /* QRCode */,
 				C7F49D992A385BF800EFA7BA /* Game */,
 				C7A841882A32E65200A76CDC /* Archived */,
 				C7A9D7AC2A287687005140F7 /* Stamp */,
@@ -310,6 +325,8 @@
 				C7A4BC4A2A36231F00629AFB /* InfoPlist.strings */,
 				C799D2AF2A376C6100EB8FB8 /* GetStartedViewController.swift */,
 				C799D2B02A376C6100EB8FB8 /* GetStartedViewController.xib */,
+				C78D50772A40AC9E00071797 /* ActionPopupViewController.swift */,
+				C78D50782A40AC9E00071797 /* ActionPopupViewController.xib */,
 			);
 			path = "personal-spending";
 			sourceTree = "<group>";
@@ -546,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A8418C2A32E66C00A76CDC /* PopupCongratsActionViewController.xib in Resources */,
+				C78D507A2A40AC9E00071797 /* ActionPopupViewController.xib in Resources */,
 				C78D4FEE2A39AE2000071797 /* FooterMainGameView.xib in Resources */,
 				C7CE41E52A38624500CD656A /* MainGameViewController.xib in Resources */,
 				C7CE41E92A38626200CD656A /* KitSelectionViewController.xib in Resources */,
@@ -721,6 +739,7 @@
 				C7CE41F12A386A3600CD656A /* TestViewController.swift in Sources */,
 				C7C989732A1F1D52009AACB1 /* SwiftDate.swift in Sources */,
 				C7C989792A1F21B5009AACB1 /* HistoryHeaderViewModel.swift in Sources */,
+				C70618EB2A41F1860037E7D2 /* EntryController.swift in Sources */,
 				C7C988C52A1F0643009AACB1 /* AppDelegate.swift in Sources */,
 				C7CE41DB2A385F1B00CD656A /* Model.xcdatamodeld in Sources */,
 				C7C989712A1F1BD5009AACB1 /* App.swift in Sources */,
@@ -741,6 +760,7 @@
 				C7A9D7CD2A2F2D93005140F7 /* ExtenStrings.swift in Sources */,
 				C78D4FE02A395D3400071797 /* MainGameModel.swift in Sources */,
 				C7A8418F2A33045B00A76CDC /* PopupEnoughClearViewController.swift in Sources */,
+				C78D50792A40AC9E00071797 /* ActionPopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,7 +930,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XSH88V68U6;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -924,7 +944,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haily.211194.personal-spending";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -943,7 +963,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XSH88V68U6;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -957,7 +977,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haily.211194.personal-spending";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

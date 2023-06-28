@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             vc = GetStartedViewController()
         }
+        let uuid = NSUUID().uuidString
+        print(uuid)
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
         return true
@@ -54,6 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: kDidBecomeActive), object: nil)
+    }
 
 }
 

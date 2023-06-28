@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,19 +14,23 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="rWM-nn-uxY">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy Your Life" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vM6-IV-Dkq">
+                                <rect key="frame" x="10" y="274.5" width="355" height="118.5"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="Hk0-NS-6Fr"/>
+                        <color key="backgroundColor" name="status_selected"/>
                         <constraints>
-                            <constraint firstItem="rWM-nn-uxY" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="GJn-69-fcH"/>
-                            <constraint firstAttribute="trailing" secondItem="rWM-nn-uxY" secondAttribute="trailing" id="RyU-91-9Ug"/>
-                            <constraint firstItem="rWM-nn-uxY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ozX-wj-6dB"/>
-                            <constraint firstAttribute="bottom" secondItem="rWM-nn-uxY" secondAttribute="bottom" id="rdr-XT-Bjx"/>
+                            <constraint firstItem="vM6-IV-Dkq" firstAttribute="leading" secondItem="Hk0-NS-6Fr" secondAttribute="leading" constant="10" id="B4J-G0-yXR"/>
+                            <constraint firstItem="Hk0-NS-6Fr" firstAttribute="trailing" secondItem="vM6-IV-Dkq" secondAttribute="trailing" constant="10" id="jGv-MS-KzU"/>
+                            <constraint firstItem="vM6-IV-Dkq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nzV-Cz-ZFV"/>
+                            <constraint firstItem="vM6-IV-Dkq" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="oGt-xr-bhD"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,9 +40,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="320" height="480"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="status_selected">
+            <color red="0.91399997472763062" green="0.96899998188018799" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

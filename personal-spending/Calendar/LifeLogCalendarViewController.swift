@@ -12,6 +12,7 @@ import SwiftDate
 
 let kLifeLogCalendar = "kLifeLogCalendar"
 let kCloseLifeLogCalendar = "kCloseLifeLogCalendar"
+let kDidBecomeActive = "kDidBecomeActive"
 
 protocol LifeLogCalendarViewControllerDelegate: class {
 
