@@ -352,6 +352,11 @@ extension WelcomeViewController: ActionPopupViewControllerDelegate {
             let navi = UINavigationController(rootViewController: vc)
             UIApplication.shared.windows.first?.rootViewController = navi
             UIApplication.shared.windows.first?.makeKeyAndVisible()
+        case .combineImage:
+            let vc = EditorImageViewController()
+            let navi = UINavigationController(rootViewController: vc)
+            UIApplication.shared.windows.first?.rootViewController = navi
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
         }
     }
 }

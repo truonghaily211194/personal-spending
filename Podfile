@@ -10,6 +10,7 @@ target 'personal-spending' do
     pod 'SwiftUtils', '4.2.1'
     pod 'SwiftDate', '4.5.1'
     pod 'Google-Mobile-Ads-SDK'
+    pod 'ZLImageEditor'
 
   target 'personal-spendingTests' do
     inherit! :search_paths
