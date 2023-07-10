@@ -8,6 +8,7 @@
 import UIKit
 import ZLImageEditor
 import CoreImage
+import PhotosUI
 
 class EditorImageViewController: UIViewController {
 
@@ -151,6 +152,20 @@ class EditorImageViewController: UIViewController {
             }
         }
     }
+    
+    func addPhotoLibrary() {
+        if #available(iOS 14.0, *) {
+            var configuration = PHPickerConfiguration()
+            configuration.filter = .images
+            configuration.selectionLimit = 1
+
+            let picker = PHPickerViewController(configuration: configuration)
+            picker.delegate = self
+            present(picker, animated: true, completion: nil)
+        } else {
+            choosePhoto(sourceType: .photoLibrary)
+        }
+    }
 
     func alertAction() {
         let alertController = UIAlertController(title: "Add Photos", message: nil, preferredStyle: .actionSheet)
@@ -160,7 +175,7 @@ class EditorImageViewController: UIViewController {
         }
 
         let libraryAction = UIAlertAction(title: "Library", style: .default) { (_) in
-            self.choosePhoto(sourceType: .photoLibrary)
+            self.addPhotoLibrary()
         }
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -356,5 +371,46 @@ extension EditorImageViewController: UIImagePickerControllerDelegate, UINavigati
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension EditorImageViewController: PHPickerViewControllerDelegate {
+    @available(iOS 14.0, *)
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true, completion: nil)
+
+        guard !results.isEmpty else {
+            return
+        }
+
+        let itemProvider = results[0].itemProvider
+        if itemProvider.canLoadObject(ofClass: UIImage.self) {
+            itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, error) in
+                guard let this = self else { return }
+                if let pickedImage = image as? UIImage {
+                    DispatchQueue.main.async {
+                        // Xử lý ảnh đã chọn hoặc chụp tại đây
+                        if this.hasImage && this.switchControl.isOn {
+                            this.newImageView.image = pickedImage
+                            this.newImageView.alpha = CGFloat(this.alphaImageAbove)
+                            this.alphaLabel.text = "Opacity:   \(String(format: "%.2f", this.alphaImageAbove))"
+                            this.nameImageLabel.text = "Image above"
+                            this.switchControl.isOn = true
+                            this.alphaSlider.value = this.alphaImageAbove
+                            this.isImageAbove = true
+                        } else {
+                            this.mainImageView.image = pickedImage
+                            this.mainImageView.alpha = CGFloat(this.alphaImageBelow)
+                            this.alphaLabel.text = "Opacity:   \(String(format: "%.2f", this.alphaImageBelow))"
+                            this.nameImageLabel.text = "Image below"
+                            this.switchControl.isOn = false
+                            this.alphaSlider.value = this.alphaImageBelow
+                            this.isImageAbove = false
+                            this.hasImage = true
+                        }
+                    }
+                }
+            }
+        }
     }
 }

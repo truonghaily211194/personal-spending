@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="personal_spending" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImage" destination="Bqw-W2-rg2" id="XaF-Km-B33"/>
                 <outlet property="descriptionLabel" destination="NXh-7m-Q1C" id="31K-Iv-5o6"/>
                 <outlet property="goldImage1" destination="4uM-x6-2du" id="i6q-xv-XOF"/>
                 <outlet property="goldImage2" destination="Fiw-dm-v20" id="9gd-ml-gMw"/>
@@ -97,18 +98,6 @@
                         <constraint firstAttribute="width" secondItem="CO3-as-jIv" secondAttribute="height" multiplier="1:1" id="Lvf-Yy-2Uu"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W06-zz-wEH">
-                    <rect key="frame" x="322" y="230" width="40" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="40" id="LdQ-k2-rC6"/>
-                        <constraint firstAttribute="height" constant="40" id="yC7-Jo-gsA"/>
-                    </constraints>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" backgroundImage="ic_usepoint"/>
-                    <connections>
-                        <action selector="tapShowStamp:" destination="-1" eventType="touchUpInside" id="9bD-Ew-Spq"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SS-Fq-HVS">
                     <rect key="frame" x="334" y="736" width="50" height="50"/>
                     <constraints>
@@ -135,7 +124,7 @@
                         <constraint firstAttribute="width" constant="45" id="mUc-Er-8Ge"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Gmail"/>
+                    <state key="normal" title="Email"/>
                     <connections>
                         <action selector="tapEmail:" destination="-1" eventType="touchUpInside" id="Vn2-Pa-Xbm"/>
                     </connections>
@@ -178,6 +167,13 @@
                         <action selector="changeDescription:" destination="-1" eventType="touchUpInside" id="XdI-Ne-CXx"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sru-XM-Eda">
+                    <rect key="frame" x="107" y="220" width="200" height="60"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="tapShowStamp:" destination="-1" eventType="touchUpInside" id="xnp-ed-x3K"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
@@ -188,11 +184,13 @@
                 <constraint firstItem="iCP-UW-hO1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="4sf-Rr-NP7"/>
                 <constraint firstItem="DYE-rY-lXQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5H2-zD-a0p"/>
                 <constraint firstAttribute="bottom" secondItem="3SS-Fq-HVS" secondAttribute="bottom" constant="110" id="Aw5-YR-DTv"/>
+                <constraint firstItem="Sru-XM-Eda" firstAttribute="leading" secondItem="4uM-x6-2du" secondAttribute="leading" id="BDX-5d-Bcb"/>
                 <constraint firstItem="Fiw-dm-v20" firstAttribute="top" secondItem="iCP-UW-hO1" secondAttribute="bottom" constant="60" id="GCH-cg-dgA"/>
                 <constraint firstItem="ggO-1r-JCD" firstAttribute="leading" secondItem="zuP-c9-Yjf" secondAttribute="trailing" constant="4" id="GOM-OB-IWq"/>
+                <constraint firstItem="Sru-XM-Eda" firstAttribute="top" secondItem="4uM-x6-2du" secondAttribute="top" id="KgF-Vd-LWK"/>
                 <constraint firstItem="dNT-Sd-wxB" firstAttribute="top" secondItem="iCP-UW-hO1" secondAttribute="bottom" id="MFd-dx-N6x"/>
-                <constraint firstItem="W06-zz-wEH" firstAttribute="leading" secondItem="CO3-as-jIv" secondAttribute="trailing" constant="15" id="MzG-dX-YDO"/>
                 <constraint firstItem="aKf-Ry-v1T" firstAttribute="leading" secondItem="ggO-1r-JCD" secondAttribute="trailing" constant="3" id="NBa-OU-Ewi"/>
+                <constraint firstItem="Sru-XM-Eda" firstAttribute="bottom" secondItem="4uM-x6-2du" secondAttribute="bottom" id="NRw-3k-oT4"/>
                 <constraint firstItem="NXh-7m-Q1C" firstAttribute="top" secondItem="Fiw-dm-v20" secondAttribute="bottom" constant="50" id="Nfb-yw-mdy"/>
                 <constraint firstItem="2Z5-g4-Fo5" firstAttribute="bottom" secondItem="NXh-7m-Q1C" secondAttribute="bottom" id="Nfu-G0-g8H"/>
                 <constraint firstItem="DYE-rY-lXQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pqm-uc-5Ci"/>
@@ -211,8 +209,8 @@
                 <constraint firstItem="NXh-7m-Q1C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qiX-mc-fc7"/>
                 <constraint firstItem="Fiw-dm-v20" firstAttribute="centerX" secondItem="iCP-UW-hO1" secondAttribute="centerX" id="vhB-Fd-Ye5"/>
                 <constraint firstItem="2Z5-g4-Fo5" firstAttribute="trailing" secondItem="NXh-7m-Q1C" secondAttribute="trailing" id="xGW-27-lrl"/>
+                <constraint firstItem="Sru-XM-Eda" firstAttribute="trailing" secondItem="CO3-as-jIv" secondAttribute="trailing" id="yxU-4d-xmq"/>
                 <constraint firstItem="aKf-Ry-v1T" firstAttribute="centerY" secondItem="ggO-1r-JCD" secondAttribute="centerY" id="z4f-7D-CTZ"/>
-                <constraint firstItem="W06-zz-wEH" firstAttribute="centerY" secondItem="CO3-as-jIv" secondAttribute="centerY" id="z5c-uj-DVa"/>
                 <constraint firstItem="ggO-1r-JCD" firstAttribute="centerY" secondItem="zuP-c9-Yjf" secondAttribute="centerY" id="zNw-6w-NZ8"/>
                 <constraint firstAttribute="trailing" secondItem="NXh-7m-Q1C" secondAttribute="trailing" constant="10" id="zvv-hZ-nhD"/>
             </constraints>
@@ -222,7 +220,6 @@
     <resources>
         <image name="add" width="170.66667175292969" height="170.66667175292969"/>
         <image name="ic_lifelog_calendar" width="26.5" height="26"/>
-        <image name="ic_usepoint" width="46" height="48"/>
         <image name="icon_slive_medal" width="34" height="34"/>
         <image name="screen4" width="2000" height="3000"/>
         <namedColor name="boldText">
