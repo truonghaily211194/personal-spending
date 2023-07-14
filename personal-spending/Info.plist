@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Enjoy Your Life need access to library.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Enjoy Your Life need camera access to take pictures.</string>
 	<key>CFBundleDisplayName</key>
 	<string>Enjoy Your Life</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>

@@ -19,10 +19,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-AW-xYr">
-                    <rect key="frame" x="313" y="578" width="50" height="50"/>
+                    <rect key="frame" x="325" y="583" width="48" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="50" id="0TG-Be-xe2"/>
-                        <constraint firstAttribute="height" constant="50" id="tzt-6F-EEa"/>
+                        <constraint firstAttribute="width" constant="48" id="0TG-Be-xe2"/>
+                        <constraint firstAttribute="height" constant="48" id="tzt-6F-EEa"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="graduate"/>
@@ -31,31 +31,46 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqG-VQ-xmw">
-                    <rect key="frame" x="213" y="628" width="50" height="50"/>
+                    <rect key="frame" x="245" y="613" width="48" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="33q-Sm-ceo"/>
-                        <constraint firstAttribute="width" constant="50" id="Mfc-M2-lKO"/>
+                        <constraint firstAttribute="height" constant="48" id="33q-Sm-ceo"/>
+                        <constraint firstAttribute="width" constant="48" id="Mfc-M2-lKO"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="qr"/>
+                    <state key="normal" image="qr-code"/>
                     <connections>
                         <action selector="generateQR:" destination="-1" eventType="touchUpInside" id="qt8-4j-7vm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmf-B6-f3z">
+                    <rect key="frame" x="223" y="693" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0nL-ry-7FX"/>
+                        <constraint firstAttribute="width" constant="50" id="JgK-3k-gMz"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="photo"/>
+                    <connections>
+                        <action selector="combineImages:" destination="-1" eventType="touchUpInside" id="6gh-Z2-MQo"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PqG-VQ-xmw" secondAttribute="bottom" constant="140" id="GH7-D5-Xdj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZGz-AW-xYr" secondAttribute="bottom" constant="190" id="Iy9-Rc-vR6"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PqG-VQ-xmw" secondAttribute="trailing" constant="130" id="PxE-tF-RSY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZGz-AW-xYr" secondAttribute="trailing" constant="30" id="u8B-id-lYh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qmf-B6-f3z" secondAttribute="trailing" constant="120" id="BOY-lt-Vaj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PqG-VQ-xmw" secondAttribute="bottom" constant="157" id="GH7-D5-Xdj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZGz-AW-xYr" secondAttribute="bottom" constant="187" id="Iy9-Rc-vR6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PqG-VQ-xmw" secondAttribute="trailing" constant="100" id="PxE-tF-RSY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qmf-B6-f3z" secondAttribute="bottom" constant="75" id="Z83-fm-xhr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZGz-AW-xYr" secondAttribute="trailing" constant="20" id="u8B-id-lYh"/>
             </constraints>
             <point key="canvasLocation" x="66" y="20"/>
         </view>
     </objects>
     <resources>
         <image name="graduate" width="256" height="256"/>
-        <image name="qr" width="256" height="256"/>
+        <image name="photo" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="qr-code" width="170.66667175292969" height="170.66667175292969"/>
     </resources>
 </document>

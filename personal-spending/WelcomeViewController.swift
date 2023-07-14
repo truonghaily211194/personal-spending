@@ -10,6 +10,7 @@ import CoreData
 import SwiftUtils
 import MessageUI
 import GoogleMobileAds
+import PhotosUI
 // ca-app-pub-1480390762284051~6234422931
 // ca-app-pub-1480390762284051/8402556741
 
@@ -22,6 +23,7 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
     @IBOutlet weak var goldImage3: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var backgroundImage: UIImageView!
 
     let date = App.region.today().toString(.date)
     var users: [NSManagedObject] = []
@@ -69,6 +71,7 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
             name: NSNotification.Name(rawValue: kDidBecomeActive),
             object: nil)
         getDateUser()
+        addGestureImageBackground()
     }
 
     override func viewDidLayoutSubviews() {
@@ -81,11 +84,11 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
         setUserDefaultShowStamp()
         setupUILogo()
     }
-    
+
     @IBAction func changeDescription(_ sender: Any) {
         descriptionLabel.text = ExtenStrings.descriptions.randomElement()
     }
-    
+
     @IBAction func editName(_ sender: Any) {
         changeName()
     }
@@ -125,7 +128,7 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true)
     }
-    
+
     @IBAction func calendarTouchUp(_ sender: Any) {
         if !isShowingCalendar {
             showLifeLogCalendar2()
@@ -136,7 +139,7 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
     @IBAction func tapEmail(_ sender: Any) {
         openMail()
     }
-    
+
     @IBAction func actionTap(_ sender: Any) {
         let action = ActionPopupViewController()
         action.modalPresentationStyle = .overFullScreen
@@ -144,16 +147,70 @@ class WelcomeViewController: UIViewController, MailDelegate, GADBannerViewDelega
         action.delegate = self
         present(action, animated: false)
     }
-    
+
+    func addGestureImageBackground() {
+        if let image = loadImageFromUserDefaults() {
+            // Hiển thị ảnh
+            backgroundImage.image = image
+        }
+        backgroundImage.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
+        backgroundImage.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func imageViewTapped() {
+        // Handle the tap gesture on the image view
+        showPhotoPicker()
+    }
+
+    func showPhotoPicker() {
+        if #available(iOS 14.0, *) {
+            var configuration = PHPickerConfiguration()
+            configuration.filter = .images
+            configuration.selectionLimit = 1
+
+            let picker = PHPickerViewController(configuration: configuration)
+            picker.delegate = self
+            present(picker, animated: true, completion: nil)
+        } else {
+            // Fallback on earlier versions
+            choosePhoto(sourceType: .photoLibrary)
+        }
+    }
+
+    // for < ios 14
+    func choosePhoto(sourceType: UIImagePickerController.SourceType) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = sourceType
+        present(imagePickerController, animated: true, completion: nil)
+    }
+
+    func saveImageToUserDefaults(image: UIImage) {
+        if let imageData = image.jpegData(compressionQuality: 1) {
+            UserDefaults.standard.set(imageData.base64EncodedString(), forKey: "SavedImage")
+        }
+    }
+
+    // Hiển thị ảnh từ UserDefault
+    func loadImageFromUserDefaults() -> UIImage? {
+        if let savedImageString = UserDefaults.standard.string(forKey: "SavedImage"),
+            let imageData = Data(base64Encoded: savedImageString),
+            let image = UIImage(data: imageData) {
+            return image
+        }
+        return nil
+    }
+
     func showGenQRCode() {
         let vc = EntryController()
         present(vc, animated: true)
     }
-    
+
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("Banner Received")
     }
-    
+
     func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
         print("Fail to receive ad with error: \(error)")
     }
@@ -352,6 +409,11 @@ extension WelcomeViewController: ActionPopupViewControllerDelegate {
             let navi = UINavigationController(rootViewController: vc)
             UIApplication.shared.windows.first?.rootViewController = navi
             UIApplication.shared.windows.first?.makeKeyAndVisible()
+        case .combineImage:
+            let vc = EditorImageViewController()
+            let navi = UINavigationController(rootViewController: vc)
+            UIApplication.shared.windows.first?.rootViewController = navi
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
         }
     }
 }
@@ -381,5 +443,46 @@ class ContactLinkMailManager {
             alert.present()
             return nil
         }
+    }
+}
+
+extension WelcomeViewController: PHPickerViewControllerDelegate {
+    @available(iOS 14.0, *)
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true, completion: nil)
+
+        guard !results.isEmpty else {
+            return
+        }
+
+        let itemProvider = results[0].itemProvider
+        if itemProvider.canLoadObject(ofClass: UIImage.self) {
+            itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, error) in
+                guard let this = self else { return }
+                if let image = image as? UIImage {
+                    DispatchQueue.main.async {
+                        // Use the selected image
+                        this.saveImageToUserDefaults(image: image)
+                        this.backgroundImage.image = image
+                    }
+                }
+            }
+        }
+    }
+}
+
+extension WelcomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            // Xử lý ảnh đã chọn hoặc chụp tại đây
+            backgroundImage.image = pickedImage
+            saveImageToUserDefaults(image: pickedImage)
+        }
+
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }

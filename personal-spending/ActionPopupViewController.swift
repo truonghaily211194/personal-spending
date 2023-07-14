@@ -16,6 +16,7 @@ class ActionPopupViewController: UIViewController {
     enum Action {
         case game
         case generate
+        case combineImage
     }
     
     weak var delegate: ActionPopupViewControllerDelegate?
@@ -36,5 +37,9 @@ class ActionPopupViewController: UIViewController {
     
     @IBAction func generateQR(_ sender: Any) {
         delegate?.controller(self, needPerformAction: .generate)
+    }
+
+    @IBAction func combineImages(_ sender: Any) {
+        delegate?.controller(self, needPerformAction: .combineImage)
     }
 }

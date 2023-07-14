@@ -48,11 +48,15 @@ PODS:
   - PromisesObjC (2.2.0)
   - SwiftDate (4.5.1)
   - SwiftUtils (4.2.1)
+  - ZLImageEditor (1.1.7):
+    - ZLImageEditor/Core (= 1.1.7)
+  - ZLImageEditor/Core (1.1.7)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - SwiftDate (= 4.5.1)
   - SwiftUtils (= 4.2.1)
+  - ZLImageEditor
 
 SPEC REPOS:
   trunk:
@@ -64,6 +68,7 @@ SPEC REPOS:
     - PromisesObjC
     - SwiftDate
     - SwiftUtils
+    - ZLImageEditor
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 32fe7836431a06a29f7734ae092b600137c8108d
@@ -74,7 +79,8 @@ SPEC CHECKSUMS:
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
   SwiftUtils: fa346feeac5a25eab7ea5d59f1857c6253cb8ab1
+  ZLImageEditor: ee86f044fb7c5dec6b5de49eb7bb6fd42286f2ae
 
-PODFILE CHECKSUM: 3a4c04f8f3a8864dcd880f6df8d07370925f0eac
+PODFILE CHECKSUM: 664eca397111cb3d2fb7b80e64148ec1f3a8c668
 
 COCOAPODS: 1.12.1
